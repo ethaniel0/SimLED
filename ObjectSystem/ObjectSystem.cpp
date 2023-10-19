@@ -10,32 +10,31 @@ bool inView(LightObject* obj, int numLEDs){
 
 ObjectSystem::ObjectSystem(LightStrip* strip){
     this->strip = strip;
-    this->objects = std::vector<LightObject*>();
+    objects = std::vector<LightObject*>();
 }
 
 void ObjectSystem::update(){
-    this->strip->clear();
+    strip->clear();
 
-    int numObjects = (int) this->objects.size();
+    int numObjects = (int) objects.size();
 
     for (int i = numObjects - 1; i >= 0; i--) {
 
-        LightObject *obj = this->objects[i];
+        LightObject *obj = objects[i];
         obj->update();
 
-        if (!obj->persistent && !inView(obj, this->strip->totalLEDs)) {
-            this->objects.erase(this->objects.begin() + i);
+        if (!obj->persistent && !inView(obj, strip->totalLEDs)) {
+            objects.erase(objects.begin() + i);
             numObjects--;
         } else {
-            obj->applyToStrip(this->strip);
+            obj->applyToStrip(strip);
         }
     }
 
     for (auto obj : this->objects){
         if (inView(obj, this->strip->totalLEDs)){
-            for (int j = 0; j < obj->colors.size(); j++){
+            for (int j = 0; j < obj->colors.size(); j++)
                 this->strip->set(obj->pos + j, obj->colors[j]);
-            }
         }
     }
 }
@@ -45,8 +44,7 @@ void ObjectSystem::add_object(LightObject* object){
 }
 
 void ObjectSystem::setState(int val){
-    for (int i = 0; i < this->objects.size(); i++){
-        LightObject* obj = this->objects[i];
+    for (auto obj : this->objects){
         obj->setState(val);
     }
 }

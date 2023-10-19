@@ -26,13 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 12,
+				"line" : 14,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 14,
+				"line" : 16,
 				"parent" : 0
 			}
 		]
@@ -69,7 +69,8 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				7
 			]
 		}
 	],
@@ -92,7 +93,15 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				7
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				6
 			]
 		}
 	],
@@ -125,13 +134,24 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "ObjectSystem/animations/animations.cpp",
+			"path" : "ObjectSystem/animations/AnimationFunctions.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "ObjectSystem/animations/BaseAnimation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ObjectSystem/animations/AnimationGroups.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ObjectSystem/animations/AnimationGroups.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

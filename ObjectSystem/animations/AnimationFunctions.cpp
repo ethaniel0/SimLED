@@ -1,4 +1,4 @@
-#include "animations.hpp"
+#include "AnimationFunctions.hpp"
 #include "../../FastLED/src/FastLED.h"
 #include <cmath>
 

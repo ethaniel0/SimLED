@@ -5,9 +5,11 @@ set(ObjectSystem_SRCS
         LightObject.cpp
         ObjectSystem.cpp
         animations/Animation.cpp
-        animations/animations.cpp
+        animations/AnimationFunctions.cpp
         animations/BaseAnimation.cpp
-  )
+        animations/AnimationGroups.h
+        animations/AnimationGroups.cpp
+)
 
 add_library(ObjectSystem ${ObjectSystem_SRCS})
 

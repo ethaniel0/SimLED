@@ -26,67 +26,67 @@ CHSV makeColor(int* numbers, int position, int numFunctions) {
 
 void BaseAnimation::update()
 {
-    if (this->done) return;
+    if (done) return;
 
-    int numFuncs = (int) this->funcs.size();
+    int numFuncs = (int) funcs.size();
 
     int gen = numFuncs;
-    int outerSize = this->bindToLength ? (int)this->obj->colors.size() : 1;
+    int outerSize = bindToLength ? (int)obj->colors.size() : 1;
 
     int numbers[outerSize * numFuncs];
 
     for (int i = 0; i < outerSize; i++) {
         int count = 0;
-        for (auto func : this->funcs){
+        for (auto func : funcs){
             numbers[i * gen + count] = func->getValue(frames + offset*i, duration);
             count++;
         }
     }
 
-    switch(this->bind){
+    switch(bind){
         case EditableProperties::POSITION:
-            this->obj->pos = numbers[0];
+            obj->pos = numbers[0];
             break;
         case EditableProperties::RELATIVE_POSITION:
-            this->obj->pos += numbers[0];
+            obj->pos += numbers[0];
             break;
         case EditableProperties::OPACITY:
-            this->obj->opacity = numbers[0];
+            obj->opacity = numbers[0];
             break;
         case EditableProperties::COLORS:
-            if (this->bindToLength){
+            if (bindToLength){
                 for (int i = 0; i < this->obj->colors.size(); i++) {
                     this->obj->colors[i] = makeColor(numbers, i * gen, numFuncs);
                 }
             }
             else {
                 CHSV color = makeColor(numbers, 0, numFuncs);
-                for (auto & i : this->obj->colors) {
+                for (auto & i : obj->colors) {
                     i = color;
                 }
             }
             break;
         case EditableProperties::BRIGHTNESS:
-            if (this->bindToLength) {
-                for (int i = 0; i < this->obj->colors.size(); i++) {
-                    this->obj->colors[i] = obj->colors[i] % numbers[i * gen];
+            if (bindToLength) {
+                for (int i = 0; i < obj->colors.size(); i++) {
+                    obj->colors[i] = obj->colors[i] % numbers[i * gen];
                 }
             }
             else {
                 int b = numbers[0];
-                for (int i = 0; i < this->obj->colors.size(); i++) {
-                    this->obj->colors[i] = obj->colors[i] % b;
+                for (auto & color : obj->colors) {
+                    color = color % b;
                 }
             }
             break;
     }
 
-    this->frames++;
+    frames++;
     if (duration != -1 && frames >= duration && loop){
         reset();
     }
     else if (frames > duration){
-        this->done = true;
+        done = true;
     }
 }
 
@@ -97,31 +97,31 @@ bool BaseAnimation::isFinished()
 
 void BaseAnimation::reset()
 {
-    this->frames = 0;
-    this->done = false;
+    frames = 0;
+    done = false;
 }
 
 void BaseAnimation::setState(int state)
 {
-    if (this->absoluteStateTriggers.find(state) != this->absoluteStateTriggers.end()) {
-        this->offset = this->absoluteStateTriggers[state];
+    if (absoluteStateTriggers.find(state) != absoluteStateTriggers.end()) {
+        offset = absoluteStateTriggers[state];
     }
-    else if (this->relativeStateTriggers.find(state) != this->relativeStateTriggers.end()) {
-        this->offset += this->relativeStateTriggers[state];
+    else if (relativeStateTriggers.find(state) != relativeStateTriggers.end()) {
+        offset += relativeStateTriggers[state];
     }
 }
 
 void BaseAnimation::addFunction(AnimationFunction *func)
 {
-    this->funcs.push_back(func);
+    funcs.push_back(func);
 }
 
 void BaseAnimation::addAbsoluteStateTrigger(int state, int frame)
 {
-    this->absoluteStateTriggers[state] = frame;
+    absoluteStateTriggers[state] = frame;
 }
 
 void BaseAnimation::addRelativeStateTrigger(int state, int frame)
 {
-    this->relativeStateTriggers[state] = frame;
+    relativeStateTriggers[state] = frame;
 }

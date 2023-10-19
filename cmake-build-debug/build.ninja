@@ -241,8 +241,8 @@ build ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o: CXX_C
   OBJECT_DIR = ObjectSystem/CMakeFiles/ObjectSystem.dir
   OBJECT_FILE_DIR = ObjectSystem/CMakeFiles/ObjectSystem.dir/animations
 
-build ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/animations.cpp.o: CXX_COMPILER__ObjectSystem_unscanned_Debug /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/animations.cpp || cmake_object_order_depends_target_ObjectSystem
-  DEP_FILE = ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/animations.cpp.o.d
+build ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o: CXX_COMPILER__ObjectSystem_unscanned_Debug /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/AnimationFunctions.cpp || cmake_object_order_depends_target_ObjectSystem
+  DEP_FILE = ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o.d
   FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem
   OBJECT_DIR = ObjectSystem/CMakeFiles/ObjectSystem.dir
@@ -250,6 +250,13 @@ build ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/animations.cpp.o: CXX_
 
 build ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o: CXX_COMPILER__ObjectSystem_unscanned_Debug /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/BaseAnimation.cpp || cmake_object_order_depends_target_ObjectSystem
   DEP_FILE = ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o.d
+  FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem
+  OBJECT_DIR = ObjectSystem/CMakeFiles/ObjectSystem.dir
+  OBJECT_FILE_DIR = ObjectSystem/CMakeFiles/ObjectSystem.dir/animations
+
+build ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o: CXX_COMPILER__ObjectSystem_unscanned_Debug /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/AnimationGroups.cpp || cmake_object_order_depends_target_ObjectSystem
+  DEP_FILE = ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o.d
   FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
   INCLUDES = -I/Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem
   OBJECT_DIR = ObjectSystem/CMakeFiles/ObjectSystem.dir
@@ -263,7 +270,7 @@ build ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o: C
 #############################################
 # Link the static library ObjectSystem/libObjectSystem.a
 
-build ObjectSystem/libObjectSystem.a: CXX_STATIC_LIBRARY_LINKER__ObjectSystem_Debug ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/animations.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o
+build ObjectSystem/libObjectSystem.a: CXX_STATIC_LIBRARY_LINKER__ObjectSystem_Debug ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o
   ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = ObjectSystem/CMakeFiles/ObjectSystem.dir

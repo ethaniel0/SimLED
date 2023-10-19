@@ -1,21 +1,21 @@
 #include "LightStrip.hpp"
 
-uint16_t XY(uint8_t x, uint8_t y){
-    return 0;
+__attribute__((unused)) uint16_t XY(uint8_t x, uint8_t y){
+    return x + y;
 }
 
 LightStrip::LightStrip(int numStrips, CRGB** strips, int* lengths){
     this->strips = strips;
     this->lengths = lengths;
     this->numStrips = numStrips;
-    this->starts = new int[numStrips];
+    starts = new int[numStrips];
     int prev = 0;
     for (int i = 0; i < numStrips; i++) {
         starts[i] = prev;
         int len = lengths[i];
         prev += len;
     }
-    this->totalLEDs = prev;
+    totalLEDs = prev;
 }
 
 LightStrip::~LightStrip(){
@@ -25,15 +25,16 @@ LightStrip::~LightStrip(){
 struct Position LightStrip::getStripAndPos(int led){
     struct Position pos{};
 
-    for (int i = 0; i < this->numStrips; i++) {
+    for (int i = 0; i < numStrips; i++) {
         if (led < starts[i]) {
             pos.strip = i - 1;
             pos.pos = led - starts[i-1];
             return pos;
         }
     }
-    pos.strip = this->numStrips - 1;
-    pos.pos = led - starts[this->numStrips - 1];
+    pos.strip = numStrips - 1;
+    pos.pos = led - starts[numStrips - 1];
+
     return pos;
 }
 
@@ -43,7 +44,7 @@ void LightStrip::set(int led, CRGB color){
 }
 
 void LightStrip::set(int led, CRGB color, fract8 alpha){
-    if (led > this->totalLEDs) return;
+    if (led > totalLEDs) return;
     Position p = getStripAndPos(led);
     CRGB oldColor = strips[p.strip][p.pos];
     CRGB newColor = blend(oldColor, color, alpha);
@@ -56,11 +57,10 @@ CRGB LightStrip::get(int led){
 }
 
 void LightStrip::clear(){
-    for (int i = 0; i < this->numStrips; i++) {
-        int len = this->lengths[i];
-        for (int j = 0; j < len; j++) {
+    for (int i = 0; i < numStrips; i++) {
+        int len = lengths[i];
+        for (int j = 0; j < len; j++)
             strips[i][j] = CRGB::Black;
-        }
     }
 }
 

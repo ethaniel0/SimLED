@@ -1,5 +1,5 @@
-#ifndef ANIMATIONS_H
-#define ANIMATIONS_H
+#ifndef ANIMATION_FUNCTIONS_H
+#define ANIMATION_FUNCTIONS_H
 
 #include "AnimationFunction.hpp"
 

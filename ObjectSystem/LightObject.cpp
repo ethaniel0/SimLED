@@ -2,24 +2,24 @@
 #include "animations/Animation.hpp"
 
 LightObject::LightObject(int length) {
-    this->pos = 0;
-    this->wrapMode = 0;
-    this->persistent = false;
-    this->opacity = 255;
-    this->colors = std::vector<CRGB>(length);
+    pos = 0;
+    wrapMode = 0;
+    persistent = false;
+    opacity = 255;
+    colors = std::vector<CRGB>(length);
 
     for (int i = 0; i < length; i++) {
-        this->colors[i] = CRGB::Black;
+        colors[i] = CRGB::Black;
     }
 }
 
 LightObject::LightObject(CRGB* colors, int length) {
-    this->pos = 0;
-    this->wrapMode = 0;
-    this->persistent = false;
-    this->opacity = 255;
+    pos = 0;
+    wrapMode = 0;
+    persistent = false;
+    opacity = 255;
+    animations = std::vector<Animation*>();
     this->colors = std::vector<CRGB>(length);
-    this->animations = std::vector<Animation*>();
 
     for (int i = 0; i < length; i++) {
         this->colors[i] = colors[i];
@@ -29,18 +29,18 @@ LightObject::LightObject(CRGB* colors, int length) {
 LightObject::~LightObject() = default;
 
 void LightObject::update() {
-    if (this->animations.empty()) return;
-    for (auto animation : this->animations)
+    if (animations.empty()) return;
+    for (auto animation : animations)
         animation->update();
 }
 
 void LightObject::addAnimation(Animation* animation) {
     animation->linkObject(this);
-    this->animations.push_back(animation);
+    animations.push_back(animation);
 }
 
 void LightObject::setState(int state){
-    for (auto & animation : this->animations)
+    for (auto & animation : animations)
     {
         animation->setState(state);
     }
@@ -48,6 +48,6 @@ void LightObject::setState(int state){
 
 void LightObject::applyToStrip(LightStrip* strip) {
     for (int i = 0; i < this->colors.size(); i++) {
-        strip->set(this->pos + i, this->colors[i]);
+        strip->set(pos + i, colors[i]);
     }
 }

@@ -9,7 +9,7 @@
 #include "LightObject.hpp"
 #include "animations/Animation.hpp"
 #include "animations/BaseAnimation.hpp"
-#include "animations/animations.hpp"
+#include "animations/AnimationFunctions.hpp"
 #include <vector>
 
 class ObjectSystem {
