@@ -220,6 +220,18 @@ FastLED_IS_TOP_LEVEL:STATIC=OFF
 FastLED_SOURCE_DIR:STATIC=/Users/ethanhorowitz/CLionProjects/SimLED/FastLED
 
 //Value Computed by CMake
+Graphics_BINARY_DIR:STATIC=/Users/ethanhorowitz/CLionProjects/SimLED/cmake-build-debug/Graphics
+
+//Value Computed by CMake
+Graphics_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+Graphics_LIB_DEPENDS:STATIC=general;/Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libxd.a;general;/Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libglad.a;general;/Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libglfw3.a;general;-framework Cocoa;general;-framework IOKit;general;-framework CoreFoundation;general;-framework CoreVideo;
+
+//Value Computed by CMake
+Graphics_SOURCE_DIR:STATIC=/Users/ethanhorowitz/CLionProjects/SimLED/Graphics
+
+//Value Computed by CMake
 ObjectSystem_BINARY_DIR:STATIC=/Users/ethanhorowitz/CLionProjects/SimLED/cmake-build-debug/ObjectSystem
 
 //Value Computed by CMake
@@ -330,7 +342,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

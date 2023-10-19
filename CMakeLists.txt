@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(FastLED)
 add_subdirectory(ObjectSystem)
+add_subdirectory(Graphics)
 
 set(LIBXD_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libxd")
 
@@ -29,4 +30,5 @@ endif()
 
 target_link_libraries(SimLED PRIVATE FastLED)
 target_link_libraries(SimLED PRIVATE ObjectSystem)
+target_link_libraries(SimLED PRIVATE Graphics)
 target_include_directories(SimLED PRIVATE ${LIBXD_PATH}/include)

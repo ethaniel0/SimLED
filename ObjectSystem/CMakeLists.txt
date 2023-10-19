@@ -1,7 +1,3 @@
-# FastLED
-# https://github.com/FastLED/FastLED
-# MIT License
-
 cmake_minimum_required(VERSION 3.5)
 
 set(ObjectSystem_SRCS

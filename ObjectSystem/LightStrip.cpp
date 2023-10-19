@@ -43,6 +43,7 @@ void LightStrip::set(int led, CRGB color){
 }
 
 void LightStrip::set(int led, CRGB color, fract8 alpha){
+    if (led > this->totalLEDs) return;
     Position p = getStripAndPos(led);
     CRGB oldColor = strips[p.strip][p.pos];
     CRGB newColor = blend(oldColor, color, alpha);

@@ -151,6 +151,9 @@
 		},
 		{
 			"path" : "ObjectSystem/CMakeLists.txt"
+		},
+		{
+			"path" : "Graphics/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

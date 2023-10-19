@@ -29,10 +29,9 @@ LightObject::LightObject(CRGB* colors, int length) {
 LightObject::~LightObject() = default;
 
 void LightObject::update() {
-    for (auto & animation : this->animations)
-    {
+    if (this->animations.empty()) return;
+    for (auto animation : this->animations)
         animation->update();
-    }
 }
 
 void LightObject::addAnimation(Animation* animation) {

@@ -47,12 +47,12 @@ cmake_ninja_workdir = /Users/ethanhorowitz/CLionProjects/SimLED/cmake-build-debu
 #############################################
 # Order-only phony target for SimLED
 
-build cmake_object_order_depends_target_SimLED: phony || cmake_object_order_depends_target_FastLED cmake_object_order_depends_target_ObjectSystem
+build cmake_object_order_depends_target_SimLED: phony || cmake_object_order_depends_target_FastLED cmake_object_order_depends_target_Graphics cmake_object_order_depends_target_ObjectSystem
 
 build CMakeFiles/SimLED.dir/main.cpp.o: CXX_COMPILER__SimLED_unscanned_Debug /Users/ethanhorowitz/CLionProjects/SimLED/main.cpp || cmake_object_order_depends_target_SimLED
   DEP_FILE = CMakeFiles/SimLED.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  INCLUDES = -I/Users/ethanhorowitz/CLionProjects/SimLED/libxd/include -I/Users/ethanhorowitz/CLionProjects/SimLED/FastLED/src -I/Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem
+  INCLUDES = -I/Users/ethanhorowitz/CLionProjects/SimLED/libxd/include -I/Users/ethanhorowitz/CLionProjects/SimLED/FastLED/src -I/Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem -I/Users/ethanhorowitz/CLionProjects/SimLED/Graphics
   OBJECT_DIR = CMakeFiles/SimLED.dir
   OBJECT_FILE_DIR = CMakeFiles/SimLED.dir
 
@@ -64,9 +64,9 @@ build CMakeFiles/SimLED.dir/main.cpp.o: CXX_COMPILER__SimLED_unscanned_Debug /Us
 #############################################
 # Link the executable SimLED
 
-build SimLED: CXX_EXECUTABLE_LINKER__SimLED_Debug CMakeFiles/SimLED.dir/main.cpp.o | /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libxd.a /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libglad.a /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libglfw3.a FastLED/libFastLED.a ObjectSystem/libObjectSystem.a || FastLED/libFastLED.a ObjectSystem/libObjectSystem.a
+build SimLED: CXX_EXECUTABLE_LINKER__SimLED_Debug CMakeFiles/SimLED.dir/main.cpp.o | /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libxd.a /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libglad.a /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libglfw3.a FastLED/libFastLED.a ObjectSystem/libObjectSystem.a Graphics/libGraphics.a /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libxd.a /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libglad.a /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libglfw3.a || FastLED/libFastLED.a Graphics/libGraphics.a ObjectSystem/libObjectSystem.a
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
-  LINK_LIBRARIES = /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libxd.a  /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libglad.a  /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation  -framework CoreVideo  FastLED/libFastLED.a  ObjectSystem/libObjectSystem.a
+  LINK_LIBRARIES = /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libxd.a  /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libglad.a  /Users/ethanhorowitz/CLionProjects/SimLED/libxd/lib/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation  -framework CoreVideo  FastLED/libFastLED.a  ObjectSystem/libObjectSystem.a  Graphics/libGraphics.a  /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libxd.a  /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libglad.a  /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation  -framework CoreVideo
   OBJECT_DIR = CMakeFiles/SimLED.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -296,13 +296,85 @@ build ObjectSystem/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build ObjectSystem/rebuild_cache: phony ObjectSystem/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/ethanhorowitz/CLionProjects/SimLED/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target Graphics
+
+
+#############################################
+# Order-only phony target for Graphics
+
+build cmake_object_order_depends_target_Graphics: phony || Graphics/CMakeFiles/Graphics.dir
+
+build Graphics/CMakeFiles/Graphics.dir/GraphicsUtils.cpp.o: CXX_COMPILER__Graphics_unscanned_Debug /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/GraphicsUtils.cpp || cmake_object_order_depends_target_Graphics
+  DEP_FILE = Graphics/CMakeFiles/Graphics.dir/GraphicsUtils.cpp.o.d
+  FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/include -I/Users/ethanhorowitz/CLionProjects/SimLED/Graphics
+  OBJECT_DIR = Graphics/CMakeFiles/Graphics.dir
+  OBJECT_FILE_DIR = Graphics/CMakeFiles/Graphics.dir
+
+build Graphics/CMakeFiles/Graphics.dir/StripElement.cpp.o: CXX_COMPILER__Graphics_unscanned_Debug /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/StripElement.cpp || cmake_object_order_depends_target_Graphics
+  DEP_FILE = Graphics/CMakeFiles/Graphics.dir/StripElement.cpp.o.d
+  FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/include -I/Users/ethanhorowitz/CLionProjects/SimLED/Graphics
+  OBJECT_DIR = Graphics/CMakeFiles/Graphics.dir
+  OBJECT_FILE_DIR = Graphics/CMakeFiles/Graphics.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target Graphics
+
+
+#############################################
+# Link the static library Graphics/libGraphics.a
+
+build Graphics/libGraphics.a: CXX_STATIC_LIBRARY_LINKER__Graphics_Debug Graphics/CMakeFiles/Graphics.dir/GraphicsUtils.cpp.o Graphics/CMakeFiles/Graphics.dir/StripElement.cpp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = Graphics/CMakeFiles/Graphics.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Graphics/libGraphics.a
+  TARGET_PDB = Graphics.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build Graphics/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/ethanhorowitz/CLionProjects/SimLED/cmake-build-debug/Graphics && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Graphics/edit_cache: phony Graphics/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Graphics/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/ethanhorowitz/CLionProjects/SimLED/cmake-build-debug/Graphics && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/ethanhorowitz/CLionProjects/SimLED -B/Users/ethanhorowitz/CLionProjects/SimLED/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Graphics/rebuild_cache: phony Graphics/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build FastLED: phony FastLED/libFastLED.a
 
+build Graphics: phony Graphics/libGraphics.a
+
 build ObjectSystem: phony ObjectSystem/libObjectSystem.a
 
 build libFastLED.a: phony FastLED/libFastLED.a
+
+build libGraphics.a: phony Graphics/libGraphics.a
 
 build libObjectSystem.a: phony ObjectSystem/libObjectSystem.a
 
@@ -314,7 +386,7 @@ build libObjectSystem.a: phony ObjectSystem/libObjectSystem.a
 #############################################
 # Folder: /Users/ethanhorowitz/CLionProjects/SimLED/cmake-build-debug
 
-build all: phony SimLED FastLED/all ObjectSystem/all
+build all: phony SimLED FastLED/all ObjectSystem/all Graphics/all
 
 # =============================================================================
 
@@ -322,6 +394,13 @@ build all: phony SimLED FastLED/all ObjectSystem/all
 # Folder: /Users/ethanhorowitz/CLionProjects/SimLED/cmake-build-debug/FastLED
 
 build FastLED/all: phony FastLED/libFastLED.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/ethanhorowitz/CLionProjects/SimLED/cmake-build-debug/Graphics
+
+build Graphics/all: phony Graphics/libGraphics.a
 
 # =============================================================================
 
@@ -337,14 +416,14 @@ build ObjectSystem/all: phony ObjectSystem/libObjectSystem.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/ethanhorowitz/CLionProjects/SimLED/CMakeLists.txt /Users/ethanhorowitz/CLionProjects/SimLED/FastLED/CMakeLists.txt /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/ethanhorowitz/CLionProjects/SimLED/CMakeLists.txt /Users/ethanhorowitz/CLionProjects/SimLED/FastLED/CMakeLists.txt /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/CMakeLists.txt /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/ethanhorowitz/CLionProjects/SimLED/CMakeLists.txt /Users/ethanhorowitz/CLionProjects/SimLED/FastLED/CMakeLists.txt /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/ethanhorowitz/CLionProjects/SimLED/CMakeLists.txt /Users/ethanhorowitz/CLionProjects/SimLED/FastLED/CMakeLists.txt /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/CMakeLists.txt /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
 
 
 #############################################

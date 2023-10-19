@@ -14,19 +14,22 @@ ObjectSystem::ObjectSystem(LightStrip* strip){
 }
 
 void ObjectSystem::update(){
+    this->strip->clear();
+
     int numObjects = (int) this->objects.size();
-    for (int i = numObjects - 1; i >= 0; i--){
-        LightObject* obj = this->objects[i];
+
+    for (int i = numObjects - 1; i >= 0; i--) {
+
+        LightObject *obj = this->objects[i];
         obj->update();
-        if (!obj->persistent && !inView(obj, this->strip->totalLEDs)){
+
+        if (!obj->persistent && !inView(obj, this->strip->totalLEDs)) {
             this->objects.erase(this->objects.begin() + i);
             numObjects--;
-        }
-        else {
+        } else {
             obj->applyToStrip(this->strip);
         }
     }
-
 
     for (auto obj : this->objects){
         if (inView(obj, this->strip->totalLEDs)){

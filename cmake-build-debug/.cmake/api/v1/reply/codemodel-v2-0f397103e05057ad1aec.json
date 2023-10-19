@@ -9,7 +9,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
@@ -20,7 +21,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -50,6 +51,21 @@
 					"source" : "ObjectSystem",
 					"targetIndexes" : 
 					[
+						2
+					]
+				},
+				{
+					"build" : "Graphics",
+					"jsonFile" : "directory-Graphics-Debug-674282de44d946320518.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "Graphics",
+					"targetIndexes" : 
+					[
 						1
 					]
 				}
@@ -61,7 +77,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"directoryIndexes" : 
 					[
@@ -70,7 +87,7 @@
 					"name" : "SimLED",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -91,6 +108,18 @@
 						2
 					],
 					"name" : "ObjectSystem",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "Graphics",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -108,16 +137,23 @@
 					"projectIndex" : 1
 				},
 				{
+					"directoryIndex" : 3,
+					"id" : "Graphics::@1ff572c405f46b43e0b2",
+					"jsonFile" : "target-Graphics-Debug-952a670c6d85767c1259.json",
+					"name" : "Graphics",
+					"projectIndex" : 3
+				},
+				{
 					"directoryIndex" : 2,
 					"id" : "ObjectSystem::@2c0ebdc361c2e5244894",
-					"jsonFile" : "target-ObjectSystem-Debug-281e96e2d987bb723e31.json",
+					"jsonFile" : "target-ObjectSystem-Debug-aaa321b2a29e889c0f1a.json",
 					"name" : "ObjectSystem",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "SimLED::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SimLED-Debug-80398861840c4f4ec34c.json",
+					"jsonFile" : "target-SimLED-Debug-9d445923ea7e212377a0.json",
 					"name" : "SimLED",
 					"projectIndex" : 0
 				}

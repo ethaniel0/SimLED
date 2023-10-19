@@ -703,7 +703,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "4"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1136,6 +1136,54 @@
 			],
 			"type" : "STATIC",
 			"value" : "/Users/ethanhorowitz/CLionProjects/SimLED/FastLED"
+		},
+		{
+			"name" : "Graphics_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/ethanhorowitz/CLionProjects/SimLED/cmake-build-debug/Graphics"
+		},
+		{
+			"name" : "Graphics_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "Graphics_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;/Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libxd.a;general;/Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libglad.a;general;/Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libglfw3.a;general;-framework Cocoa;general;-framework IOKit;general;-framework CoreFoundation;general;-framework CoreVideo;"
+		},
+		{
+			"name" : "Graphics_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/ethanhorowitz/CLionProjects/SimLED/Graphics"
 		},
 		{
 			"name" : "ObjectSystem_BINARY_DIR",
