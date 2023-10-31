@@ -2054,7 +2054,7 @@ void map_data_into_colors_through_palette(
 /// ...and so on and so forth for the CRGB::green and CRGB::blue channels.
 ///
 /// Additionally, there are two significant visual improvements
-/// to this algorithm implemented here. First is this:
+/// to this algorithm implemented here. first is this:
 ///   * When increasing a channel, it is stepped up by ONE.
 ///   * When decreasing a channel, it is stepped down by TWO.
 ///

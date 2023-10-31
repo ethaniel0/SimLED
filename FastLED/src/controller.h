@@ -94,7 +94,7 @@ public:
     /// Initialize the LED controller
     virtual void init() = 0;
 
-    /// Clear out/zero out the given number of LEDs.
+    /// clear out/zero out the given number of LEDs.
     /// @param nLeds the number of LEDs to clear
     virtual void clearLeds(int nLeds) { showColor(CRGB::Black, nLeds, CRGB::Black); }
 

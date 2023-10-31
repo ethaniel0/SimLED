@@ -1,7 +1,8 @@
 #ifndef ANIMATION_FUNCTIONS_H
 #define ANIMATION_FUNCTIONS_H
 
-#include "AnimationFunction.hpp"
+#include "AnimationFunction.h"
+#include "../Arduino/Arduino.h"
 
 class EaseTransform: public AnimationFunction {
     public:
@@ -9,6 +10,7 @@ class EaseTransform: public AnimationFunction {
         int end;
         EaseTransform(int start, int end);
         int getValue(int time, int duration) override;
+        AnimationFunction* clone() override;
 };
 
 class LinearTransform: public AnimationFunction {
@@ -17,6 +19,7 @@ class LinearTransform: public AnimationFunction {
         int end;
         LinearTransform(int start, int end);
         int getValue(int time, int duration) override;
+        AnimationFunction* clone() override;
 };
 
 class PerlinTransform: public AnimationFunction {
@@ -26,6 +29,7 @@ class PerlinTransform: public AnimationFunction {
         int speed;
         PerlinTransform(int speed, int min, int max);
         int getValue(int time, int duration) override;
+        AnimationFunction* clone() override;
 };
 
 class RandomTransform: public AnimationFunction {
@@ -34,6 +38,7 @@ class RandomTransform: public AnimationFunction {
         int max;
         RandomTransform(int min, int max);
         int getValue(int time, int duration) override;
+        AnimationFunction* clone() override;
 };
 
 class StaticTransform: public AnimationFunction {
@@ -41,6 +46,7 @@ class StaticTransform: public AnimationFunction {
         int val;
         explicit StaticTransform(int val);
         int getValue(int time, int duration) override;
+        AnimationFunction* clone() override;
 };
 
 #endif

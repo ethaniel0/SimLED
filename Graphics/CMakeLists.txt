@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 set(Graphics_SRCS
         GraphicsUtils.cpp
         StripElement.cpp
+        Button.cpp
 )
 
 set(LIBXD_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../libxd")

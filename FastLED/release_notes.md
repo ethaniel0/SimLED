@@ -81,7 +81,7 @@ FastLED 3.2.10
 
 FastLED 3.2.9
 =============
-* Update ItsyBitsy support
+* update ItsyBitsy support
 * Remove conflicting types courtesy of an esp8266 framework update
 * Fixes to clockless M0 code to allow for more interrupt enabled environments
 * ATTiny25 compilation fix
@@ -253,7 +253,7 @@ FastLED2
 
 ## Release Candidate 6
 * Rename library, offically, to FastLED, move to github
-* Update keywords with all the new stuffs
+* update keywords with all the new stuffs
 
 ## Release Candidate 5
 * Gemma and Trinket: supported except for global "setBrightness"

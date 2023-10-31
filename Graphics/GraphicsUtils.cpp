@@ -13,5 +13,32 @@ void testCircle(int width, int height){
     int radius = 100;
     xd::fill(color(255, 0, 0));
     xd::ellipse(x, y, x, y);
+}
 
+struct Point detectedMousePos{0, 0};
+
+bool isMousePressed = false;
+
+bool mouseIsPressed(){
+    return isMousePressed;
+}
+
+struct Point mousePos(){
+    return detectedMousePos;
+}
+
+
+
+void mouseMove(float x, float y){
+    detectedMousePos.x = (int)x;
+    detectedMousePos.y = (int)y;
+}
+
+void pressMouse(int i){ isMousePressed = true; }
+void releaseMouse(int i){ isMousePressed = false; }
+
+void trackMouse(){
+    xd::mouseMoved(&mouseMove);
+    xd::mousePressed(&pressMouse);
+    xd::mouseReleased(&releaseMouse);
 }

@@ -1,7 +1,7 @@
 #ifndef ANIMATION_H
 #define ANIMATION_H
 
-#include "../LightObject.hpp"
+#include "../objects/LightObject.h"
 
 class LightObject;
 
@@ -15,6 +15,8 @@ class Animation{
         /// @brief sets the object that the animation applies to (only one at a time)
         /// @param object the object to apply the animation to
         void linkObject(LightObject* object);
+
+        virtual Animation* clone() = 0;
     
     protected:
         LightObject* obj{};

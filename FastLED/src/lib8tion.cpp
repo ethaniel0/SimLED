@@ -21,7 +21,7 @@ uint16_t rand16seed = RAND16_SEED;
 //
 //  There are two techniques that make these routines
 //  faster than the standard avr-libc routines.
-//  First, the loops are unrolled 2X, meaning that
+//  first, the loops are unrolled 2X, meaning that
 //  the average loop overhead is cut in half.
 //  And second, the compare-and-branch at the bottom
 //  of each loop decrements the low byte of the

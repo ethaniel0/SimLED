@@ -21,7 +21,7 @@ namespace glm
 	/// @addtogroup core_func_packing
 	/// @{
 
-	/// First, converts each component of the normalized floating-point value v into 8- or 16-bit integer values. 
+	/// first, converts each component of the normalized floating-point value v into 8- or 16-bit integer values.
 	/// Then, the results are packed into the returned 32-bit unsigned integer.
 	/// 
 	/// The conversion for component c of v to fixed point is done as follows:
@@ -34,7 +34,7 @@ namespace glm
 	/// @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.4 Floating-Point Pack and Unpack Functions</a>
 	GLM_FUNC_DECL uint packUnorm2x16(vec2 const& v);
 
-	/// First, converts each component of the normalized floating-point value v into 8- or 16-bit integer values. 
+	/// first, converts each component of the normalized floating-point value v into 8- or 16-bit integer values.
 	/// Then, the results are packed into the returned 32-bit unsigned integer.
 	/// 
 	/// The conversion for component c of v to fixed point is done as follows:
@@ -47,7 +47,7 @@ namespace glm
 	/// @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.4 Floating-Point Pack and Unpack Functions</a>
 	GLM_FUNC_DECL uint packSnorm2x16(vec2 const& v);
 
-	/// First, converts each component of the normalized floating-point value v into 8- or 16-bit integer values. 
+	/// first, converts each component of the normalized floating-point value v into 8- or 16-bit integer values.
 	/// Then, the results are packed into the returned 32-bit unsigned integer.
 	/// 
 	/// The conversion for component c of v to fixed point is done as follows:
@@ -60,7 +60,7 @@ namespace glm
 	/// @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.4 Floating-Point Pack and Unpack Functions</a>
 	GLM_FUNC_DECL uint packUnorm4x8(vec4 const& v);
 
-	/// First, converts each component of the normalized floating-point value v into 8- or 16-bit integer values. 
+	/// first, converts each component of the normalized floating-point value v into 8- or 16-bit integer values.
 	/// Then, the results are packed into the returned 32-bit unsigned integer.
 	/// 
 	/// The conversion for component c of v to fixed point is done as follows:
@@ -73,7 +73,7 @@ namespace glm
 	/// @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.4 Floating-Point Pack and Unpack Functions</a>
 	GLM_FUNC_DECL uint packSnorm4x8(vec4 const& v);
 
-	/// First, unpacks a single 32-bit unsigned integer p into a pair of 16-bit unsigned integers, four 8-bit unsigned integers, or four 8-bit signed integers. 
+	/// first, unpacks a single 32-bit unsigned integer p into a pair of 16-bit unsigned integers, four 8-bit unsigned integers, or four 8-bit signed integers.
 	/// Then, each component is converted to a normalized floating-point value to generate the returned two- or four-component vector.
 	/// 
 	/// The conversion for unpacked fixed-point value f to floating point is done as follows:
@@ -86,7 +86,7 @@ namespace glm
 	/// @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.4 Floating-Point Pack and Unpack Functions</a>
 	GLM_FUNC_DECL vec2 unpackUnorm2x16(uint p);
 
-	/// First, unpacks a single 32-bit unsigned integer p into a pair of 16-bit unsigned integers, four 8-bit unsigned integers, or four 8-bit signed integers. 
+	/// first, unpacks a single 32-bit unsigned integer p into a pair of 16-bit unsigned integers, four 8-bit unsigned integers, or four 8-bit signed integers.
 	/// Then, each component is converted to a normalized floating-point value to generate the returned two- or four-component vector.
 	/// 
 	/// The conversion for unpacked fixed-point value f to floating point is done as follows:
@@ -99,7 +99,7 @@ namespace glm
 	/// @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.4 Floating-Point Pack and Unpack Functions</a>
 	GLM_FUNC_DECL vec2 unpackSnorm2x16(uint p);
 
-	/// First, unpacks a single 32-bit unsigned integer p into a pair of 16-bit unsigned integers, four 8-bit unsigned integers, or four 8-bit signed integers. 
+	/// first, unpacks a single 32-bit unsigned integer p into a pair of 16-bit unsigned integers, four 8-bit unsigned integers, or four 8-bit signed integers.
 	/// Then, each component is converted to a normalized floating-point value to generate the returned two- or four-component vector.
 	/// 
 	/// The conversion for unpacked fixed-point value f to floating point is done as follows:
@@ -112,7 +112,7 @@ namespace glm
 	/// @see <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.pdf">GLSL 4.20.8 specification, section 8.4 Floating-Point Pack and Unpack Functions</a>
 	GLM_FUNC_DECL vec4 unpackUnorm4x8(uint p);
 
-	/// First, unpacks a single 32-bit unsigned integer p into a pair of 16-bit unsigned integers, four 8-bit unsigned integers, or four 8-bit signed integers. 
+	/// first, unpacks a single 32-bit unsigned integer p into a pair of 16-bit unsigned integers, four 8-bit unsigned integers, or four 8-bit signed integers.
 	/// Then, each component is converted to a normalized floating-point value to generate the returned two- or four-component vector.
 	/// 
 	/// The conversion for unpacked fixed-point value f to floating point is done as follows:

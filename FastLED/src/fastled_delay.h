@@ -2,7 +2,7 @@
 #define __INC_FL_DELAY_H
 
 #include "FastLED.h"
-#include "arduinoFunctions.h"
+#include "../../Arduino/Arduino.h"
 
 /// @file fastled_delay.h
 /// Utility functions and classes for managing delay cycles

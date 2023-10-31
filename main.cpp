@@ -1,30 +1,36 @@
-#include "ObjectSystem/ObjectSystem.hpp"
+#include "src/ObjectSystem.h"
 #include <xd/xd.hpp>
-#include "Graphics/StripElement.h"
+#include "Graphics.h"
 #include <cmath>
+#include <chrono>
+#include <thread>
 
 using namespace xd;
 
 StripElement* strip1;
 StripElement* strip2;
-ObjectSystem* objsystem;
+ObjectSystem* objectSystem;
 
-CRGB* strip1Arr;
-CRGB* strip2Arr;
+Button* state1;
+
+void action1(int _){
+    objectSystem->setState(0);
+}
 
 void setup() {
     size(640, 480);
 
-    strip1Arr = new CRGB[30];
-    strip2Arr = new CRGB[30];
-    auto* strip = new LightStrip(2, new CRGB*[2]{strip1Arr, strip2Arr}, new int[2]{30, 30});
+    trackMouse();
 
-    strip1 = new StripElement(strip1Arr, 30);
+    objectSystem = new ObjectSystem();
+
+    objectSystem->strip.addStrip(30);
+    objectSystem->strip.addStrip(30);
+
+    strip1 = new StripElement(objectSystem->strip.getSegment(0), 30);
     strip1->setParameters(100, 460,  -M_PI/3, 15, 15);
-    strip2 = new StripElement(strip2Arr, 30);
+    strip2 = new StripElement(objectSystem->strip.getSegment(1), 30);
     strip2->setParameters(550, 460, -2*M_PI/3, 15, 15);
-
-    objsystem = new ObjectSystem(strip);
 
     auto* obj = new LightObject(10);
     obj->persistent = true;
@@ -32,36 +38,41 @@ void setup() {
     gradient->bindToLength = true;
     gradient->addFunction(new LinearTransform(0, 255));
     gradient->addFunction(new StaticTransform(255));
-    gradient->bindToLength = true;
     obj->addAnimation(gradient);
 
     auto* anim = new BaseAnimation(60, true, EditableProperties::POSITION);
-//    auto* ltransform = ;
     anim->addFunction(new LinearTransform(0, 80));
+    anim->addAbsoluteStateTrigger(0, 0);
     obj->addAnimation(anim);
 
-    //    LightObject obj2(60);
-    //    obj2.pos = 0;
-    //    BaseAnimation anim2(255*20, false, EditableProperties::COLORS);
-    //    LinearTransform ltransform2(0, 255*20);
-    //    anim2.addFunction(&ltransform2);
-    //    obj2.addAnimation(&anim2);
+    auto obj2 = new LightObject(60);
+    auto anim2 = new BaseAnimation(255*20, false, EditableProperties::COLORS);
+    anim2->addFunction(new LinearTransform(0, 255*20));
+    obj2->addAnimation(anim2);
 
-    objsystem->add_object(obj);
-    //    objsystem.add_object(&obj2);
+    objectSystem->addObject(obj2);
+    objectSystem->addObject(obj);
+
+    state1 = new Button(new char[]{'1'}, 10, 10, 80, 25);
+    state1->fontsize = 30;
+    state1->action = action1;
 }
 
 void draw() {
     background(color(0, 0, 0));
     strip1->draw();
     strip2->draw();
-//    testCircle(640, 480);
-//    printf("led 1 color: %d, %d, %d\n", strip1Arr[0].r, strip1Arr[0].g, strip1Arr[0].b);
 
+    fill(color(255, 255, 255));
+    state1->draw();
 
-    objsystem->update();
+    objectSystem->update();
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
 }
 
 void destroy() {
-
+    delete objectSystem;
+    delete strip1;
+    delete strip2;
+    delete state1;
 }

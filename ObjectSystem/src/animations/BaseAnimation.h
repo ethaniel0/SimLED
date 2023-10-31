@@ -1,11 +1,10 @@
 #ifndef BASEANIMATION_H
 #define BASEANIMATION_H
 
-#include "Animation.hpp"
-#include "../LightObject.hpp"
-#include "AnimationFunction.hpp"
-#include <vector>
-#include <map>
+#include "Animation.h"
+#include "../objects/LightObject.h"
+#include "AnimationFunction.h"
+#include "../linkedlist/LinkedList.h"
 
 class BaseAnimation : public Animation {
   public:
@@ -26,7 +25,9 @@ class BaseAnimation : public Animation {
 
     BaseAnimation(int duration, bool loop, EditableProperties bind);
 
-    /// @brief Update the animation
+    ~BaseAnimation();
+
+    /// @brief update the animation
     void update() override;
 
     /// @brief returns if the animation is finished
@@ -39,6 +40,8 @@ class BaseAnimation : public Animation {
     /// @brief sets the state of the animation, according to the absolute and relative state triggers
     /// @param state the number of the state to transition to
     void setState(int state) override;
+
+    Animation* clone() override;
 
     /// @brief Adds an animation function to the animation, to be used for
     ///        adjusting position, modifying the object's colors, etc. One function
@@ -59,9 +62,9 @@ class BaseAnimation : public Animation {
   private:
     bool done;
     EditableProperties bind;
-    std::vector<AnimationFunction*> funcs;
-    std::map<int, int> absoluteStateTriggers;
-    std::map<int, int> relativeStateTriggers;
+    LinkedList<AnimationFunction*> funcs;
+    int absoluteStateTriggers[16];
+    int relativeStateTriggers[16];
 };
 
 #endif

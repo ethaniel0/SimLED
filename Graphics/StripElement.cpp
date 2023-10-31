@@ -25,15 +25,14 @@ void StripElement::setParameters(int x, int y, double angle, int ledSize, int le
 }
 
 void StripElement::draw(){
-    double x_step = cos(this->angle) * this->ledSpacing;
-    double y_step = sin(this->angle) * this->ledSpacing;
-    for (int i = 0; i < this->length; i++) {
+    double x_step = cos(angle) * ledSpacing;
+    double y_step = sin(angle) * ledSpacing;
+    for (int i = 0; i < length; i++) {
         int lx = (int)(this->x + i * x_step);
         int ly = (int)(this->y + i * y_step);
 
         xd::stroke(color(255, 255, 255));
         xd::fill(color(leds[i].r, leds[i].g, leds[i].b));
         xd::ellipse((float)lx, (float)ly, (float)this->ledSize, (float)this->ledSize);
-//        printf("     led %d color: (%d, %d, %d)\n", i, leds[i].r, leds[i].g, leds[i].b);
     }
 }
