@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libObjectSystem.a CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o CMakeFiles/ObjectSystem.dir/LightObject.cpp.o CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o CMakeFiles/ObjectSystem.dir/animations/animations.cpp.o CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libObjectSystem.a
