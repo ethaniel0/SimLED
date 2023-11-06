@@ -63,10 +63,10 @@ void * memset8 ( void * ptr, uint8_t val, uint16_t num )
 
 
 //__attribute__ ((noinline))
-void * memcpy8 ( void * dst, const void* src, uint16_t num )
+void * memcpy8 ( void * dst, const void* lib, uint16_t num )
 {
     asm volatile(
-         "  movw r30, %[src]        \n\t"
+         "  movw r30, %[lib]        \n\t"
          "  movw r26, %[dst]        \n\t"
          "  sbrs %A[num], 0         \n\t"
          "  rjmp Lcpyeven_%=        \n\t"
@@ -83,7 +83,7 @@ void * memcpy8 ( void * dst, const void* src, uint16_t num )
          "  sbci %B[num], 0         \n\t"
          "  brcc Lcpyloop_%=        \n\t"
          : [num] "+r" (num)
-         : [src] "r" (src),
+         : [lib] "r" (lib),
            [dst] "r" (dst)
          : "memory"
          );
@@ -91,17 +91,17 @@ void * memcpy8 ( void * dst, const void* src, uint16_t num )
 }
 
 //__attribute__ ((noinline))
-void * memmove8 ( void * dst, const void* src, uint16_t num )
+void * memmove8 ( void * dst, const void* lib, uint16_t num )
 {
-    if( src > dst) {
-        // if src > dst then we can use the forward-stepping memcpy8
-        return memcpy8( dst, src, num);
+    if( lib > dst) {
+        // if lib > dst then we can use the forward-stepping memcpy8
+        return memcpy8( dst, lib, num);
     } else {
-        // if src < dst then we have to step backward:
+        // if lib < dst then we have to step backward:
         dst = (char*)dst + num;
-        src = (char*)src + num;
+        lib = (char*)lib + num;
         asm volatile(
-             "  movw r30, %[src]        \n\t"
+             "  movw r30, %[lib]        \n\t"
              "  movw r26, %[dst]        \n\t"
              "  sbrs %A[num], 0         \n\t"
              "  rjmp Lmoveven_%=        \n\t"
@@ -118,7 +118,7 @@ void * memmove8 ( void * dst, const void* src, uint16_t num )
              "  sbci %B[num], 0         \n\t"
              "  brcc Lmovloop_%=        \n\t"
              : [num] "+r" (num)
-             : [src] "r" (src),
+             : [lib] "r" (lib),
                [dst] "r" (dst)
              : "memory"
              );

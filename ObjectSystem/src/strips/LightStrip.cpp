@@ -13,12 +13,13 @@ LightStrip::~LightStrip(){
     strips.moveToStart();
     for (int i = 0; i < numStrips; i++) {
         delete[] strips.current();
+        strips.next();
     }
+    strips.clear();
 }
 
 void LightStrip::addStrip(int length) {
     CRGB* strip = new CRGB[length];
-    starts.append(totalLEDs);
     strips.append(strip);
     lengths.append(length);
     totalLEDs += length;
@@ -32,33 +33,26 @@ int LightStrip::size() const{
 struct Position LightStrip::getStripAndPos(int led){
     struct Position pos{};
 
-    starts.moveToStart();
-
+    lengths.moveToStart();
 
     for (int i = 0; i < numStrips; i++) {
-        if (led < starts.current()) {
-            pos.strip = i - 1;
-            starts.prev();
-            pos.pos = led - starts.current();
+        if (led < lengths.current()) {
+            pos.strip = i;
+            pos.pos = led;
             return pos;
         }
-        starts.next();
+        led -= lengths.current();
+        lengths.next();
     }
 
     pos.strip = numStrips - 1;
-    pos.pos = led - starts.get(numStrips - 1);
+    pos.pos = lengths.current() - 1;
 
     return pos;
 }
 
-void LightStrip::set(int led, CRGB color){
-    if (led > totalLEDs || led < 0) return;
-    Position p = getStripAndPos(led);
-    strips.get(p.strip)[p.pos] = color;
-}
-
 void LightStrip::set(int led, CRGB color, fract8 alpha){
-    if (led > totalLEDs || led < 0) return;
+    if (led >= totalLEDs || led < 0) return;
     Position p = getStripAndPos(led);
 
     CRGB oldColor = strips.get(p.strip)[p.pos];
@@ -67,6 +61,7 @@ void LightStrip::set(int led, CRGB color, fract8 alpha){
 }
 
 CRGB LightStrip::get(int led){
+    if (led >= totalLEDs || led < 0) return CRGB::Black;
     Position p = getStripAndPos(led);
     return strips.get(p.strip)[p.pos];
 }
@@ -82,5 +77,3 @@ void LightStrip::clear(){
         lengths.next();
     }
 }
-
-

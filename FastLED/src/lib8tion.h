@@ -345,8 +345,8 @@ FASTLED_NAMESPACE_BEGIN
 ///  - Optimized memmove, memcpy, and memset, that are
 ///    faster than standard avr-libc 1.8.
 ///      @code
-///      memmove8( dest, src,  bytecount)
-///      memcpy8(  dest, src,  bytecount)
+///      memmove8( dest, lib,  bytecount)
+///      memcpy8(  dest, lib,  bytecount)
 ///      memset8(  buf, value, bytecount)
 ///      @endcode
 ///
@@ -498,8 +498,8 @@ LIB8STATIC sfract15 floatToSfract15( float f)
 
 #if defined(__AVR__) || defined(FASTLED_DOXYGEN)
 extern "C" {
-void * memmove8( void * dst, const void * src, uint16_t num );  ///< Faster alternative to memmove() on AVR
-void * memcpy8 ( void * dst, const void * src, uint16_t num )  __attribute__ ((noinline));  ///< Faster alternative to memcpy() on AVR
+void * memmove8( void * dst, const void * lib, uint16_t num );  ///< Faster alternative to memmove() on AVR
+void * memcpy8 ( void * dst, const void * lib, uint16_t num )  __attribute__ ((noinline));  ///< Faster alternative to memcpy() on AVR
 void * memset8 ( void * ptr, uint8_t value, uint16_t num ) __attribute__ ((noinline)) ;  ///< Faster alternative to memset() on AVR
 }
 #else

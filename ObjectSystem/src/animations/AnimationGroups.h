@@ -8,7 +8,7 @@
 #include "../linkedlist/LinkedList.h"
 #include "Animation.h"
 
-class AnimationSequence : Animation{
+class AnimationSequence : public Animation{
 public:
     bool loop;
     int currentAnimation;
@@ -16,6 +16,7 @@ public:
 
     void addAnimation(Animation* animation);
     void addNextTrigger(int stateNumber);
+    void addPrevTrigger(int stateNumber);
     void addResetTrigger(int stateNumber);
 
     void update() override;
@@ -27,11 +28,12 @@ public:
 private:
     LinkedList<Animation*> animations;
     LinkedList<int> nextStates;
+    LinkedList<int> prevStates;
     LinkedList<int> resetStates;
     bool done;
 };
 
-class AnimationStateMap : Animation {
+class AnimationStateMap : public Animation {
 public:
     AnimationStateMap();
 
@@ -44,7 +46,7 @@ public:
     Animation* clone() override;
 
 private:
-    Animation* stateMap[16];
+    Animation* stateMap[16]{};
     Animation* currentAnimation;
 };
 

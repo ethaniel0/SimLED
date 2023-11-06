@@ -69,127 +69,207 @@ include ObjectSystem/CMakeFiles/ObjectSystem.dir/progress.make
 # Include the compile flags for this target's objects.
 include ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
-ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/LightStrip.cpp
-ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o -MF CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o.d -o CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/LightStrip.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/ObjectSystem.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/ObjectSystem.cpp
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/LightStrip.cpp.i"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/LightStrip.cpp > CMakeFiles/ObjectSystem.dir/LightStrip.cpp.i
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/ObjectSystem.cpp > CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.i
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/LightStrip.cpp.s"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/LightStrip.cpp -o CMakeFiles/ObjectSystem.dir/LightStrip.cpp.s
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/ObjectSystem.cpp -o CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.s
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
-ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/LightObject.cpp
-ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.o"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.o -MF CMakeFiles/ObjectSystem.dir/LightObject.cpp.o.d -o CMakeFiles/ObjectSystem.dir/LightObject.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/LightObject.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/strips/LightStrip.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/strips/LightStrip.cpp
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/LightObject.cpp.i"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/LightObject.cpp > CMakeFiles/ObjectSystem.dir/LightObject.cpp.i
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/strips/LightStrip.cpp > CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.i
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/LightObject.cpp.s"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/LightObject.cpp -o CMakeFiles/ObjectSystem.dir/LightObject.cpp.s
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/strips/LightStrip.cpp -o CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.s
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
-ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/ObjectSystem.cpp
-ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o -MF CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o.d -o CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/ObjectSystem.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/objects/LightObject.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/objects/LightObject.cpp
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.i"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/ObjectSystem.cpp > CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.i
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/objects/LightObject.cpp > CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.i
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.s"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/ObjectSystem.cpp -o CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.s
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/objects/LightObject.cpp -o CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.s
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/Animation.cpp
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o -MF CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o.d -o CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/Animation.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/Animation.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/Animation.cpp
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.i"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/Animation.cpp > CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.i
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/Animation.cpp > CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.i
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.s"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/Animation.cpp -o CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.s
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/Animation.cpp -o CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.s
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/AnimationFunctions.cpp
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o -MF CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o.d -o CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/AnimationFunctions.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/AnimationFunctions.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/AnimationFunctions.cpp
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.i"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/AnimationFunctions.cpp > CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.i
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/AnimationFunctions.cpp > CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.i
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.s"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/AnimationFunctions.cpp -o CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.s
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/AnimationFunctions.cpp -o CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.s
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/BaseAnimation.cpp
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o -MF CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o.d -o CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/BaseAnimation.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/BaseAnimation.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/BaseAnimation.cpp
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.i"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/BaseAnimation.cpp > CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.i
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/BaseAnimation.cpp > CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.i
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.s"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/BaseAnimation.cpp -o CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.s
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/BaseAnimation.cpp -o CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.s
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/AnimationGroups.cpp
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o -MF CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o.d -o CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/AnimationGroups.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/AnimationGroups.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/AnimationGroups.cpp
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.i"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/AnimationGroups.cpp > CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.i
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/AnimationGroups.cpp > CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.i
 
-ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.s"
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/animations/AnimationGroups.cpp -o CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.s
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/animations/AnimationGroups.cpp -o CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.s
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/SystemCreator.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/SystemCreator.cpp
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/SystemCreator.cpp > CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.i
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/SystemCreator.cpp -o CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.s
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/AnimationCreators.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/AnimationCreators.cpp
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/AnimationCreators.cpp > CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.i
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/AnimationCreators.cpp -o CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.s
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/utils.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/utils.cpp
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/utils.cpp > CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.i
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/utils.cpp -o CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.s
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/ObjectCreators.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/ObjectCreators.cpp
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/ObjectCreators.cpp > CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.i
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/creators/ObjectCreators.cpp -o CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.s
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/flags.make
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/objects/Generator.cpp
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.o: ObjectSystem/CMakeFiles/ObjectSystem.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.o"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.o -MF CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.o.d -o CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/objects/Generator.cpp
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.i"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/objects/Generator.cpp > CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.i
+
+ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.s"
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/src/objects/Generator.cpp -o CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.s
 
 # Object files for target ObjectSystem
 ObjectSystem_OBJECTS = \
-"CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o" \
-"CMakeFiles/ObjectSystem.dir/LightObject.cpp.o" \
-"CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o" \
-"CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o" \
-"CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o" \
-"CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o" \
-"CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o"
+"CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.o" \
+"CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.o"
 
 # External object files for target ObjectSystem
 ObjectSystem_EXTERNAL_OBJECTS =
 
-ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o
-ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.o
-ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o
-ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o
-ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o
-ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o
-ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.o
+ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.o
 ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make
 ObjectSystem/libObjectSystem.a: ObjectSystem/CMakeFiles/ObjectSystem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libObjectSystem.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libObjectSystem.a"
 	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && $(CMAKE_COMMAND) -P CMakeFiles/ObjectSystem.dir/cmake_clean_target.cmake
 	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ObjectSystem.dir/link.txt --verbose=$(VERBOSE)
 

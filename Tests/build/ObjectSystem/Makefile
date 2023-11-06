@@ -130,173 +130,293 @@ ObjectSystem/fast:
 	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/build
 .PHONY : ObjectSystem/fast
 
-LightObject.o: LightObject.cpp.o
-.PHONY : LightObject.o
+src/ObjectSystem.o: src/ObjectSystem.cpp.o
+.PHONY : src/ObjectSystem.o
 
 # target to build an object file
-LightObject.cpp.o:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.o
-.PHONY : LightObject.cpp.o
+src/ObjectSystem.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.o
+.PHONY : src/ObjectSystem.cpp.o
 
-LightObject.i: LightObject.cpp.i
-.PHONY : LightObject.i
+src/ObjectSystem.i: src/ObjectSystem.cpp.i
+.PHONY : src/ObjectSystem.i
 
 # target to preprocess a source file
-LightObject.cpp.i:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.i
-.PHONY : LightObject.cpp.i
+src/ObjectSystem.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.i
+.PHONY : src/ObjectSystem.cpp.i
 
-LightObject.s: LightObject.cpp.s
-.PHONY : LightObject.s
+src/ObjectSystem.s: src/ObjectSystem.cpp.s
+.PHONY : src/ObjectSystem.s
 
 # target to generate assembly for a file
-LightObject.cpp.s:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/LightObject.cpp.s
-.PHONY : LightObject.cpp.s
+src/ObjectSystem.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/ObjectSystem.cpp.s
+.PHONY : src/ObjectSystem.cpp.s
 
-LightStrip.o: LightStrip.cpp.o
-.PHONY : LightStrip.o
+src/animations/Animation.o: src/animations/Animation.cpp.o
+.PHONY : src/animations/Animation.o
 
 # target to build an object file
-LightStrip.cpp.o:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.o
-.PHONY : LightStrip.cpp.o
+src/animations/Animation.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.o
+.PHONY : src/animations/Animation.cpp.o
 
-LightStrip.i: LightStrip.cpp.i
-.PHONY : LightStrip.i
+src/animations/Animation.i: src/animations/Animation.cpp.i
+.PHONY : src/animations/Animation.i
 
 # target to preprocess a source file
-LightStrip.cpp.i:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.i
-.PHONY : LightStrip.cpp.i
+src/animations/Animation.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.i
+.PHONY : src/animations/Animation.cpp.i
 
-LightStrip.s: LightStrip.cpp.s
-.PHONY : LightStrip.s
+src/animations/Animation.s: src/animations/Animation.cpp.s
+.PHONY : src/animations/Animation.s
 
 # target to generate assembly for a file
-LightStrip.cpp.s:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/LightStrip.cpp.s
-.PHONY : LightStrip.cpp.s
+src/animations/Animation.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/Animation.cpp.s
+.PHONY : src/animations/Animation.cpp.s
 
-ObjectSystem.o: ObjectSystem.cpp.o
-.PHONY : ObjectSystem.o
+src/animations/AnimationFunctions.o: src/animations/AnimationFunctions.cpp.o
+.PHONY : src/animations/AnimationFunctions.o
 
 # target to build an object file
-ObjectSystem.cpp.o:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.o
-.PHONY : ObjectSystem.cpp.o
+src/animations/AnimationFunctions.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.o
+.PHONY : src/animations/AnimationFunctions.cpp.o
 
-ObjectSystem.i: ObjectSystem.cpp.i
-.PHONY : ObjectSystem.i
+src/animations/AnimationFunctions.i: src/animations/AnimationFunctions.cpp.i
+.PHONY : src/animations/AnimationFunctions.i
 
 # target to preprocess a source file
-ObjectSystem.cpp.i:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.i
-.PHONY : ObjectSystem.cpp.i
+src/animations/AnimationFunctions.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.i
+.PHONY : src/animations/AnimationFunctions.cpp.i
 
-ObjectSystem.s: ObjectSystem.cpp.s
-.PHONY : ObjectSystem.s
+src/animations/AnimationFunctions.s: src/animations/AnimationFunctions.cpp.s
+.PHONY : src/animations/AnimationFunctions.s
 
 # target to generate assembly for a file
-ObjectSystem.cpp.s:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/ObjectSystem.cpp.s
-.PHONY : ObjectSystem.cpp.s
+src/animations/AnimationFunctions.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationFunctions.cpp.s
+.PHONY : src/animations/AnimationFunctions.cpp.s
 
-animations/Animation.o: animations/Animation.cpp.o
-.PHONY : animations/Animation.o
+src/animations/AnimationGroups.o: src/animations/AnimationGroups.cpp.o
+.PHONY : src/animations/AnimationGroups.o
 
 # target to build an object file
-animations/Animation.cpp.o:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.o
-.PHONY : animations/Animation.cpp.o
+src/animations/AnimationGroups.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.o
+.PHONY : src/animations/AnimationGroups.cpp.o
 
-animations/Animation.i: animations/Animation.cpp.i
-.PHONY : animations/Animation.i
+src/animations/AnimationGroups.i: src/animations/AnimationGroups.cpp.i
+.PHONY : src/animations/AnimationGroups.i
 
 # target to preprocess a source file
-animations/Animation.cpp.i:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.i
-.PHONY : animations/Animation.cpp.i
+src/animations/AnimationGroups.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.i
+.PHONY : src/animations/AnimationGroups.cpp.i
 
-animations/Animation.s: animations/Animation.cpp.s
-.PHONY : animations/Animation.s
+src/animations/AnimationGroups.s: src/animations/AnimationGroups.cpp.s
+.PHONY : src/animations/AnimationGroups.s
 
 # target to generate assembly for a file
-animations/Animation.cpp.s:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/Animation.cpp.s
-.PHONY : animations/Animation.cpp.s
+src/animations/AnimationGroups.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/AnimationGroups.cpp.s
+.PHONY : src/animations/AnimationGroups.cpp.s
 
-animations/AnimationFunctions.o: animations/AnimationFunctions.cpp.o
-.PHONY : animations/AnimationFunctions.o
+src/animations/BaseAnimation.o: src/animations/BaseAnimation.cpp.o
+.PHONY : src/animations/BaseAnimation.o
 
 # target to build an object file
-animations/AnimationFunctions.cpp.o:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.o
-.PHONY : animations/AnimationFunctions.cpp.o
+src/animations/BaseAnimation.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.o
+.PHONY : src/animations/BaseAnimation.cpp.o
 
-animations/AnimationFunctions.i: animations/AnimationFunctions.cpp.i
-.PHONY : animations/AnimationFunctions.i
+src/animations/BaseAnimation.i: src/animations/BaseAnimation.cpp.i
+.PHONY : src/animations/BaseAnimation.i
 
 # target to preprocess a source file
-animations/AnimationFunctions.cpp.i:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.i
-.PHONY : animations/AnimationFunctions.cpp.i
+src/animations/BaseAnimation.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.i
+.PHONY : src/animations/BaseAnimation.cpp.i
 
-animations/AnimationFunctions.s: animations/AnimationFunctions.cpp.s
-.PHONY : animations/AnimationFunctions.s
+src/animations/BaseAnimation.s: src/animations/BaseAnimation.cpp.s
+.PHONY : src/animations/BaseAnimation.s
 
 # target to generate assembly for a file
-animations/AnimationFunctions.cpp.s:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationFunctions.cpp.s
-.PHONY : animations/AnimationFunctions.cpp.s
+src/animations/BaseAnimation.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/animations/BaseAnimation.cpp.s
+.PHONY : src/animations/BaseAnimation.cpp.s
 
-animations/AnimationGroups.o: animations/AnimationGroups.cpp.o
-.PHONY : animations/AnimationGroups.o
+src/creators/AnimationCreators.o: src/creators/AnimationCreators.cpp.o
+.PHONY : src/creators/AnimationCreators.o
 
 # target to build an object file
-animations/AnimationGroups.cpp.o:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.o
-.PHONY : animations/AnimationGroups.cpp.o
+src/creators/AnimationCreators.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.o
+.PHONY : src/creators/AnimationCreators.cpp.o
 
-animations/AnimationGroups.i: animations/AnimationGroups.cpp.i
-.PHONY : animations/AnimationGroups.i
+src/creators/AnimationCreators.i: src/creators/AnimationCreators.cpp.i
+.PHONY : src/creators/AnimationCreators.i
 
 # target to preprocess a source file
-animations/AnimationGroups.cpp.i:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.i
-.PHONY : animations/AnimationGroups.cpp.i
+src/creators/AnimationCreators.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.i
+.PHONY : src/creators/AnimationCreators.cpp.i
 
-animations/AnimationGroups.s: animations/AnimationGroups.cpp.s
-.PHONY : animations/AnimationGroups.s
+src/creators/AnimationCreators.s: src/creators/AnimationCreators.cpp.s
+.PHONY : src/creators/AnimationCreators.s
 
 # target to generate assembly for a file
-animations/AnimationGroups.cpp.s:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/AnimationGroups.cpp.s
-.PHONY : animations/AnimationGroups.cpp.s
+src/creators/AnimationCreators.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/AnimationCreators.cpp.s
+.PHONY : src/creators/AnimationCreators.cpp.s
 
-animations/BaseAnimation.o: animations/BaseAnimation.cpp.o
-.PHONY : animations/BaseAnimation.o
+src/creators/ObjectCreators.o: src/creators/ObjectCreators.cpp.o
+.PHONY : src/creators/ObjectCreators.o
 
 # target to build an object file
-animations/BaseAnimation.cpp.o:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.o
-.PHONY : animations/BaseAnimation.cpp.o
+src/creators/ObjectCreators.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.o
+.PHONY : src/creators/ObjectCreators.cpp.o
 
-animations/BaseAnimation.i: animations/BaseAnimation.cpp.i
-.PHONY : animations/BaseAnimation.i
+src/creators/ObjectCreators.i: src/creators/ObjectCreators.cpp.i
+.PHONY : src/creators/ObjectCreators.i
 
 # target to preprocess a source file
-animations/BaseAnimation.cpp.i:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.i
-.PHONY : animations/BaseAnimation.cpp.i
+src/creators/ObjectCreators.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.i
+.PHONY : src/creators/ObjectCreators.cpp.i
 
-animations/BaseAnimation.s: animations/BaseAnimation.cpp.s
-.PHONY : animations/BaseAnimation.s
+src/creators/ObjectCreators.s: src/creators/ObjectCreators.cpp.s
+.PHONY : src/creators/ObjectCreators.s
 
 # target to generate assembly for a file
-animations/BaseAnimation.cpp.s:
-	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/animations/BaseAnimation.cpp.s
-.PHONY : animations/BaseAnimation.cpp.s
+src/creators/ObjectCreators.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/ObjectCreators.cpp.s
+.PHONY : src/creators/ObjectCreators.cpp.s
+
+src/creators/SystemCreator.o: src/creators/SystemCreator.cpp.o
+.PHONY : src/creators/SystemCreator.o
+
+# target to build an object file
+src/creators/SystemCreator.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.o
+.PHONY : src/creators/SystemCreator.cpp.o
+
+src/creators/SystemCreator.i: src/creators/SystemCreator.cpp.i
+.PHONY : src/creators/SystemCreator.i
+
+# target to preprocess a source file
+src/creators/SystemCreator.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.i
+.PHONY : src/creators/SystemCreator.cpp.i
+
+src/creators/SystemCreator.s: src/creators/SystemCreator.cpp.s
+.PHONY : src/creators/SystemCreator.s
+
+# target to generate assembly for a file
+src/creators/SystemCreator.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/SystemCreator.cpp.s
+.PHONY : src/creators/SystemCreator.cpp.s
+
+src/creators/utils.o: src/creators/utils.cpp.o
+.PHONY : src/creators/utils.o
+
+# target to build an object file
+src/creators/utils.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.o
+.PHONY : src/creators/utils.cpp.o
+
+src/creators/utils.i: src/creators/utils.cpp.i
+.PHONY : src/creators/utils.i
+
+# target to preprocess a source file
+src/creators/utils.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.i
+.PHONY : src/creators/utils.cpp.i
+
+src/creators/utils.s: src/creators/utils.cpp.s
+.PHONY : src/creators/utils.s
+
+# target to generate assembly for a file
+src/creators/utils.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/creators/utils.cpp.s
+.PHONY : src/creators/utils.cpp.s
+
+src/objects/Generator.o: src/objects/Generator.cpp.o
+.PHONY : src/objects/Generator.o
+
+# target to build an object file
+src/objects/Generator.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.o
+.PHONY : src/objects/Generator.cpp.o
+
+src/objects/Generator.i: src/objects/Generator.cpp.i
+.PHONY : src/objects/Generator.i
+
+# target to preprocess a source file
+src/objects/Generator.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.i
+.PHONY : src/objects/Generator.cpp.i
+
+src/objects/Generator.s: src/objects/Generator.cpp.s
+.PHONY : src/objects/Generator.s
+
+# target to generate assembly for a file
+src/objects/Generator.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/Generator.cpp.s
+.PHONY : src/objects/Generator.cpp.s
+
+src/objects/LightObject.o: src/objects/LightObject.cpp.o
+.PHONY : src/objects/LightObject.o
+
+# target to build an object file
+src/objects/LightObject.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.o
+.PHONY : src/objects/LightObject.cpp.o
+
+src/objects/LightObject.i: src/objects/LightObject.cpp.i
+.PHONY : src/objects/LightObject.i
+
+# target to preprocess a source file
+src/objects/LightObject.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.i
+.PHONY : src/objects/LightObject.cpp.i
+
+src/objects/LightObject.s: src/objects/LightObject.cpp.s
+.PHONY : src/objects/LightObject.s
+
+# target to generate assembly for a file
+src/objects/LightObject.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/objects/LightObject.cpp.s
+.PHONY : src/objects/LightObject.cpp.s
+
+src/strips/LightStrip.o: src/strips/LightStrip.cpp.o
+.PHONY : src/strips/LightStrip.o
+
+# target to build an object file
+src/strips/LightStrip.cpp.o:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.o
+.PHONY : src/strips/LightStrip.cpp.o
+
+src/strips/LightStrip.i: src/strips/LightStrip.cpp.i
+.PHONY : src/strips/LightStrip.i
+
+# target to preprocess a source file
+src/strips/LightStrip.cpp.i:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.i
+.PHONY : src/strips/LightStrip.cpp.i
+
+src/strips/LightStrip.s: src/strips/LightStrip.cpp.s
+.PHONY : src/strips/LightStrip.s
+
+# target to generate assembly for a file
+src/strips/LightStrip.cpp.s:
+	cd /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build && $(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/src/strips/LightStrip.cpp.s
+.PHONY : src/strips/LightStrip.cpp.s
 
 # Help Target
 help:
@@ -307,27 +427,42 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ObjectSystem"
-	@echo "... LightObject.o"
-	@echo "... LightObject.i"
-	@echo "... LightObject.s"
-	@echo "... LightStrip.o"
-	@echo "... LightStrip.i"
-	@echo "... LightStrip.s"
-	@echo "... ObjectSystem.o"
-	@echo "... ObjectSystem.i"
-	@echo "... ObjectSystem.s"
-	@echo "... animations/Animation.o"
-	@echo "... animations/Animation.i"
-	@echo "... animations/Animation.s"
-	@echo "... animations/AnimationFunctions.o"
-	@echo "... animations/AnimationFunctions.i"
-	@echo "... animations/AnimationFunctions.s"
-	@echo "... animations/AnimationGroups.o"
-	@echo "... animations/AnimationGroups.i"
-	@echo "... animations/AnimationGroups.s"
-	@echo "... animations/BaseAnimation.o"
-	@echo "... animations/BaseAnimation.i"
-	@echo "... animations/BaseAnimation.s"
+	@echo "... src/ObjectSystem.o"
+	@echo "... src/ObjectSystem.i"
+	@echo "... src/ObjectSystem.s"
+	@echo "... src/animations/Animation.o"
+	@echo "... src/animations/Animation.i"
+	@echo "... src/animations/Animation.s"
+	@echo "... src/animations/AnimationFunctions.o"
+	@echo "... src/animations/AnimationFunctions.i"
+	@echo "... src/animations/AnimationFunctions.s"
+	@echo "... src/animations/AnimationGroups.o"
+	@echo "... src/animations/AnimationGroups.i"
+	@echo "... src/animations/AnimationGroups.s"
+	@echo "... src/animations/BaseAnimation.o"
+	@echo "... src/animations/BaseAnimation.i"
+	@echo "... src/animations/BaseAnimation.s"
+	@echo "... src/creators/AnimationCreators.o"
+	@echo "... src/creators/AnimationCreators.i"
+	@echo "... src/creators/AnimationCreators.s"
+	@echo "... src/creators/ObjectCreators.o"
+	@echo "... src/creators/ObjectCreators.i"
+	@echo "... src/creators/ObjectCreators.s"
+	@echo "... src/creators/SystemCreator.o"
+	@echo "... src/creators/SystemCreator.i"
+	@echo "... src/creators/SystemCreator.s"
+	@echo "... src/creators/utils.o"
+	@echo "... src/creators/utils.i"
+	@echo "... src/creators/utils.s"
+	@echo "... src/objects/Generator.o"
+	@echo "... src/objects/Generator.i"
+	@echo "... src/objects/Generator.s"
+	@echo "... src/objects/LightObject.o"
+	@echo "... src/objects/LightObject.i"
+	@echo "... src/objects/LightObject.s"
+	@echo "... src/strips/LightStrip.o"
+	@echo "... src/strips/LightStrip.i"
+	@echo "... src/strips/LightStrip.s"
 .PHONY : help
 
 

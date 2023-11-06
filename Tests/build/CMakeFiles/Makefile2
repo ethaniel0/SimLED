@@ -117,15 +117,32 @@ Graphics/clean: Graphics/CMakeFiles/Graphics.dir/clean
 
 # Recursive "all" directory target.
 ObjectSystem/all: ObjectSystem/CMakeFiles/ObjectSystem.dir/all
+ObjectSystem/all: ObjectSystem/src/Arduino/all
 .PHONY : ObjectSystem/all
 
 # Recursive "preinstall" directory target.
-ObjectSystem/preinstall:
+ObjectSystem/preinstall: ObjectSystem/src/Arduino/preinstall
 .PHONY : ObjectSystem/preinstall
 
 # Recursive "clean" directory target.
 ObjectSystem/clean: ObjectSystem/CMakeFiles/ObjectSystem.dir/clean
+ObjectSystem/clean: ObjectSystem/src/Arduino/clean
 .PHONY : ObjectSystem/clean
+
+#=============================================================================
+# Directory level rules for directory ObjectSystem/src/Arduino
+
+# Recursive "all" directory target.
+ObjectSystem/src/Arduino/all: ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/all
+.PHONY : ObjectSystem/src/Arduino/all
+
+# Recursive "preinstall" directory target.
+ObjectSystem/src/Arduino/preinstall:
+.PHONY : ObjectSystem/src/Arduino/preinstall
+
+# Recursive "clean" directory target.
+ObjectSystem/src/Arduino/clean: ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/clean
+.PHONY : ObjectSystem/src/Arduino/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/SimLEDTests.dir
@@ -133,15 +150,16 @@ ObjectSystem/clean: ObjectSystem/CMakeFiles/ObjectSystem.dir/clean
 # All Build rule for target.
 CMakeFiles/SimLEDTests.dir/all: FastLED/CMakeFiles/FastLED.dir/all
 CMakeFiles/SimLEDTests.dir/all: ObjectSystem/CMakeFiles/ObjectSystem.dir/all
+CMakeFiles/SimLEDTests.dir/all: ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/all
 CMakeFiles/SimLEDTests.dir/all: Graphics/CMakeFiles/Graphics.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=21,22,23,24 "Built target SimLEDTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=28,29,30,31,32,33,34 "Built target SimLEDTests"
 .PHONY : CMakeFiles/SimLEDTests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SimLEDTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles 34
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SimLEDTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles 0
 .PHONY : CMakeFiles/SimLEDTests.dir/rule
@@ -162,7 +180,7 @@ CMakeFiles/SimLEDTests.dir/clean:
 FastLED/CMakeFiles/FastLED.dir/all:
 	$(MAKE) $(MAKESILENT) -f FastLED/CMakeFiles/FastLED.dir/build.make FastLED/CMakeFiles/FastLED.dir/depend
 	$(MAKE) $(MAKESILENT) -f FastLED/CMakeFiles/FastLED.dir/build.make FastLED/CMakeFiles/FastLED.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target FastLED"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10 "Built target FastLED"
 .PHONY : FastLED/CMakeFiles/FastLED.dir/all
 
 # Build rule for subdir invocation for target.
@@ -185,15 +203,15 @@ FastLED/CMakeFiles/FastLED.dir/clean:
 # Target rules for target ObjectSystem/CMakeFiles/ObjectSystem.dir
 
 # All Build rule for target.
-ObjectSystem/CMakeFiles/ObjectSystem.dir/all:
+ObjectSystem/CMakeFiles/ObjectSystem.dir/all: ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/all
 	$(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/depend
 	$(MAKE) $(MAKESILENT) -f ObjectSystem/CMakeFiles/ObjectSystem.dir/build.make ObjectSystem/CMakeFiles/ObjectSystem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20 "Built target ObjectSystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target ObjectSystem"
 .PHONY : ObjectSystem/CMakeFiles/ObjectSystem.dir/all
 
 # Build rule for subdir invocation for target.
 ObjectSystem/CMakeFiles/ObjectSystem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ObjectSystem/CMakeFiles/ObjectSystem.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles 0
 .PHONY : ObjectSystem/CMakeFiles/ObjectSystem.dir/rule
@@ -208,13 +226,39 @@ ObjectSystem/CMakeFiles/ObjectSystem.dir/clean:
 .PHONY : ObjectSystem/CMakeFiles/ObjectSystem.dir/clean
 
 #=============================================================================
+# Target rules for target ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir
+
+# All Build rule for target.
+ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/all:
+	$(MAKE) $(MAKESILENT) -f ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/build.make ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/depend
+	$(MAKE) $(MAKESILENT) -f ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/build.make ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=1,2 "Built target Arduino"
+.PHONY : ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/all
+
+# Build rule for subdir invocation for target.
+ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles 0
+.PHONY : ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/rule
+
+# Convenience name for target.
+Arduino: ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/rule
+.PHONY : Arduino
+
+# clean rule for target.
+ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/clean:
+	$(MAKE) $(MAKESILENT) -f ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/build.make ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/clean
+.PHONY : ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/clean
+
+#=============================================================================
 # Target rules for target Graphics/CMakeFiles/Graphics.dir
 
 # All Build rule for target.
 Graphics/CMakeFiles/Graphics.dir/all:
 	$(MAKE) $(MAKESILENT) -f Graphics/CMakeFiles/Graphics.dir/build.make Graphics/CMakeFiles/Graphics.dir/depend
 	$(MAKE) $(MAKESILENT) -f Graphics/CMakeFiles/Graphics.dir/build.make Graphics/CMakeFiles/Graphics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=9,10,11,12 "Built target Graphics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=11,12,13,14 "Built target Graphics"
 .PHONY : Graphics/CMakeFiles/Graphics.dir/all
 
 # Build rule for subdir invocation for target.

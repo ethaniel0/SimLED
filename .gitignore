@@ -1,0 +1,6 @@
+!Tests/build/runTests.sh
+
+/cmake-build-debug
+/build
+/Tests/build
+/Tests/cmake-build-debug

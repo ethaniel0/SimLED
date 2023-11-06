@@ -7,6 +7,9 @@ class LightObject;
 
 class Animation{
     public:
+
+        virtual ~Animation() = default;
+
         virtual void update() = 0;
         virtual bool isFinished() = 0;
         virtual void reset() = 0;

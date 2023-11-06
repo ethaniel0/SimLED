@@ -83,46 +83,94 @@ CMakeFiles/SimLEDTests.dir/tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SimLEDTests.dir/tests.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/Tests/tests.cpp -o CMakeFiles/SimLEDTests.dir/tests.cpp.s
 
-CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.o: CMakeFiles/SimLEDTests.dir/flags.make
-CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/Tests/LightObjTests.cpp
-CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.o: CMakeFiles/SimLEDTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.o -MF CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.o.d -o CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/Tests/LightObjTests.cpp
+CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.o: CMakeFiles/SimLEDTests.dir/flags.make
+CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/LightObjTests.cpp
+CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.o: CMakeFiles/SimLEDTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.o -MF CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.o.d -o CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/LightObjTests.cpp
 
-CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/Tests/LightObjTests.cpp > CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.i
+CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/LightObjTests.cpp > CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.i
 
-CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/Tests/LightObjTests.cpp -o CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.s
+CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/LightObjTests.cpp -o CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.s
 
-CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.o: CMakeFiles/SimLEDTests.dir/flags.make
-CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/Tests/TestFunctions.cpp
-CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.o: CMakeFiles/SimLEDTests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.o -MF CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.o.d -o CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/Tests/TestFunctions.cpp
+CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.o: CMakeFiles/SimLEDTests.dir/flags.make
+CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Framework/TestFramework.cpp
+CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.o: CMakeFiles/SimLEDTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.o -MF CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.o.d -o CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Framework/TestFramework.cpp
 
-CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/Tests/TestFunctions.cpp > CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.i
+CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Framework/TestFramework.cpp > CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.i
 
-CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/Tests/TestFunctions.cpp -o CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.s
+CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Framework/TestFramework.cpp -o CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.s
+
+CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.o: CMakeFiles/SimLEDTests.dir/flags.make
+CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/StripTests.cpp
+CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.o: CMakeFiles/SimLEDTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.o -MF CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.o.d -o CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/StripTests.cpp
+
+CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/StripTests.cpp > CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.i
+
+CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/StripTests.cpp -o CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.s
+
+CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.o: CMakeFiles/SimLEDTests.dir/flags.make
+CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/AnimationTests.cpp
+CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.o: CMakeFiles/SimLEDTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.o -MF CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.o.d -o CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/AnimationTests.cpp
+
+CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/AnimationTests.cpp > CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.i
+
+CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/AnimationTests.cpp -o CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.s
+
+CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.o: CMakeFiles/SimLEDTests.dir/flags.make
+CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.o: /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/AnimationFunctionTests.cpp
+CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.o: CMakeFiles/SimLEDTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.o -MF CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.o.d -o CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.o -c /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/AnimationFunctionTests.cpp
+
+CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/AnimationFunctionTests.cpp > CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.i
+
+CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ethanhorowitz/CLionProjects/SimLED/Tests/Tests/AnimationFunctionTests.cpp -o CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.s
 
 # Object files for target SimLEDTests
 SimLEDTests_OBJECTS = \
 "CMakeFiles/SimLEDTests.dir/tests.cpp.o" \
-"CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.o" \
-"CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.o"
+"CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.o" \
+"CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.o" \
+"CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.o" \
+"CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.o" \
+"CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.o"
 
 # External object files for target SimLEDTests
 SimLEDTests_EXTERNAL_OBJECTS =
 
 SimLEDTests: CMakeFiles/SimLEDTests.dir/tests.cpp.o
-SimLEDTests: CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.o
-SimLEDTests: CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.o
+SimLEDTests: CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.o
+SimLEDTests: CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.o
+SimLEDTests: CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.o
+SimLEDTests: CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.o
+SimLEDTests: CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.o
 SimLEDTests: CMakeFiles/SimLEDTests.dir/build.make
 SimLEDTests: /Users/ethanhorowitz/CLionProjects/SimLED/Tests/../libxd/lib/libxd.a
 SimLEDTests: /Users/ethanhorowitz/CLionProjects/SimLED/Tests/../libxd/lib/libglad.a
@@ -130,11 +178,12 @@ SimLEDTests: /Users/ethanhorowitz/CLionProjects/SimLED/Tests/../libxd/lib/libglf
 SimLEDTests: FastLED/libFastLED.a
 SimLEDTests: ObjectSystem/libObjectSystem.a
 SimLEDTests: Graphics/libGraphics.a
+SimLEDTests: ObjectSystem/src/Arduino/libArduino.a
 SimLEDTests: /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libxd.a
 SimLEDTests: /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libglad.a
 SimLEDTests: /Users/ethanhorowitz/CLionProjects/SimLED/Graphics/../libxd/lib/libglfw3.a
 SimLEDTests: CMakeFiles/SimLEDTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SimLEDTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable SimLEDTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SimLEDTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

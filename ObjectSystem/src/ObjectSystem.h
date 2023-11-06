@@ -7,9 +7,11 @@
 
 #include "strips/LightStrip.h"
 #include "objects/PlaceableObject.h"
+#include "objects/Generator.h"
 #include "animations/BaseAnimation.h"
 #include "animations/AnimationFunctions.h"
 #include "linkedlist/LinkedList.h"
+#include "creators/SystemCreator.h"
 
 class PlaceableObject;
 

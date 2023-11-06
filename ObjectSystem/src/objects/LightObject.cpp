@@ -1,3 +1,4 @@
+#include <cstdio>
 #include "LightObject.h"
 #include "../animations/Animation.h"
 
@@ -64,7 +65,7 @@ void LightObject::applyToStrip(LightStrip* strip) {
         CRGB color = colors.current();
 
         color = blend(strip->get(pos + i), color, opacity);
-        strip->set(pos + i, color);
+        strip->set(pos + i, color, opacity);
         colors.next();
     }
 }

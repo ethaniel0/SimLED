@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem
+CXX_INCLUDES = -I/Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem -I/Users/ethanhorowitz/CLionProjects/SimLED/Arduino
 
 CXX_FLAGSarm64 = -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
 

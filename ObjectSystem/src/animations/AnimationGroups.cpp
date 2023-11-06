@@ -18,7 +18,9 @@ void AnimationSequence::addAnimation(Animation *animation) {
 void AnimationSequence::addNextTrigger(int stateNumber) {
     this->nextStates.append(stateNumber);
 }
-
+void AnimationSequence::addPrevTrigger(int stateNumber) {
+    this->prevStates.append(stateNumber);
+}
 void AnimationSequence::addResetTrigger(int stateNumber) {
     this->resetStates.append(stateNumber);
 }
@@ -56,6 +58,15 @@ void AnimationSequence::setState(int state) {
     if (foundNext){
         currentAnimation++;
         if (currentAnimation >= animations.getLength()){
+            if (loop) reset();
+            else done = true;
+        }
+        return;
+    }
+    bool foundPrev = prevStates.search(state);
+    if (foundPrev){
+        currentAnimation--;
+        if (currentAnimation < 0){
             if (loop) reset();
             else done = true;
         }

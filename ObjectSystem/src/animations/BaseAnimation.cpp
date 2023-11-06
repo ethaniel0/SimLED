@@ -29,7 +29,7 @@ BaseAnimation::~BaseAnimation()
 CHSV makeColor(int* numbers, int position, int numFunctions) {
     if (numFunctions == 0) return {0, 0, 0};
     if (numFunctions == 1) {
-        return CHSV(numbers[position], numbers[position], numbers[position]);
+        return CHSV(numbers[position], 255, 255);
     }
     if (numFunctions == 2)
         return CHSV(numbers[position], numbers[position + 1], 255);
@@ -83,6 +83,7 @@ void BaseAnimation::update()
                 CHSV color = makeColor(numbers, 0, numFuncs);
                 obj->colors.moveToStart();
                 int len = obj->colors.getLength();
+
                 for (int i = 0; i < len; i++) {
                     obj->colors.update(color);
                     obj->colors.next();
@@ -107,6 +108,8 @@ void BaseAnimation::update()
                     obj->colors.next();
                 }
             }
+            break;
+        case EditableProperties::NONE:
             break;
     }
 

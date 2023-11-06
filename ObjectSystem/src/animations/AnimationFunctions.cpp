@@ -1,3 +1,4 @@
+#include <cstdio>
 #include "AnimationFunctions.h"
 #include "../../../FastLED/src/FastLED.h"
 

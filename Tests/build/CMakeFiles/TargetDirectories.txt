@@ -7,6 +7,9 @@
 /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem/CMakeFiles/ObjectSystem.dir
 /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem/CMakeFiles/edit_cache.dir
 /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem/CMakeFiles/rebuild_cache.dir
+/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir
+/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem/src/Arduino/CMakeFiles/edit_cache.dir
+/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem/src/Arduino/CMakeFiles/rebuild_cache.dir
 /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/Graphics/CMakeFiles/Graphics.dir
 /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/Graphics/CMakeFiles/edit_cache.dir
 /Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/Graphics/CMakeFiles/rebuild_cache.dir

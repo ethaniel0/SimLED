@@ -25,7 +25,7 @@ class BaseAnimation : public Animation {
 
     BaseAnimation(int duration, bool loop, EditableProperties bind);
 
-    ~BaseAnimation();
+    ~BaseAnimation() override;
 
     /// @brief update the animation
     void update() override;

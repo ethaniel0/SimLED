@@ -19,8 +19,12 @@ include_directories(${LIBXD_PATH}/include)
 
 add_executable(
         SimLEDTests tests.cpp
-        LightObjTests.cpp
-        TestFunctions.cpp
+        Tests/LightObjTests.cpp
+        Framework/TestFramework.h
+        Framework/TestFramework.cpp
+        Tests/StripTests.cpp
+        Tests/AnimationTests.cpp
+        Tests/AnimationFunctionTests.cpp
 )
 
 target_link_libraries(SimLEDTests PRIVATE

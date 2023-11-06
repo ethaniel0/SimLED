@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/Users/ethanhorowitz/CLionProjects/SimLED/Arduino/CMakeLists.txt"
   "/Users/ethanhorowitz/CLionProjects/SimLED/FastLED/CMakeLists.txt"
   "/Users/ethanhorowitz/CLionProjects/SimLED/Graphics/CMakeLists.txt"
   "/Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem/CMakeLists.txt"
@@ -48,6 +49,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "FastLED/CMakeFiles/CMakeDirectoryInformation.cmake"
   "ObjectSystem/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "ObjectSystem/src/Arduino/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Graphics/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -56,5 +58,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/SimLEDTests.dir/DependInfo.cmake"
   "FastLED/CMakeFiles/FastLED.dir/DependInfo.cmake"
   "ObjectSystem/CMakeFiles/ObjectSystem.dir/DependInfo.cmake"
+  "ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/DependInfo.cmake"
   "Graphics/CMakeFiles/Graphics.dir/DependInfo.cmake"
   )

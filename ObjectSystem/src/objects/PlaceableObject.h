@@ -5,6 +5,8 @@
 #ifndef SIMLED_PLACEABLEOBJECT_H
 #define SIMLED_PLACEABLEOBJECT_H
 
+#include "../strips/LightStrip.h"
+
 class ObjectSystem;
 
 class PlaceableObject {
@@ -13,9 +15,11 @@ public:
     bool persistent = false;
     int length = 0;
 
+    virtual ~PlaceableObject() = default;
     virtual void update(ObjectSystem*) = 0;
     virtual void applyToStrip(LightStrip* strip) = 0;
     virtual void setState(int state) = 0;
+    virtual PlaceableObject* clone() = 0;
 };
 
 #endif //SIMLED_PLACEABLEOBJECT_H

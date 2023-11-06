@@ -156,6 +156,19 @@ ObjectSystem/fast:
 .PHONY : ObjectSystem/fast
 
 #=============================================================================
+# Target rules for targets named Arduino
+
+# Build rule for target.
+Arduino: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Arduino
+.PHONY : Arduino
+
+# fast build rule for target.
+Arduino/fast:
+	$(MAKE) $(MAKESILENT) -f ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/build.make ObjectSystem/src/Arduino/CMakeFiles/Arduino.dir/build
+.PHONY : Arduino/fast
+
+#=============================================================================
 # Target rules for targets named Graphics
 
 # Build rule for target.
@@ -168,53 +181,125 @@ Graphics/fast:
 	$(MAKE) $(MAKESILENT) -f Graphics/CMakeFiles/Graphics.dir/build.make Graphics/CMakeFiles/Graphics.dir/build
 .PHONY : Graphics/fast
 
-LightObjTests.o: LightObjTests.cpp.o
-.PHONY : LightObjTests.o
+Framework/TestFramework.o: Framework/TestFramework.cpp.o
+.PHONY : Framework/TestFramework.o
 
 # target to build an object file
-LightObjTests.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.o
-.PHONY : LightObjTests.cpp.o
+Framework/TestFramework.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.o
+.PHONY : Framework/TestFramework.cpp.o
 
-LightObjTests.i: LightObjTests.cpp.i
-.PHONY : LightObjTests.i
+Framework/TestFramework.i: Framework/TestFramework.cpp.i
+.PHONY : Framework/TestFramework.i
 
 # target to preprocess a source file
-LightObjTests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.i
-.PHONY : LightObjTests.cpp.i
+Framework/TestFramework.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.i
+.PHONY : Framework/TestFramework.cpp.i
 
-LightObjTests.s: LightObjTests.cpp.s
-.PHONY : LightObjTests.s
+Framework/TestFramework.s: Framework/TestFramework.cpp.s
+.PHONY : Framework/TestFramework.s
 
 # target to generate assembly for a file
-LightObjTests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/LightObjTests.cpp.s
-.PHONY : LightObjTests.cpp.s
+Framework/TestFramework.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Framework/TestFramework.cpp.s
+.PHONY : Framework/TestFramework.cpp.s
 
-TestFunctions.o: TestFunctions.cpp.o
-.PHONY : TestFunctions.o
+Tests/AnimationFunctionTests.o: Tests/AnimationFunctionTests.cpp.o
+.PHONY : Tests/AnimationFunctionTests.o
 
 # target to build an object file
-TestFunctions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.o
-.PHONY : TestFunctions.cpp.o
+Tests/AnimationFunctionTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.o
+.PHONY : Tests/AnimationFunctionTests.cpp.o
 
-TestFunctions.i: TestFunctions.cpp.i
-.PHONY : TestFunctions.i
+Tests/AnimationFunctionTests.i: Tests/AnimationFunctionTests.cpp.i
+.PHONY : Tests/AnimationFunctionTests.i
 
 # target to preprocess a source file
-TestFunctions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.i
-.PHONY : TestFunctions.cpp.i
+Tests/AnimationFunctionTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.i
+.PHONY : Tests/AnimationFunctionTests.cpp.i
 
-TestFunctions.s: TestFunctions.cpp.s
-.PHONY : TestFunctions.s
+Tests/AnimationFunctionTests.s: Tests/AnimationFunctionTests.cpp.s
+.PHONY : Tests/AnimationFunctionTests.s
 
 # target to generate assembly for a file
-TestFunctions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/TestFunctions.cpp.s
-.PHONY : TestFunctions.cpp.s
+Tests/AnimationFunctionTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/AnimationFunctionTests.cpp.s
+.PHONY : Tests/AnimationFunctionTests.cpp.s
+
+Tests/AnimationTests.o: Tests/AnimationTests.cpp.o
+.PHONY : Tests/AnimationTests.o
+
+# target to build an object file
+Tests/AnimationTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.o
+.PHONY : Tests/AnimationTests.cpp.o
+
+Tests/AnimationTests.i: Tests/AnimationTests.cpp.i
+.PHONY : Tests/AnimationTests.i
+
+# target to preprocess a source file
+Tests/AnimationTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.i
+.PHONY : Tests/AnimationTests.cpp.i
+
+Tests/AnimationTests.s: Tests/AnimationTests.cpp.s
+.PHONY : Tests/AnimationTests.s
+
+# target to generate assembly for a file
+Tests/AnimationTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/AnimationTests.cpp.s
+.PHONY : Tests/AnimationTests.cpp.s
+
+Tests/LightObjTests.o: Tests/LightObjTests.cpp.o
+.PHONY : Tests/LightObjTests.o
+
+# target to build an object file
+Tests/LightObjTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.o
+.PHONY : Tests/LightObjTests.cpp.o
+
+Tests/LightObjTests.i: Tests/LightObjTests.cpp.i
+.PHONY : Tests/LightObjTests.i
+
+# target to preprocess a source file
+Tests/LightObjTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.i
+.PHONY : Tests/LightObjTests.cpp.i
+
+Tests/LightObjTests.s: Tests/LightObjTests.cpp.s
+.PHONY : Tests/LightObjTests.s
+
+# target to generate assembly for a file
+Tests/LightObjTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/LightObjTests.cpp.s
+.PHONY : Tests/LightObjTests.cpp.s
+
+Tests/StripTests.o: Tests/StripTests.cpp.o
+.PHONY : Tests/StripTests.o
+
+# target to build an object file
+Tests/StripTests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.o
+.PHONY : Tests/StripTests.cpp.o
+
+Tests/StripTests.i: Tests/StripTests.cpp.i
+.PHONY : Tests/StripTests.i
+
+# target to preprocess a source file
+Tests/StripTests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.i
+.PHONY : Tests/StripTests.cpp.i
+
+Tests/StripTests.s: Tests/StripTests.cpp.s
+.PHONY : Tests/StripTests.s
+
+# target to generate assembly for a file
+Tests/StripTests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimLEDTests.dir/build.make CMakeFiles/SimLEDTests.dir/Tests/StripTests.cpp.s
+.PHONY : Tests/StripTests.cpp.s
 
 tests.o: tests.cpp.o
 .PHONY : tests.o
@@ -248,16 +333,26 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Arduino"
 	@echo "... FastLED"
 	@echo "... Graphics"
 	@echo "... ObjectSystem"
 	@echo "... SimLEDTests"
-	@echo "... LightObjTests.o"
-	@echo "... LightObjTests.i"
-	@echo "... LightObjTests.s"
-	@echo "... TestFunctions.o"
-	@echo "... TestFunctions.i"
-	@echo "... TestFunctions.s"
+	@echo "... Framework/TestFramework.o"
+	@echo "... Framework/TestFramework.i"
+	@echo "... Framework/TestFramework.s"
+	@echo "... Tests/AnimationFunctionTests.o"
+	@echo "... Tests/AnimationFunctionTests.i"
+	@echo "... Tests/AnimationFunctionTests.s"
+	@echo "... Tests/AnimationTests.o"
+	@echo "... Tests/AnimationTests.i"
+	@echo "... Tests/AnimationTests.s"
+	@echo "... Tests/LightObjTests.o"
+	@echo "... Tests/LightObjTests.i"
+	@echo "... Tests/LightObjTests.s"
+	@echo "... Tests/StripTests.o"
+	@echo "... Tests/StripTests.i"
+	@echo "... Tests/StripTests.s"
 	@echo "... tests.o"
 	@echo "... tests.i"
 	@echo "... tests.s"

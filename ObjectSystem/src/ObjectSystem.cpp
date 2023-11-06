@@ -24,22 +24,19 @@ ObjectSystem::~ObjectSystem(){
 void ObjectSystem::update(){
     strip.clear();
 
-    int numObjects = (int) objects.getLength();
-
     objects.moveToStart();
-    for (int i = 0; i < numObjects; i++){
+    while(true){
         PlaceableObject *obj = objects.current();
         obj->update(this);
 
         if (!obj->persistent && !inView(obj, strip.size())) {
             objects.deleteCurrent();
-            numObjects--;
         } else {
             obj->applyToStrip(&strip);
         }
-        objects.next();
+        bool hasNext = objects.next();
+        if (!hasNext) break;
     }
-
 }
 
 void ObjectSystem::addObject(PlaceableObject* object){

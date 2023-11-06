@@ -14,6 +14,15 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+Arduino_BINARY_DIR:STATIC=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/build/ObjectSystem/src/Arduino
+
+//Value Computed by CMake
+Arduino_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Arduino_SOURCE_DIR:STATIC=/Users/ethanhorowitz/CLionProjects/SimLED/Arduino
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -240,6 +249,9 @@ ObjectSystem_BINARY_DIR:STATIC=/Users/ethanhorowitz/CLionProjects/SimLED/Tests/b
 //Value Computed by CMake
 ObjectSystem_IS_TOP_LEVEL:STATIC=OFF
 
+//Dependencies for the target
+ObjectSystem_LIB_DEPENDS:STATIC=general;Arduino;
+
 //Value Computed by CMake
 ObjectSystem_SOURCE_DIR:STATIC=/Users/ethanhorowitz/CLionProjects/SimLED/ObjectSystem
 
@@ -351,7 +363,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -14,27 +14,26 @@ enum EditableProperties {
     RELATIVE_POSITION,
     COLORS,
     OPACITY,
-    BRIGHTNESS
+    BRIGHTNESS,
+    NONE
 };
 
 class LightObject: public PlaceableObject {
 public:
-    int pos;
     int wrapMode;
-    bool persistent;
     fract8 opacity;
     LinkedList<CRGB> colors;
     LinkedList<Animation*> animations;
 
     explicit LightObject(int length);
     LightObject(CRGB* colors, int length);
-    ~LightObject();
+    ~LightObject() override;
 
     void update(ObjectSystem* system) override;
     void applyToStrip(LightStrip* strip) override;
     void setState(int state) override;
     void addAnimation(Animation* animation);
-    LightObject* clone();
+    LightObject* clone() override;
 };
 
 #endif

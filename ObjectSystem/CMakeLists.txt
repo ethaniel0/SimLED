@@ -9,7 +9,13 @@ set(ObjectSystem_SRCS
         src/animations/AnimationFunctions.cpp
         src/animations/BaseAnimation.cpp
         src/animations/AnimationGroups.cpp
-#        linkedlist/LinkedList.cpp
+        src/creators/SystemCreator.cpp
+        src/creators/FunctionCreators.h
+        src/creators/utils.h
+        src/creators/AnimationCreators.cpp
+        src/creators/utils.cpp
+        src/creators/ObjectCreators.cpp
+        src/objects/Generator.cpp
 )
 
 add_subdirectory(../Arduino src/Arduino)
