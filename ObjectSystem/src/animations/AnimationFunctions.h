@@ -10,7 +10,7 @@ class EaseTransform: public AnimationFunction {
         int end;
         EaseTransform(int start, int end);
         int getValue(int time, int duration) override;
-        AnimationFunction* clone() override;
+        EaseTransform* clone() override;
 };
 
 class LinearTransform: public AnimationFunction {
@@ -19,7 +19,7 @@ class LinearTransform: public AnimationFunction {
         int end;
         LinearTransform(int start, int end);
         int getValue(int time, int duration) override;
-        AnimationFunction* clone() override;
+        LinearTransform* clone() override;
 };
 
 class PerlinTransform: public AnimationFunction {
@@ -29,7 +29,7 @@ class PerlinTransform: public AnimationFunction {
         int speed;
         PerlinTransform(int speed, int min, int max);
         int getValue(int time, int duration) override;
-        AnimationFunction* clone() override;
+        PerlinTransform* clone() override;
 };
 
 class RandomTransform: public AnimationFunction {
@@ -38,7 +38,7 @@ class RandomTransform: public AnimationFunction {
         int max;
         RandomTransform(int min, int max);
         int getValue(int time, int duration) override;
-        AnimationFunction* clone() override;
+        RandomTransform* clone() override;
 };
 
 class StaticTransform: public AnimationFunction {
@@ -46,7 +46,7 @@ class StaticTransform: public AnimationFunction {
         int val;
         explicit StaticTransform(int val);
         int getValue(int time, int duration) override;
-        AnimationFunction* clone() override;
+        StaticTransform* clone() override;
 };
 
 #endif

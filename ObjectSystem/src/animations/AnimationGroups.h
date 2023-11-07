@@ -24,7 +24,7 @@ public:
     void reset() override;
     void setState(int state) override;
     void linkObject(LightObject* object) override;
-    Animation* clone() override;
+    AnimationSequence* clone() override;
 
 private:
     LinkedList<Animation*> animations;
@@ -45,7 +45,7 @@ public:
     void reset() override;
     void setState(int state) override;
     void linkObject(LightObject* object) override;
-    Animation* clone() override;
+    AnimationStateMap* clone() override;
 
 private:
     Animation* stateMap[16]{};

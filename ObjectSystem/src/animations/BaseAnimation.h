@@ -41,7 +41,7 @@ class BaseAnimation : public Animation {
     /// @param state the number of the state to transition to
     void setState(int state) override;
 
-    Animation* clone() override;
+    BaseAnimation* clone() override;
 
     /// @brief Adds an animation function to the animation, to be used for
     ///        adjusting position, modifying the object's colors, etc. One function

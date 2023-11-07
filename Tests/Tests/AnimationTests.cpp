@@ -285,6 +285,25 @@ TEST(Animations, BaseSetState){
     EXPECT_EQ(obj.opacity, 255, %d)
 }
 
+TEST(Animations, BaseClone){
+    auto* anim = new BaseAnimation(10, true, EditableProperties::POSITION);
+    anim->offset = 17;
+    anim->frames = 12;
+    anim->bindToLength = true;
+
+    AnimationFunction* func = new LinearTransform(0, 100);
+    anim->addFunction(func);
+
+    BaseAnimation* anim2 = anim->clone();
+
+    EXPECT_EQ(anim->offset, anim2->offset, %d)
+    EXPECT_EQ(anim->loop, anim2->loop, %d)
+    EXPECT_EQ(anim2->frames, 0, %d)
+    EXPECT_EQ(anim->offset, anim2->offset, %d)
+    EXPECT_EQ(anim->duration, anim2->duration, %d)
+    EXPECT_EQ(anim->bindToLength, anim2->bindToLength, %b)
+}
+
 /* AnimationSequence Tests */
 
 TEST(Animations, SequenceFunctionality){
@@ -327,6 +346,68 @@ TEST(Animations, SequenceFunctionality){
     obj.update(nullptr);
     EXPECT_TRUE(obj.colors.current() == CHSV(120, 255, 255))
 
+
+    // go to previous state
+    obj.setState(1);
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(60, 255, 255))
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(60, 255, 255))
+
+    // go to previous state
+    obj.setState(1);
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(0, 255, 255))
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(0, 255, 255))
+
+    EXPECT_EQ(obj.colors.getLength(), 1, %d)
+    EXPECT_EQ(obj.length, 1, %d)
+}
+
+TEST(Animations, SequenceClone){
+    auto* seq = new AnimationSequence(false);
+    seq->addNextTrigger(0);
+    seq->addPrevTrigger(1);
+
+    auto* subAnim1 = new BaseAnimation(-1, false, EditableProperties::COLORS);
+    subAnim1->addFunction(new StaticTransform(0));
+
+    auto* subAnim2 = new BaseAnimation(-1, false, EditableProperties::COLORS);
+    subAnim2->addFunction(new StaticTransform(60));
+
+    auto* subAnim3 = new BaseAnimation(-1, false, EditableProperties::COLORS);
+    subAnim3->addFunction(new StaticTransform(120));
+
+    seq->addAnimation(subAnim1);
+    seq->addAnimation(subAnim2);
+    seq->addAnimation(subAnim3);
+
+    AnimationSequence* seq2 = seq->clone();
+
+    delete seq;
+
+    LightObject obj(1);
+    obj.addAnimation(seq2);
+
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(0, 255, 255))
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(0, 255, 255))
+
+    // go to next state
+    obj.setState(0);
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(60, 255, 255))
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(60, 255, 255))
+
+    // go to next state
+    obj.setState(0);
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(120, 255, 255))
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(120, 255, 255))
 
     // go to previous state
     obj.setState(1);
@@ -404,3 +485,62 @@ TEST(Animations, MapFunctionality){
     EXPECT_EQ(obj.length, 1, %d)
 }
 
+TEST(Animations, MapClone){
+    auto* map = new AnimationStateMap();
+
+    auto* subAnim1 = new BaseAnimation(-1, false, EditableProperties::COLORS);
+    subAnim1->addFunction(new StaticTransform(0));
+
+    auto* subAnim2 = new BaseAnimation(-1, false, EditableProperties::COLORS);
+    subAnim2->addFunction(new StaticTransform(60));
+
+    auto* subAnim3 = new BaseAnimation(-1, false, EditableProperties::COLORS);
+    subAnim3->addFunction(new StaticTransform(120));
+
+    map->addState(0, subAnim1);
+    map->addState(1, subAnim2);
+    map->addState(2, subAnim3);
+
+    AnimationStateMap* map2 = map->clone();
+
+    delete map;
+
+    LightObject obj(1);
+    obj.addAnimation(map2);
+
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(0, 255, 255))
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(0, 255, 255))
+
+    // go to state 0 (animation 0)
+    obj.setState(0);
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(0, 255, 255))
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(0, 255, 255))
+
+    // go to state 1 (animation 1)
+    obj.setState(1);
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(60, 255, 255))
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(60, 255, 255))
+
+    // go back to state 0
+    obj.setState(0);
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(0, 255, 255))
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(0, 255, 255))
+
+    // go to state 2
+    obj.setState(2);
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(120, 255, 255))
+    obj.update(nullptr);
+    EXPECT_TRUE(obj.colors.current() == CHSV(120, 255, 255))
+
+    EXPECT_EQ(obj.colors.getLength(), 1, %d)
+    EXPECT_EQ(obj.length, 1, %d)
+}

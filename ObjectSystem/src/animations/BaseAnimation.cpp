@@ -144,7 +144,7 @@ void BaseAnimation::setState(int state)
     }
 }
 
-Animation* BaseAnimation::clone(){
+BaseAnimation* BaseAnimation::clone(){
     auto* anim = new BaseAnimation(duration, loop, bind);
     anim->bindToLength = bindToLength;
     anim->offset = offset;

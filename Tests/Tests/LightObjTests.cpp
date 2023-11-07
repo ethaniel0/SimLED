@@ -125,6 +125,56 @@ TEST(LightObjects, VariedLengths){
     for (int i = 0; i < 100; i++) obj5.colors.next();
 }
 
+TEST(LightObjects, Cloning){
+    LightObject obj(1);
+    LightObject* obj2 = obj.clone();
+
+    EXPECT_EQ(obj.length, obj2->length, %d)
+    EXPECT_EQ(obj.wrapMode, obj2->wrapMode, %d)
+    EXPECT_EQ(obj.opacity, obj2->opacity, %d)
+    EXPECT_EQ(obj.persistent, obj2->persistent, %d)
+    EXPECT_EQ(obj.pos, obj2->pos, %d)
+    EXPECT_EQ(obj.colors.getLength(), obj2->colors.getLength(), %d)
+    obj.colors.moveToStart();
+    obj2->colors.moveToStart();
+    for (int i = 0; i < obj.length; i++){
+        EXPECT_TRUE(obj.colors.current() == obj2->colors.current())
+        obj.colors.next();
+        obj2->colors.next();
+    }
+    EXPECT_EQ(obj.animations.getLength(), obj2->animations.getLength(), %d)
+
+    delete obj2;
+
+    CRGB colors[] = {
+            CRGB(255, 0, 0), CRGB(255, 255, 0),
+            CRGB(0, 255, 0), CRGB(0, 255, 255),
+            CRGB(0, 0, 255), CRGB(255, 0, 255)
+    };
+
+    LightObject coloredObj(colors, 6);
+    coloredObj.opacity = 128;
+    coloredObj.wrapMode = 1;
+    coloredObj.pos = 21;
+    coloredObj.persistent = true;
+    LightObject* coloredObj2 = coloredObj.clone();
+
+    EXPECT_EQ(coloredObj.length, coloredObj2->length, %d)
+    EXPECT_EQ(coloredObj.wrapMode, coloredObj2->wrapMode, %d)
+    EXPECT_EQ(coloredObj.opacity, coloredObj2->opacity, %d)
+    EXPECT_EQ(coloredObj.colors.getLength(), coloredObj2->colors.getLength(), %d)
+    EXPECT_EQ(coloredObj.persistent, coloredObj2->persistent, %d)
+    EXPECT_EQ(coloredObj.pos, coloredObj2->pos, %d)
+    coloredObj.colors.moveToStart();
+    coloredObj2->colors.moveToStart();
+    for (int i = 0; i < coloredObj.length; i++){
+        EXPECT_TRUE(coloredObj.colors.current() == coloredObj2->colors.current())
+        coloredObj.colors.next();
+        coloredObj2->colors.next();
+    }
+    EXPECT_EQ(coloredObj.animations.getLength(), coloredObj2->animations.getLength(), %d)
+}
+
 void LOTests(){
     RUN_TEST_GROUP("LightObjects");
 }

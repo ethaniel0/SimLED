@@ -69,21 +69,22 @@ void LightObject::applyToStrip(LightStrip* strip) {
 }
 
 LightObject* LightObject::clone() {
-    auto* obj = new LightObject(this->length);
-    obj->pos = this->pos;
-    obj->wrapMode = this->wrapMode;
-    obj->persistent = this->persistent;
-    obj->opacity = this->opacity;
+    auto* obj = new LightObject(length);
+    obj->pos = pos;
+    obj->wrapMode = wrapMode;
+    obj->persistent = persistent;
+    obj->opacity = opacity;
 
     colors.moveToStart();
-    int len = colors.getLength();
-    for (int i = 0; i < len; i++) {
-        obj->colors.append(colors.current());
+    obj->colors.moveToStart();
+    for (int i = 0; i < length; i++) {
+        obj->colors.update(colors.current());
         colors.next();
+        obj->colors.next();
     }
 
     animations.moveToStart();
-    len = animations.getLength();
+    int len = animations.getLength();
     for (int i = 0; i < len; i++) {
         obj->addAnimation(animations.current()->clone());
         animations.next();

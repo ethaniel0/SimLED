@@ -88,7 +88,7 @@ void AnimationSequence::linkObject(LightObject *object) {
     }
 }
 
-Animation *AnimationSequence::clone() {
+AnimationSequence* AnimationSequence::clone() {
     auto seq = new AnimationSequence(loop);
     animations.moveToStart();
     int len = animations.getLength();
@@ -160,10 +160,11 @@ void AnimationStateMap::linkObject(LightObject *object) {
     }
 }
 
-Animation *AnimationStateMap::clone() {
+AnimationStateMap* AnimationStateMap::clone() {
     auto map = new AnimationStateMap();
     for (int i = 0; i < 16; i++){
-        map->addState(i, stateMap[i]->clone());
+        if (stateMap[i] != nullptr)
+            map->addState(i, stateMap[i]->clone());
     }
     return map;
 }

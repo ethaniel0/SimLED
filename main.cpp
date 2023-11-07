@@ -48,10 +48,8 @@ void setup() {
     smallObj->addAnimation(smallAnim);
     smallObj->addAnimation(moveAnim);
 
-
-    auto* gen = smallObj;
-//    auto* gen = new Generator(0, smallObj);
-//    gen->spacing = 10;
+    auto* gen = new Generator(0, smallObj);
+    gen->spacing = 10;
 
 
 //    auto* entireObject = sc.parseObject(

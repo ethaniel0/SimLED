@@ -33,32 +33,44 @@ void __setErrorFlag(){
 }
 
 void RUN_TESTS(){
+    int num_errors = 0;
+    int total_tests = 0;
     for(auto& group : *testGroups){
         printf("Running tests in group %s\n", group.first.c_str());
         for(auto& test : *group.second){
             errorFlag = false;
             test.test();
-            if (errorFlag)
+            if (errorFlag) {
                 printf("\tx  ");
-            else
+                num_errors++;
+            }
+            else {
                 printf("\t✓  ");
+            }
+            total_tests++;
             printf("%s\n", test.name);
 
         }
     }
+    printf("Test results: %d successes, %d fails\n", total_tests - num_errors, num_errors);
 }
 
 void RUN_TEST_GROUP(std::string group){
+    int num_errors = 0;
+    int total_tests = 0;
     for(auto& test : *((*testGroups)[group])){
         errorFlag = false;
         test.test();
-        if (errorFlag)
+        if (errorFlag) {
             printf("\tx  ");
+            num_errors++;
+        }
         else
             printf("\t✓  ");
         printf("%s\n", test.name);
-
+        total_tests++;
     }
+    printf("Test results for group %s: %d successes, %d fails\n", group.c_str(), total_tests - num_errors, num_errors);
 }
 
 __TFTest::__TFTest(void (*test)(), const char* group, const char* name){
