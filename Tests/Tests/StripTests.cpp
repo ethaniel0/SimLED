@@ -69,3 +69,4 @@ TEST(Strip, SetOpacity){
     strip.set(0, CRGB(255, 255, 255), 230);
     ASSERT_TRUE(strip.get(0) == CRGB(230, 230, 230))
 }
+

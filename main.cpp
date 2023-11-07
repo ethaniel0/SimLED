@@ -35,21 +35,22 @@ void setup() {
     strip2 = new StripElement(objectSystem->strip.getSegment(1), 30);
     strip2->setParameters(550, 460, -2*M_PI/3, 15, 15);
 
-    auto* smallObj = new LightObject(1);
-    auto* smallAnim = new BaseAnimation(-1, true, EditableProperties::COLORS);
-    smallAnim->addFunction(new StaticTransform(0));
-    smallAnim->addFunction(new StaticTransform(255));
+//    auto* lightobj = sc.parseObject("l 0 0 c 1 ff0000 1 " "b -1 0 r 0 0 1 s 1");
+    auto* gen = sc.parseObject("g0 8 " "l 0 0 c 1 ff0000 1 " "b -1 1 r 0 0 1 s 1");
 
-    printf("%d\n", smallObj->colors.getLength());
-
-    auto* moveAnim = new BaseAnimation(80, false, EditableProperties::RELATIVE_POSITION);
-    moveAnim->addFunction(new StaticTransform(1));
-
-    smallObj->addAnimation(smallAnim);
-    smallObj->addAnimation(moveAnim);
-
-    auto* gen = new Generator(0, smallObj);
-    gen->spacing = 10;
+//    auto* smallObj = new LightObject(1);
+//    auto* smallAnim = new BaseAnimation(-1, true, EditableProperties::COLORS);
+//    smallAnim->addFunction(new StaticTransform(0));
+//    smallAnim->addFunction(new StaticTransform(255));
+//
+//    auto* moveAnim = new BaseAnimation(80, false, EditableProperties::RELATIVE_POSITION);
+//    moveAnim->addFunction(new StaticTransform(1));
+//
+//    smallObj->addAnimation(smallAnim);
+//    smallObj->addAnimation(moveAnim);
+//
+//    auto* gen = new Generator(0, smallObj);
+//    gen->spacing = 9;
 
 
 //    auto* entireObject = sc.parseObject(

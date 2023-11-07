@@ -12,4 +12,6 @@
 
 PlaceableObject* createLightObject(const char* string, int* pos, SystemCreator* _);
 
+PlaceableObject* createGenerator(const char* string, int* pos, SystemCreator* _);
+
 #endif //SIMLED_OBJECTCREATORS_H

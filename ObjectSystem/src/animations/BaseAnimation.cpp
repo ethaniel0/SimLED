@@ -1,7 +1,6 @@
 #include "BaseAnimation.h"
 
-BaseAnimation::BaseAnimation(int duration, bool loop, EditableProperties bind)
-{
+BaseAnimation::BaseAnimation(int duration, bool loop, EditableProperties bind) {
     this->duration = duration;
     this->loop = loop;
     this->bind = bind;
@@ -16,8 +15,7 @@ BaseAnimation::BaseAnimation(int duration, bool loop, EditableProperties bind)
     }
 }
 
-BaseAnimation::~BaseAnimation()
-{
+BaseAnimation::~BaseAnimation() {
     funcs.moveToStart();
     int len = funcs.getLength();
     for (int i = 0; i < len; i++) {
@@ -37,8 +35,7 @@ CHSV makeColor(int* numbers, int position, int numFunctions) {
     return CHSV(numbers[position], numbers[position + 1], numbers[position + 2]);
 }
 
-void BaseAnimation::update()
-{
+void BaseAnimation::update() {
     if (done) return;
 
     int numFuncs = (int) funcs.getLength();
@@ -117,24 +114,21 @@ void BaseAnimation::update()
     if (duration != -1 && frames > duration && loop){
         reset();
     }
-    else if (frames > duration){
+    else if (duration != -1 && frames > duration){
         done = true;
     }
 }
 
-bool BaseAnimation::isFinished()
-{
+bool BaseAnimation::isFinished() {
     return false;
 }
 
-void BaseAnimation::reset()
-{
+void BaseAnimation::reset() {
     frames = 0;
     done = false;
 }
 
-void BaseAnimation::setState(int state)
-{
+void BaseAnimation::setState(int state) {
     if (state < 0 || state > 15) return;
     if (absoluteStateTriggers[state] != -1) {
         frames = absoluteStateTriggers[state];
@@ -144,7 +138,7 @@ void BaseAnimation::setState(int state)
     }
 }
 
-BaseAnimation* BaseAnimation::clone(){
+BaseAnimation* BaseAnimation::clone() {
     auto* anim = new BaseAnimation(duration, loop, bind);
     anim->bindToLength = bindToLength;
     anim->offset = offset;
@@ -161,19 +155,16 @@ BaseAnimation* BaseAnimation::clone(){
     return anim;
 }
 
-void BaseAnimation::addFunction(AnimationFunction *func)
-{
+void BaseAnimation::addFunction(AnimationFunction *func) {
     funcs.append(func);
 }
 
-void BaseAnimation::addAbsoluteStateTrigger(int state, int frame)
-{
+void BaseAnimation::addAbsoluteStateTrigger(int state, int frame) {
     if (state >= 0 && state < 16)
         absoluteStateTriggers[state] = frame;
 }
 
-void BaseAnimation::addRelativeStateTrigger(int state, int frame)
-{
+void BaseAnimation::addRelativeStateTrigger(int state, int frame) {
     if (state >= 0 && state < 16)
         relativeStateTriggers[state] = frame;
 }

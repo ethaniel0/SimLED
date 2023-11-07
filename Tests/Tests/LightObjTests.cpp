@@ -7,6 +7,10 @@
 #include <vector>
 #include "../Framework/TestFramework.h"
 
+void LOTests(){
+    RUN_TEST_GROUP("LightObjects");
+}
+
 TEST(LightObjects, LightObjectCreation){
     LightObject obj(30);
     ASSERT_EQ(obj.colors.getLength(), 30, %d)
@@ -29,12 +33,15 @@ TEST(LightObjects, LightObjectCreation){
 }
 
 TEST(LightObjects, ApplyToStrip){
-    LightObject obj = LightObject(new CRGB[]{
+    CRGB colors[] = {
         CRGB(255, 0, 0),
         CRGB(0, 255, 0),
         CRGB(0, 0, 255),
         CRGB(142, 213, 23),
-        CRGB(42, 0, 69)}, 5);
+        CRGB(42, 0, 69)
+    };
+
+    LightObject obj = LightObject(colors, 5);
 
     LightStrip strip = LightStrip();
     strip.addStrip(30);
@@ -87,7 +94,7 @@ TEST(LightObjects, SetStateAndUpdate){
     for (int i = 0; i <= 10; i++) {
         obj.update(nullptr);
     }
-    EXPECT_EQ(obj.pos, 10, %d);
+    EXPECT_EQ(obj.pos, 10, %d)
 
 
 }
@@ -173,8 +180,4 @@ TEST(LightObjects, Cloning){
         coloredObj2->colors.next();
     }
     EXPECT_EQ(coloredObj.animations.getLength(), coloredObj2->animations.getLength(), %d)
-}
-
-void LOTests(){
-    RUN_TEST_GROUP("LightObjects");
 }

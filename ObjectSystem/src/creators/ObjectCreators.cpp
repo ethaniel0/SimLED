@@ -3,6 +3,7 @@
 //
 
 #include "ObjectCreators.h"
+#include "../objects/Generator.h"
 
 PlaceableObject* createLightObject(const char* string, int* pos, SystemCreator* sc){
     // define by either length or colors
@@ -49,4 +50,15 @@ PlaceableObject* createLightObject(const char* string, int* pos, SystemCreator* 
         obj->addAnimation(a);
     }
     return obj;
+}
+
+PlaceableObject* createGenerator(const char* string, int* pos, SystemCreator* sc){
+    // syntax: <pos> <spacing> <... object to copy>
+    int strip_pos = extractNumber(string, pos);
+    int spacing = extractNumber(string, pos);
+    PlaceableObject* obj = sc->parseObject(string, pos);
+    if (obj == nullptr) return nullptr;
+    auto* gen = new Generator(strip_pos, obj);
+    gen->spacing = spacing;
+    return gen;
 }

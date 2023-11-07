@@ -1,7 +1,11 @@
 #ifndef LIGHTSTRIP_H
 #define LIGHTSTRIP_H
 
-#include "../../../FastLED/src/FastLED.h"
+#if defined(ARDUINO) && ARDUINO >= 100
+    #include "FastLED.h"
+#else
+    #include "../../../FastLED/src/FastLED.h"
+#endif
 #include "../linkedlist/LinkedList.h"
 
 struct Position {

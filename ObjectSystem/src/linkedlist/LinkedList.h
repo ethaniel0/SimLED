@@ -5,7 +5,6 @@
 #ifndef SIMLED_LINKEDLIST_H
 #define SIMLED_LINKEDLIST_H
 
-
 template <class T>
 class ListNode {
 public:

@@ -2,7 +2,14 @@
 #define ANIMATION_FUNCTIONS_H
 
 #include "AnimationFunction.h"
-#include "../Arduino/Arduino.h"
+
+#if defined(ARDUINO)
+    #include "Arduino.h"
+#else
+    #include "../Arduino/Arduino.h"
+#endif
+
+
 
 class EaseTransform: public AnimationFunction {
     public:

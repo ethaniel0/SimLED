@@ -25,6 +25,7 @@ add_executable(
         Tests/StripTests.cpp
         Tests/AnimationTests.cpp
         Tests/AnimationFunctionTests.cpp
+        Tests/GeneratorTests.cpp
 )
 
 target_link_libraries(SimLEDTests PRIVATE

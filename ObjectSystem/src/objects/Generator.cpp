@@ -2,7 +2,6 @@
 // Created by Ethan Horowitz on 11/2/23.
 //
 
-#include <cstdio>
 #include "Generator.h"
 
 Generator::Generator(int pos, PlaceableObject* referenceObject) {
@@ -15,7 +14,9 @@ Generator::Generator(int pos, PlaceableObject* referenceObject) {
 
 void Generator::update(ObjectSystem* system) {
     if (frames % spacing == 0 && active) {
-        system->addObject(object->clone());
+        PlaceableObject* c = object->clone();
+        c->pos = pos;
+        system->addObject(c);
     }
     frames++;
 }

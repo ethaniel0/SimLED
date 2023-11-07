@@ -1,11 +1,16 @@
 #ifndef LIGHTOBJECT_H
 #define LIGHTOBJECT_H
 
-#include "../../../FastLED/src/FastLED.h"
+#if defined(ARDUINO) && ARDUINO >= 100
+    #include "FastLED.h"
+#else
+    #include "../../../FastLED/src/FastLED.h"
+#endif
+
 #include "../animations/Animation.h"
 #include "../strips/LightStrip.h"
 #include "PlaceableObject.h"
-#include "src/linkedlist/LinkedList.h"
+#include "../linkedlist/LinkedList.h"
 
 class Animation;
 

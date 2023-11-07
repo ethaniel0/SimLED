@@ -1,5 +1,12 @@
 #include "AnimationFunctions.h"
-#include "../../../FastLED/src/FastLED.h"
+
+#if defined(ARDUINO)
+    #include "FastLED.h"
+#else
+    #include "../../../FastLED/src/FastLED.h"
+#endif
+
+
 
 EaseTransform::EaseTransform(int start, int end) {
     this->start = start;

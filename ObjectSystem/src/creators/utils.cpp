@@ -9,7 +9,7 @@ void incPtr(int* pos){
 }
 
 void skipWhitespace(const char* string, int* pos){
-    while(string[*pos] != 0 && string[*pos] == ' ' || string[*pos] == '\t' || string[*pos] == '\n'){
+    while(string[*pos] != 0 && (string[*pos] == ' ' || string[*pos] == '\t' || string[*pos] == '\n')){
         incPtr(pos);
     }
 }
@@ -17,11 +17,17 @@ void skipWhitespace(const char* string, int* pos){
 int extractNumber(const char* string, int* pos){
     skipWhitespace(string, pos);
     int num = 0;
+    bool neg = false;
+    if (string[*pos] == '-'){
+        neg = true;
+        incPtr(pos);
+    }
     while(string[*pos] >= '0' && string[*pos] <= '9'){
         num *= 10;
         num += string[*pos] - '0';
         incPtr(pos);
     }
+    if (neg) num *= -1;
     return num;
 }
 

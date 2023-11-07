@@ -17,17 +17,18 @@ SystemCreator::SystemCreator() {
         objs[i] = nullptr;
     }
 
-    animFunctions['e'-'a'] = createEaseTransform;
-    animFunctions['l'-'a'] = createLinearTransform;
-    animFunctions['p'-'a'] = createPerlinTransform;
-    animFunctions['r'-'a'] = createRandomTransform;
-    animFunctions['s'-'a'] = createStaticTransform;
+    addAnimationFunction('e', createEaseTransform);
+    addAnimationFunction('l', createLinearTransform);
+    addAnimationFunction('p', createPerlinTransform);
+    addAnimationFunction('r', createRandomTransform);
+    addAnimationFunction('s', createStaticTransform);
 
-    anims['b'-'a'] = createBaseAnimation;
-    anims['s'-'a'] = createAnimationSequence;
-    anims['m'-'a'] = createAnimationStateMap;
+    addAnimation('b', createBaseAnimation);
+    addAnimation('s', createAnimationSequence);
+    addAnimation('m', createAnimationStateMap);
 
-    objs['l'-'a'] = createLightObject;
+    addPlaceableObject('l', createLightObject);
+    addPlaceableObject('g', createGenerator);
 }
 
 void SystemCreator::addAnimationFunction(char specifier, AnimationFunction* (*func)(const char*, int*, SystemCreator*)) {

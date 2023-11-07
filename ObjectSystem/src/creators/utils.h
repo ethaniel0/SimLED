@@ -5,7 +5,12 @@
 #ifndef SIMLED_UTILS_H
 #define SIMLED_UTILS_H
 
-#include "../../../FastLED/src/FastLED.h"
+#if defined(ARDUINO) && ARDUINO >= 100
+    #include "FastLED.h"
+#else
+    #include "../../../FastLED/src/FastLED.h"
+#endif
+
 
 void incPtr(int* pos);
 void skipWhitespace(const char* string, int* pos);
