@@ -26,6 +26,7 @@ void ObjectSystem::update(){
 
     objects.moveToStart();
     while(true){
+        if (objects.getLength() == 0) break;
         PlaceableObject *obj = objects.current();
         obj->update(this);
 

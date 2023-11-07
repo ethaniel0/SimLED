@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libGraphics.a CMakeFiles/Graphics.dir/GraphicsUtils.cpp.o CMakeFiles/Graphics.dir/StripElement.cpp.o CMakeFiles/Graphics.dir/Button.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libGraphics.a

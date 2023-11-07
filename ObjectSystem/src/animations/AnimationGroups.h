@@ -23,6 +23,7 @@ public:
     bool isFinished() override;
     void reset() override;
     void setState(int state) override;
+    void linkObject(LightObject* object) override;
     Animation* clone() override;
 
 private:
@@ -43,6 +44,7 @@ public:
     bool isFinished() override;
     void reset() override;
     void setState(int state) override;
+    void linkObject(LightObject* object) override;
     Animation* clone() override;
 
 private:

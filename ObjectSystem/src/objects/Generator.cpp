@@ -2,7 +2,6 @@
 // Created by Ethan Horowitz on 11/2/23.
 //
 
-#include <cstdio>
 #include "Generator.h"
 
 Generator::Generator(int pos, PlaceableObject* referenceObject) {

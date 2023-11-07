@@ -1,6 +1,4 @@
-#include <cstdio>
 #include "LightObject.h"
-#include "../animations/Animation.h"
 
 LightObject::LightObject(int length) {
     pos = 0;

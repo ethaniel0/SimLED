@@ -12,7 +12,9 @@ AnimationSequence::AnimationSequence(bool doesLoop) {
 }
 
 void AnimationSequence::addAnimation(Animation *animation) {
+    animation->linkObject(obj);
     this->animations.append(animation);
+
 }
 
 void AnimationSequence::addNextTrigger(int stateNumber) {
@@ -79,6 +81,13 @@ void AnimationSequence::setState(int state) {
 
 }
 
+void AnimationSequence::linkObject(LightObject *object) {
+    obj = object;
+    for (int i = 0; i < animations.getLength(); i++){
+        animations.get(i)->linkObject(object);
+    }
+}
+
 Animation *AnimationSequence::clone() {
     auto seq = new AnimationSequence(loop);
     animations.moveToStart();
@@ -115,6 +124,7 @@ AnimationStateMap::AnimationStateMap() {
 
 void AnimationStateMap::addState(int state, Animation *animation) {
     if (state < 0 || state > 15) return;
+    animation->linkObject(obj);
     stateMap[state] = animation;
 }
 
@@ -140,6 +150,13 @@ void AnimationStateMap::setState(int state) {
     auto s = stateMap[state];
     if (s != nullptr){
         currentAnimation = s;
+    }
+}
+
+void AnimationStateMap::linkObject(LightObject *object) {
+    obj = object;
+    for (auto anim : stateMap){
+        if (anim != nullptr) anim->linkObject(object);
     }
 }
 

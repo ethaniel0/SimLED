@@ -17,7 +17,7 @@ class Animation{
 
         /// @brief sets the object that the animation applies to (only one at a time)
         /// @param object the object to apply the animation to
-        void linkObject(LightObject* object);
+        virtual void linkObject(LightObject* object);
 
         virtual Animation* clone() = 0;
     

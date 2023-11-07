@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libFastLED.a CMakeFiles/FastLED.dir/src/bitswap.cpp.o CMakeFiles/FastLED.dir/src/colorpalettes.cpp.o CMakeFiles/FastLED.dir/src/colorutils.cpp.o CMakeFiles/FastLED.dir/src/FastLED.cpp.o CMakeFiles/FastLED.dir/src/hsv2rgb.cpp.o CMakeFiles/FastLED.dir/src/lib8tion.cpp.o CMakeFiles/FastLED.dir/src/noise.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libFastLED.a

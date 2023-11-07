@@ -16,6 +16,7 @@ set(ObjectSystem_SRCS
         src/creators/utils.cpp
         src/creators/ObjectCreators.cpp
         src/objects/Generator.cpp
+        src/creators/FunctionCreators.cpp
 )
 
 add_subdirectory(../Arduino src/Arduino)

@@ -114,7 +114,7 @@ void BaseAnimation::update()
     }
 
     frames++;
-    if (duration != -1 && frames >= duration && loop){
+    if (duration != -1 && frames > duration && loop){
         reset();
     }
     else if (frames > duration){

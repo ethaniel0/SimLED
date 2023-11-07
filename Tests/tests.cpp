@@ -6,9 +6,10 @@
 #include "Framework/TestFramework.h"
 #include "Tests/StripTests.h"
 #include "Tests/AnimationTests.h"
+#include "Tests/LightObjTests.h"
 
 int main(){
-    AnimationTests();
+    RUN_TESTS();
     printf("finished\n");
     return 0;
 }

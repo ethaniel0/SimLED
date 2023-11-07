@@ -49,8 +49,9 @@ void setup() {
     smallObj->addAnimation(moveAnim);
 
 
-    auto* gen = new Generator(0, smallObj);
-    gen->spacing = 10;
+    auto* gen = smallObj;
+//    auto* gen = new Generator(0, smallObj);
+//    gen->spacing = 10;
 
 
 //    auto* entireObject = sc.parseObject(
@@ -74,11 +75,6 @@ void setup() {
 //    // baseAnimation dur 16, loop, bind position, bind to length, 0 offset. functions: linear 0 80, static 255. One absolute state transition: 1 0, no relative state positions
 //    auto* anim = (BaseAnimation*) sc.parseAnimation("b60 1 p 0 0 2 l0 80 s255 1 0 0 0");
 //    obj->addAnimation(anim);
-
-    auto obj2 = new LightObject(60);
-    auto anim2 = new BaseAnimation(255*20, false, EditableProperties::COLORS);
-    anim2->addFunction(new LinearTransform(0, 255*20));
-    obj2->addAnimation(anim2);
 
 //    objectSystem->addObject(obj2);
 //    objectSystem->addObject(entireObject);
