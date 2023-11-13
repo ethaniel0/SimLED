@@ -72,3 +72,25 @@ PlaceableObject* SystemCreator::parseObject(const char *string, int* pos) {
     PlaceableObject* o = objs[specifier](string, pos, this);
     return o;
 }
+
+ObjectSystem *SystemCreator::parseSystem(const char *string, int *pos) {
+    // <# of strips> <strip lengths> <# of objects> <objects>
+    int start = 0;
+    if (pos == nullptr) pos = &start;
+    skipWhitespace(string, pos);
+    int numStrips = extractNumber(string, pos);
+    ObjectSystem* system = new ObjectSystem();
+    for (int i = 0; i < numStrips; i++){
+        int len = extractNumber(string, pos);
+        system->strip->addStrip(len);
+    }
+    int numObjects = extractNumber(string, pos);
+
+    for (int i = 0; i < numObjects; i++){
+        PlaceableObject* obj = parseObject(string, pos);
+        if (obj == nullptr) return nullptr;
+        system->addObject(obj);
+    }
+
+    return system;
+}

@@ -30,7 +30,7 @@ TEST(Animations, BasePos){
     EXPECT_EQ(obj.colors.getLength(), 10, %d)
     EXPECT_EQ(obj.length, 10, %d)
     EXPECT_FALSE(obj.persistent)
-    EXPECT_EQ(obj.wrapMode, 0, %d)
+    
     EXPECT_EQ(obj.opacity, 255, %d)
 }
 
@@ -55,7 +55,7 @@ TEST(Animations, BaseRelPos){
     EXPECT_EQ(obj.colors.getLength(), 10, %d)
     EXPECT_EQ(obj.length, 10, %d)
     EXPECT_FALSE(obj.persistent)
-    EXPECT_EQ(obj.wrapMode, 0, %d)
+    
     EXPECT_EQ(obj.opacity, 255, %d)
 }
 
@@ -79,7 +79,7 @@ TEST(Animations, BaseOpacity){
     EXPECT_EQ(obj.colors.getLength(), 10, %d)
     EXPECT_EQ(obj.length, 10, %d)
     EXPECT_FALSE(obj.persistent)
-    EXPECT_EQ(obj.wrapMode, 0, %d)
+    
 }
 
 TEST(Animations, BaseColorsSingleVarFunctions){
@@ -123,7 +123,7 @@ TEST(Animations, BaseColorsSingleVarFunctions){
     EXPECT_EQ(obj.colors.getLength(), 10, %d)
     EXPECT_EQ(obj.length, 10, %d)
     EXPECT_FALSE(obj.persistent)
-    EXPECT_EQ(obj.wrapMode, 0, %d)
+    
     EXPECT_EQ(obj.opacity, 255, %d)
 }
 
@@ -163,7 +163,7 @@ TEST(Animations, BaseColorsSingle){
     EXPECT_EQ(obj.colors.getLength(), 10, %d)
     EXPECT_EQ(obj.length, 10, %d)
     EXPECT_FALSE(obj.persistent)
-    EXPECT_EQ(obj.wrapMode, 0, %d)
+    
     EXPECT_EQ(obj.opacity, 255, %d)
 }
 
@@ -206,7 +206,7 @@ TEST(Animations, BaseColorsLengthVarFuncs){
     EXPECT_EQ(obj.colors.getLength(), 10, %d)
     EXPECT_EQ(obj.length, 10, %d)
     EXPECT_FALSE(obj.persistent)
-    EXPECT_EQ(obj.wrapMode, 0, %d)
+    
     EXPECT_EQ(obj.opacity, 255, %d)
 }
 
@@ -230,7 +230,7 @@ TEST(Animations, BaseBrightness){
     EXPECT_EQ(obj.colors.getLength(), 10, %d)
     EXPECT_EQ(obj.length, 10, %d)
     EXPECT_FALSE(obj.persistent)
-    EXPECT_EQ(obj.wrapMode, 0, %d)
+    
     EXPECT_EQ(obj.opacity, 255, %d)
 }
 
@@ -281,7 +281,7 @@ TEST(Animations, BaseSetState){
     EXPECT_EQ(obj.colors.getLength(), 10, %d)
     EXPECT_EQ(obj.length, 10, %d)
     EXPECT_FALSE(obj.persistent)
-    EXPECT_EQ(obj.wrapMode, 0, %d)
+    
     EXPECT_EQ(obj.opacity, 255, %d)
 }
 

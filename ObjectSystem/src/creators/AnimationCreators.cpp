@@ -13,7 +13,7 @@ EditableProperties getEditableProperty(char c){
 }
 
 Animation* createBaseAnimation(const char* string, int* pos, SystemCreator* sc){
-    // syntax: <duration> <loop> <bind> <bind to length> <offset> <# of functions> <functions> <# absolute state transitions> <state> <frame> ... <# relative state transitions> <state> <frame> ...
+    // syntax: <duration> <loop> <bind> <bind to length> <frameOffset> <lightOffset> <# of functions> <functions> <# absolute state transitions> <state> <frame> ... <# relative state transitions> <state> <frame> ...
     int duration = extractNumber(string, pos);
     bool loop = extractNumber(string, pos);
     // bind: position(p), relative position(r), colors(c), opacity(o), brightness(b)
@@ -24,12 +24,14 @@ Animation* createBaseAnimation(const char* string, int* pos, SystemCreator* sc){
     incPtr(pos);
 
     bool bindToLength = extractNumber(string, pos);
-    int offset = extractNumber(string, pos);
+    int frameOffset = extractNumber(string, pos);
+    int lightOffset = extractNumber(string, pos);
 
     int numFuncs = extractNumber(string, pos);
     auto* base = new BaseAnimation(duration, loop, bind);
     base->bindToLength = bindToLength;
-    base->offset = offset;
+    base->frameOffset = frameOffset;
+    base->lightOffset = lightOffset;
     for (int i = 0; i < numFuncs; i++){
         AnimationFunction* func = sc->parseAnimationFunction(string, pos);
         if (func == nullptr) return nullptr;

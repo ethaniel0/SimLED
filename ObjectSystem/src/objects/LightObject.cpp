@@ -2,7 +2,6 @@
 
 LightObject::LightObject(int length) {
     pos = 0;
-    wrapMode = 0;
     persistent = false;
     opacity = 255;
     this->length = length;
@@ -13,7 +12,6 @@ LightObject::LightObject(int length) {
 
 LightObject::LightObject(CRGB* colors, int length) {
     pos = 0;
-    wrapMode = 0;
     persistent = false;
     opacity = 255;
     this->length = length;
@@ -71,7 +69,6 @@ void LightObject::applyToStrip(LightStrip* strip) {
 LightObject* LightObject::clone() {
     auto* obj = new LightObject(length);
     obj->pos = pos;
-    obj->wrapMode = wrapMode;
     obj->persistent = persistent;
     obj->opacity = opacity;
 

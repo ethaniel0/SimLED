@@ -8,6 +8,7 @@
 #include "../animations/AnimationFunction.h"
 #include "../animations/Animation.h"
 #include "../objects/PlaceableObject.h"
+#include "../ObjectSystem.h"
 
 
 class SystemCreator {
@@ -22,6 +23,7 @@ public:
     Animation* parseAnimation(const char* string, int* pos = 0);
     AnimationFunction* parseAnimationFunction(const char* string, int* pos = 0);
     PlaceableObject* parseObject(const char* string, int* pos = 0);
+    ObjectSystem* parseSystem(const char* string, int* pos = 0);
 
 private:
     Animation* createAnimation(const char* string, int* pos);

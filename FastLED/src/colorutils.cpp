@@ -75,13 +75,13 @@ void fill_rainbow_circular(struct CRGB* targetArray, int numToFill, uint8_t init
     hsv.sat = 240;
 
     const uint16_t hueChange = 65535 / (uint16_t)numToFill;  // hue change for each LED, * 256 for precision (256 * 256 - 1)
-    uint16_t hueOffset = 0;  // offset for hue value, with precision (*256)
+    uint16_t hueOffset = 0;  // lightOffset for hue value, with precision (*256)
 
     for (int i = 0; i < numToFill; ++i) {
         targetArray[i] = hsv;
         if (reversed) hueOffset -= hueChange;
         else hueOffset += hueChange;
-        hsv.hue = initialhue + (uint8_t)(hueOffset >> 8);  // assign new hue with precise offset (as 8-bit)
+        hsv.hue = initialhue + (uint8_t)(hueOffset >> 8);  // assign new hue with precise lightOffset (as 8-bit)
     }
 }
 
@@ -95,13 +95,13 @@ void fill_rainbow_circular(struct CHSV* targetArray, int numToFill, uint8_t init
     hsv.sat = 240;
 
     const uint16_t hueChange = 65535 / (uint16_t) numToFill;  // hue change for each LED, * 256 for precision (256 * 256 - 1)
-    uint16_t hueOffset = 0;  // offset for hue value, with precision (*256)
+    uint16_t hueOffset = 0;  // lightOffset for hue value, with precision (*256)
 
     for (int i = 0; i < numToFill; ++i) {
         targetArray[i] = hsv;
         if (reversed) hueOffset -= hueChange;
         else hueOffset += hueChange;
-        hsv.hue = initialhue + (uint8_t)(hueOffset >> 8);  // assign new hue with precise offset (as 8-bit)
+        hsv.hue = initialhue + (uint8_t)(hueOffset >> 8);  // assign new hue with precise lightOffset (as 8-bit)
     }
 }
 

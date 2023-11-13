@@ -395,7 +395,7 @@ public:
 /// CPixelView for CRGB arrays
 typedef CPixelView<CRGB> CRGBSet;
 
-/// Retrieve a pointer to a CRGB array, using a CRGBSet and an LED offset
+/// Retrieve a pointer to a CRGB array, using a CRGBSet and an LED lightOffset
 __attribute__((always_inline))
 inline CRGB *operator+(const CRGBSet & pixels, int offset) { return (CRGB*)pixels + offset; }
 

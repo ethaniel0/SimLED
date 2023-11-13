@@ -27,57 +27,16 @@ void setup() {
 
     SystemCreator sc;
 
-    objectSystem->strip.addStrip(30);
-    objectSystem->strip.addStrip(30);
+    objectSystem->strip->addStrip(30);
+    objectSystem->strip->addStrip(30);
 
-    strip1 = new StripElement(objectSystem->strip.getSegment(0), 30);
+    strip1 = new StripElement(objectSystem->strip->getSegment(0), 30);
     strip1->setParameters(100, 460,  -M_PI/3, 15, 15);
-    strip2 = new StripElement(objectSystem->strip.getSegment(1), 30);
+    strip2 = new StripElement(objectSystem->strip->getSegment(1), 30);
     strip2->setParameters(550, 460, -2*M_PI/3, 15, 15);
 
-//    auto* lightobj = sc.parseObject("l 0 0 c 1 ff0000 1 " "b -1 0 r 0 0 1 s 1");
-    auto* gen = sc.parseObject("g0 8 " "l 0 0 c 1 ff0000 1 " "b -1 1 r 0 0 1 s 1");
-
-//    auto* smallObj = new LightObject(1);
-//    auto* smallAnim = new BaseAnimation(-1, true, EditableProperties::COLORS);
-//    smallAnim->addFunction(new StaticTransform(0));
-//    smallAnim->addFunction(new StaticTransform(255));
-//
-//    auto* moveAnim = new BaseAnimation(80, false, EditableProperties::RELATIVE_POSITION);
-//    moveAnim->addFunction(new StaticTransform(1));
-//
-//    smallObj->addAnimation(smallAnim);
-//    smallObj->addAnimation(moveAnim);
-//
-//    auto* gen = new Generator(0, smallObj);
-//    gen->spacing = 9;
-
-
-//    auto* entireObject = sc.parseObject(
-//            "l0 1 l 10 2 "
-//            "b80 1 c 1 0 2 l0 255 s255 0 0 "
-//            "b60 1 p 0 0 2 l0 80 s255 1 0 0 0"
-//    );
-//
-//    auto* movingobject = sc.parseObject(
-//            "l0 1 c 7 ff0000 ffff00 00ff00 00ffff 0000ff ff00ff ffffff 1"
-//            "b80 1 p 0 0 1 l0 80"
-//    );
-
-//    // LightObject pos 0, persistent. Create with length of 10. No animations.
-//    auto* obj = (LightObject*) sc.parseObject("l0 1 l 10 0");
-//
-//    // baseAnimation dur 80, loop, bind color, bind to length, 0 offset. functions: linear 0 255, static 255. No absolute or relative state transitions
-//    auto* gradient = sc.parseAnimation("b80 1 c 1 0 2 l0 255 s255 0 0");
-//    obj->addAnimation(gradient);
-//
-//    // baseAnimation dur 16, loop, bind position, bind to length, 0 offset. functions: linear 0 80, static 255. One absolute state transition: 1 0, no relative state positions
-//    auto* anim = (BaseAnimation*) sc.parseAnimation("b60 1 p 0 0 2 l0 80 s255 1 0 0 0");
-//    obj->addAnimation(anim);
-
-//    objectSystem->addObject(obj2);
-//    objectSystem->addObject(entireObject);
-//    objectSystem->addObject(movingobject);
+//    auto* lightobj = sc.parseObject("l 0 0 c 1 ff0000 1 " "b -1 0 r 0 0 0 1 s 1");
+    auto* gen = sc.parseObject("g0 8 " "l 0 0 c 1 ff0000 1 " "b -1 1 r 0 0 0 1 s 1");
     objectSystem->addObject(gen);
 
     state1 = new Button(new char[]{'1'}, 10, 10, 80, 25);

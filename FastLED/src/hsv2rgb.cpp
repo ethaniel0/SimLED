@@ -59,7 +59,7 @@ void hsv2rgb_raw_C (const struct CHSV & hsv, struct CRGB & rgb)
     uint8_t color_amplitude = value - brightness_floor;
 
     // Figure out which section of the hue wheel we're in,
-    // and how far offset we are withing that section
+    // and how far lightOffset we are withing that section
     uint8_t section = hsv.hue / HSV_SECTION_3; // 0..2
     uint8_t offset = hsv.hue % HSV_SECTION_3;  // 0..63
 
@@ -99,7 +99,7 @@ void hsv2rgb_raw_C (const struct CHSV & hsv, struct CRGB & rgb)
     uint8_t rampup_amp_adj   = (rampup   * color_amplitude) / (256 / 4);
     uint8_t rampdown_amp_adj = (rampdown * color_amplitude) / (256 / 4);
 
-    // add brightness_floor offset to everything
+    // add brightness_floor lightOffset to everything
     uint8_t rampup_adj_with_floor   = rampup_amp_adj   + brightness_floor;
     uint8_t rampdown_adj_with_floor = rampdown_amp_adj + brightness_floor;
 
@@ -160,10 +160,10 @@ void hsv2rgb_raw_avr(const struct CHSV & hsv, struct CRGB & rgb)
     // create the specific hue desired.
     uint8_t color_amplitude = value - brightness_floor;
 
-    // Figure how far we are offset into the section of the
+    // Figure how far we are lightOffset into the section of the
     // color wheel that we're in
-    uint8_t offset = hsv.hue & (HSV_SECTION_3 - 1);  // 0..63
-    uint8_t rampup = offset * 4; // 0..252
+    uint8_t lightOffset = hsv.hue & (HSV_SECTION_3 - 1);  // 0..63
+    uint8_t rampup = lightOffset * 4; // 0..252
 
 
     // compute color-amplitude-scaled-down versions of rampup and rampdown
@@ -184,7 +184,7 @@ void hsv2rgb_raw_avr(const struct CHSV & hsv, struct CRGB & rgb)
                  );
 
 
-    // add brightness_floor offset to everything
+    // add brightness_floor lightOffset to everything
     uint8_t rampup_adj_with_floor   = rampup_amp_adj   + brightness_floor;
     uint8_t rampdown_adj_with_floor = rampdown_amp_adj + brightness_floor;
 
@@ -276,7 +276,7 @@ void hsv2rgb_rainbow( const CHSV& hsv, CRGB& rgb)
     
     uint8_t offset = hue & 0x1F; // 0..31
     
-    // offset8 = offset * 8
+    // offset8 = lightOffset * 8
     uint8_t offset8 = offset;
     {
 #if defined(__AVR__)

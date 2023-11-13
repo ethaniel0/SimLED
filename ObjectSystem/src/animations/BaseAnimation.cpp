@@ -4,11 +4,12 @@ BaseAnimation::BaseAnimation(int duration, bool loop, EditableProperties bind) {
     this->duration = duration;
     this->loop = loop;
     this->bind = bind;
-    this->done = false;
-    this->frames = 0;
-    this->offset = 1;
-    this->bindToLength = false;
-    this->obj = nullptr;
+    done = false;
+    frames = 0;
+    lightOffset = 1;
+    frameOffset = 0;
+    bindToLength = false;
+    obj = nullptr;
     for (int i = 0; i < 16; i++){
         absoluteStateTriggers[i] = -1;
         relativeStateTriggers[i] = -1;
@@ -50,7 +51,7 @@ void BaseAnimation::update() {
         funcs.moveToStart();
         int len = funcs.getLength();
         for (int j = 0; j < len; j++) {
-            numbers[i * gen + count] = funcs.current()->getValue(frames + offset*i, duration);
+            numbers[i * gen + count] = funcs.current()->getValue(frames + lightOffset * i + frameOffset, duration);
             funcs.next();
             count++;
         }
@@ -141,7 +142,7 @@ void BaseAnimation::setState(int state) {
 BaseAnimation* BaseAnimation::clone() {
     auto* anim = new BaseAnimation(duration, loop, bind);
     anim->bindToLength = bindToLength;
-    anim->offset = offset;
+    anim->lightOffset = lightOffset;
     funcs.moveToStart();
     int len = funcs.getLength();
     for (int i = 0; i < len; i++) {

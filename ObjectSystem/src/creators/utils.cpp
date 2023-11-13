@@ -31,9 +31,9 @@ int extractNumber(const char* string, int* pos){
     return num;
 }
 
-int extractHex(const char* string, int* pos, int digits){
+uint32_t extractHex(const char* string, int* pos, int digits){
     skipWhitespace(string, pos);
-    int num = 0;
+    uint32_t num = 0;
     for (int i = 0; i < digits; i++){
         num *= 16;
         if (string[*pos] >= '0' && string[*pos] <= '9'){
@@ -51,6 +51,6 @@ int extractHex(const char* string, int* pos, int digits){
 CRGB extractColor(const char* string, int* pos){
     // extracts color from hex
     skipWhitespace(string, pos);
-    int color = extractHex(string, pos, 6);
+    uint32_t color = extractHex(string, pos, 6);
     return CRGB(color);
 }

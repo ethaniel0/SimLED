@@ -8,8 +8,11 @@
 
 class BaseAnimation : public Animation {
   public:
-    /// @brief when the bindToLength property is true, successive numbers will be calculated at thit specified frame offset
-    int offset;
+    /// @brief when the bindToLength property is true, successive numbers will be calculated at that specified frame lightOffset
+    int lightOffset;
+
+    /// @brief the offset in frames for which the animation should use. Will return to this value after a reset.
+    int frameOffset;
 
     /// @brief whether or not the animation should loop once it is finished
     bool loop;

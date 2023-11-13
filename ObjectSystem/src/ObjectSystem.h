@@ -17,7 +17,7 @@ class PlaceableObject;
 
 class ObjectSystem {
 public:
-    LightStrip strip;
+    LightStrip* strip;
     ObjectSystem();
     ~ObjectSystem();
 

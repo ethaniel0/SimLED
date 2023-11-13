@@ -1018,7 +1018,7 @@ uint32_t get_millisecond_timer();
 /// Generates a 16-bit "sawtooth" wave at a given BPM, with BPM
 /// specified in Q8.8 fixed-point format.
 /// @param beats_per_minute_88 the frequency of the wave, in Q8.8 format
-/// @param timebase the time offset of the wave from the millis() timer
+/// @param timebase the time lightOffset of the wave from the millis() timer
 /// @warning The BPM parameter **MUST** be provided in Q8.8 format! E.g.
 /// for 120 BPM it would be 120*256 = 30720. If you just want to specify
 /// "120", use beat16() or beat8().
@@ -1037,7 +1037,7 @@ LIB8STATIC uint16_t beat88( accum88 beats_per_minute_88, uint32_t timebase = 0)
 
 /// Generates a 16-bit "sawtooth" wave at a given BPM
 /// @param beats_per_minute the frequency of the wave, in decimal
-/// @param timebase the time offset of the wave from the millis() timer
+/// @param timebase the time lightOffset of the wave from the millis() timer
 LIB8STATIC uint16_t beat16( accum88 beats_per_minute, uint32_t timebase = 0)
 {
     // Convert simple 8-bit BPM's to full Q8.8 accum88's if needed
@@ -1047,7 +1047,7 @@ LIB8STATIC uint16_t beat16( accum88 beats_per_minute, uint32_t timebase = 0)
 
 /// Generates an 8-bit "sawtooth" wave at a given BPM
 /// @param beats_per_minute the frequency of the wave, in decimal
-/// @param timebase the time offset of the wave from the millis() timer
+/// @param timebase the time lightOffset of the wave from the millis() timer
 LIB8STATIC uint8_t beat8( accum88 beats_per_minute, uint32_t timebase = 0)
 {
     return beat16( beats_per_minute, timebase) >> 8;
@@ -1059,8 +1059,8 @@ LIB8STATIC uint8_t beat8( accum88 beats_per_minute, uint32_t timebase = 0)
 /// @param beats_per_minute_88 the frequency of the wave, in Q8.8 format
 /// @param lowest the lowest output value of the sine wave
 /// @param highest the highest output value of the sine wave
-/// @param timebase the time offset of the wave from the millis() timer
-/// @param phase_offset phase offset of the wave from the current position
+/// @param timebase the time lightOffset of the wave from the millis() timer
+/// @param phase_offset phase lightOffset of the wave from the current position
 /// @warning The BPM parameter **MUST** be provided in Q8.8 format! E.g.
 /// for 120 BPM it would be 120*256 = 30720. If you just want to specify
 /// "120", use beatsin16() or beatsin8().
@@ -1080,8 +1080,8 @@ LIB8STATIC uint16_t beatsin88( accum88 beats_per_minute_88, uint16_t lowest = 0,
 /// @param beats_per_minute the frequency of the wave, in decimal
 /// @param lowest the lowest output value of the sine wave
 /// @param highest the highest output value of the sine wave
-/// @param timebase the time offset of the wave from the millis() timer
-/// @param phase_offset phase offset of the wave from the current position
+/// @param timebase the time lightOffset of the wave from the millis() timer
+/// @param phase_offset phase lightOffset of the wave from the current position
 LIB8STATIC uint16_t beatsin16( accum88 beats_per_minute, uint16_t lowest = 0, uint16_t highest = 65535,
                                uint32_t timebase = 0, uint16_t phase_offset = 0)
 {
@@ -1098,8 +1098,8 @@ LIB8STATIC uint16_t beatsin16( accum88 beats_per_minute, uint16_t lowest = 0, ui
 /// @param beats_per_minute the frequency of the wave, in decimal
 /// @param lowest the lowest output value of the sine wave
 /// @param highest the highest output value of the sine wave
-/// @param timebase the time offset of the wave from the millis() timer
-/// @param phase_offset phase offset of the wave from the current position
+/// @param timebase the time lightOffset of the wave from the millis() timer
+/// @param phase_offset phase lightOffset of the wave from the current position
 LIB8STATIC uint8_t beatsin8( accum88 beats_per_minute, uint8_t lowest = 0, uint8_t highest = 255,
                             uint32_t timebase = 0, uint8_t phase_offset = 0)
 {

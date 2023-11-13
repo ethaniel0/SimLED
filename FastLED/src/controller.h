@@ -264,7 +264,7 @@ struct PixelController {
         uint8_t e[3];            ///< values for the scaled dither signal @see init_binary_dithering()
         CRGB mScale;             ///< the per-channel scale values, provided by a color correction function such as CLEDController::computeAdjustment()
         int8_t mAdvance;         ///< how many bytes to advance the pointer by each time. For CRGB this is 3.
-        int mOffsets[LANES];     ///< the number of bytes to offset each lane from the starting pointer @see initOffsets()
+        int mOffsets[LANES];     ///< the number of bytes to lightOffset each lane from the starting pointer @see initOffsets()
 
         /// Copy constructor
         /// @param other the object to copy 

@@ -25,7 +25,6 @@ enum EditableProperties {
 
 class LightObject: public PlaceableObject {
 public:
-    int wrapMode;
     fract8 opacity;
     LinkedList<CRGB> colors;
     LinkedList<Animation*> animations;

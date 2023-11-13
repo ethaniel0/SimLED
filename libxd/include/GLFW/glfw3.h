@@ -1363,8 +1363,8 @@ typedef void (* GLFWcursorenterfun)(GLFWwindow*,int);
  *  This is the function signature for scroll callback functions.
  *
  *  @param[in] window The window that received the event.
- *  @param[in] xoffset The scroll offset along the x-axis.
- *  @param[in] yoffset The scroll offset along the y-axis.
+ *  @param[in] xoffset The scroll lightOffset along the x-axis.
+ *  @param[in] yoffset The scroll lightOffset along the y-axis.
  *
  *  @sa @ref scrolling
  *  @sa @ref glfwSetScrollCallback
@@ -2879,7 +2879,7 @@ GLFWAPI void glfwGetFramebufferSize(GLFWwindow* window, int* width, int* height)
  *  [window-related hints](@ref window_hints_wnd) used to create it.
  *
  *  Because this function retrieves the size of each window frame edge and not
- *  the offset along a particular coordinate axis, the retrieved values will
+ *  the lightOffset along a particular coordinate axis, the retrieved values will
  *  always be zero or positive.
  *
  *  Any or all of the size arguments may be `NULL`.  If an error occurs, all
@@ -4973,7 +4973,7 @@ GLFWAPI const char* glfwGetClipboardString(GLFWwindow* window);
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED.
  *
  *  @thread_safety This function may be called from any thread.  Reading and
- *  writing of the internal timer offset is not atomic, so it needs to be
+ *  writing of the internal timer lightOffset is not atomic, so it needs to be
  *  externally synchronized with calls to @ref glfwSetTime.
  *
  *  @sa @ref time
@@ -5000,7 +5000,7 @@ GLFWAPI double glfwGetTime(void);
  *  storing nanoseconds in 64 bits.  The limit may be increased in the future.
  *
  *  @thread_safety This function may be called from any thread.  Reading and
- *  writing of the internal timer offset is not atomic, so it needs to be
+ *  writing of the internal timer lightOffset is not atomic, so it needs to be
  *  externally synchronized with calls to @ref glfwGetTime.
  *
  *  @sa @ref time

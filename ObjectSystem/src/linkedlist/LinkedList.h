@@ -35,17 +35,12 @@ public:
     T& first() const;
     T& last() const;
     T get(int ind);
-    bool atStart() const { return index == 0; }
-    bool atEnd() const { return index == length - 1; }
     int getLength();
     void append(T);
-    void DeleteLast();
-    void DeleteFirst();
     void deleteCurrent();
     bool next();
     bool moveToStart();
     bool prev();
-    void Delete(T&);
     bool search(T);
     void clear();
     void update(T elem);
@@ -161,24 +156,6 @@ void LinkedList<T>::append(T element)
 }
 
 template <class T>
-void LinkedList<T>::DeleteLast()
-{
-    if(length == 0)
-        return;
-    curr = tail;
-    deleteCurrent();
-}
-
-template <class T>
-void LinkedList<T>::DeleteFirst()
-{
-    if(length == 0)
-        return;
-    curr = head;
-    deleteCurrent();
-}
-
-template <class T>
 bool LinkedList<T>::next()
 {
     if(length == 0)
@@ -214,13 +191,6 @@ bool LinkedList<T>::prev()
     index--;
     curr = curr->prev;
     return true;
-}
-
-template <class T>
-void LinkedList<T>::Delete(T & elem)
-{
-    if(search(elem))
-        deleteCurrent();
 }
 
 template <class T>

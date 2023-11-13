@@ -30,6 +30,10 @@ public:
         return strips.get(stripNum);
     }
 
+    int numSegments(){
+        return numStrips;
+    }
+
 private:
     LinkedList<CRGB*> strips;
     LinkedList<int> lengths;
