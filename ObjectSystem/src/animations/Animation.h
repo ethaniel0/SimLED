@@ -10,7 +10,7 @@ class Animation{
 
         virtual ~Animation() = default;
 
-        virtual void update() = 0;
+        virtual void update(int32_t *data) = 0;
         virtual bool isFinished() = 0;
         virtual void reset() = 0;
         virtual void setState(int state) = 0;

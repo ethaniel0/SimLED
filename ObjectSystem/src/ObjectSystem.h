@@ -6,6 +6,7 @@
 #define SIMLED_OBJECTSYSTEM_H
 
 #include "strips/LightStrip.h"
+#include "strips/StripPath.h"
 #include "objects/PlaceableObject.h"
 #include "objects/Generator.h"
 #include "animations/BaseAnimation.h"
@@ -17,7 +18,9 @@ class PlaceableObject;
 
 class ObjectSystem {
 public:
-    LightStrip* strip;
+    LightStrip strip;
+    int32_t data[16];
+    bool dataReset[16];
     ObjectSystem();
     ~ObjectSystem();
 
@@ -27,6 +30,7 @@ public:
 
 private:
     LinkedList<PlaceableObject*> objects;
+
 };
 
 #endif //SIMLED_OBJECTSYSTEM_H

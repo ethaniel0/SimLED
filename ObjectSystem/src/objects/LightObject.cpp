@@ -1,10 +1,12 @@
 #include "LightObject.h"
+#include "../ObjectSystem.h"
 
 LightObject::LightObject(int length) {
     pos = 0;
     persistent = false;
     opacity = 255;
     this->length = length;
+    path = nullptr;
     for (int i = 0; i < length; i++) {
         this->colors.append(CRGB::Black);
     }
@@ -35,7 +37,7 @@ void LightObject::update(ObjectSystem* system) {
     animations.moveToStart();
     int len = animations.getLength();
     for (int i = 0; i < len; i++) {
-        animations.current()->update();
+        animations.current()->update(system->data);
         animations.next();
     }
 }
@@ -57,12 +59,23 @@ void LightObject::setState(int state){
 void LightObject::applyToStrip(LightStrip* strip) {
     colors.moveToStart();
     int len = colors.getLength();
-    for (int i = 0; i < len; i++) {
-        CRGB color = colors.current();
+    if (path == nullptr) {
+        for (int i = 0; i < len; i++) {
+            CRGB color = colors.current();
 
-        color = blend(strip->get(pos + i), color, opacity);
-        strip->set(pos + i, color, opacity);
-        colors.next();
+            color = blend(strip->get(pos + i), color, opacity);
+            strip->set(pos + i, color, opacity);
+            colors.next();
+        }
+    }
+    else {
+        for (int i = 0; i < len; i++) {
+            CRGB color = colors.current();
+            int index = path->get(pos + i);
+            color = blend(strip->get(index), color, opacity);
+            strip->set(index, color, opacity);
+            colors.next();
+        }
     }
 }
 
@@ -71,6 +84,7 @@ LightObject* LightObject::clone() {
     obj->pos = pos;
     obj->persistent = persistent;
     obj->opacity = opacity;
+    obj->path = path;
 
     colors.moveToStart();
     obj->colors.moveToStart();

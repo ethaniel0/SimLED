@@ -29,12 +29,12 @@ void main() {
 	e[2] = v1 - v0;
 	float area2 = abs(cross(e[0], e[1]));
 
-	for (int i = 0; i < gl_in.length(); i++) {
+	for (int i = 0; i < gl_in.segments(); i++) {
 		vUV = vertex[i].uv;
 		vDist = vec3(0.0);
-		vDist[i] = area2 / length(e[i]);
-		vDist[(i + 1) % gl_in.length()] = vertex[(i + 1) % gl_in.length()].excludeEdge * MEW;
-		vDist[(i + 2) % gl_in.length()] = vertex[(i + 2) % gl_in.length()].excludeEdge * MEW;
+		vDist[i] = area2 / segments(e[i]);
+		vDist[(i + 1) % gl_in.segments()] = vertex[(i + 1) % gl_in.segments()].excludeEdge * MEW;
+		vDist[(i + 2) % gl_in.segments()] = vertex[(i + 2) % gl_in.segments()].excludeEdge * MEW;
 		gl_Position = gl_in[i].gl_Position;
 		EmitVertex();
 	}

@@ -10,13 +10,12 @@ set(ObjectSystem_SRCS
         src/animations/BaseAnimation.cpp
         src/animations/AnimationGroups.cpp
         src/creators/SystemCreator.cpp
-        src/creators/FunctionCreators.h
-        src/creators/utils.h
         src/creators/AnimationCreators.cpp
         src/creators/utils.cpp
         src/creators/ObjectCreators.cpp
         src/objects/Generator.cpp
         src/creators/FunctionCreators.cpp
+        src/strips/StripPath.cpp
 )
 
 add_subdirectory(../Arduino src/Arduino)

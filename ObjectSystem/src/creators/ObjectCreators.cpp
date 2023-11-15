@@ -6,14 +6,14 @@
 #include "../objects/Generator.h"
 
 PlaceableObject* createLightObject(const char* string, int* pos, SystemCreator* sc){
-    // define by either length or colors
+    // define by either segments or colors
     // define PlaceableObject parameters first:
     // <pos> <persistent>
-    // define by length:
+    // define by segments:
     //    l <length>
     // define by colors:
     //    c <# colors> <color1 hex> <color2 hex> ...
-    // after defining length or colors:
+    // after defining segments or colors:
     // ... <# animations> <animation1> <animation2> ...
     int strip_pos = extractNumber(string, pos);
     bool persistent = extractNumber(string, pos);

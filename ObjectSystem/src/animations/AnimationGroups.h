@@ -19,7 +19,7 @@ public:
     void addPrevTrigger(int stateNumber);
     void addResetTrigger(int stateNumber);
 
-    void update() override;
+    void update(int32_t *data) override;
     bool isFinished() override;
     void reset() override;
     void setState(int state) override;
@@ -40,7 +40,7 @@ public:
 
     void addState(int state, Animation* animation);
 
-    void update() override;
+    void update(int32_t *data) override;
     bool isFinished() override;
     void reset() override;
     void setState(int state) override;

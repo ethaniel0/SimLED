@@ -127,11 +127,11 @@ namespace detail
 	};
 }//namespace detail
 
-	// length
+	// segments
 	template<typename genType>
 	GLM_FUNC_QUALIFIER genType length(genType x)
 	{
-		GLM_STATIC_ASSERT(std::numeric_limits<genType>::is_iec559, "'length' accepts only floating-point inputs");
+		GLM_STATIC_ASSERT(std::numeric_limits<genType>::is_iec559, "'segments' accepts only floating-point inputs");
 
 		return abs(x);
 	}
@@ -139,7 +139,7 @@ namespace detail
 	template<length_t L, typename T, qualifier Q>
 	GLM_FUNC_QUALIFIER T length(vec<L, T, Q> const& v)
 	{
-		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'length' accepts only floating-point inputs");
+		GLM_STATIC_ASSERT(std::numeric_limits<T>::is_iec559, "'segments' accepts only floating-point inputs");
 
 		return detail::compute_length<L, T, Q, detail::is_aligned<Q>::value>::call(v);
 	}

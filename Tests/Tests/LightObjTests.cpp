@@ -137,7 +137,6 @@ TEST(LightObjects, Cloning){
     LightObject* obj2 = obj.clone();
 
     EXPECT_EQ(obj.length, obj2->length, %d)
-    EXPECT_EQ(obj.wrapMode, obj2->wrapMode, %d)
     EXPECT_EQ(obj.opacity, obj2->opacity, %d)
     EXPECT_EQ(obj.persistent, obj2->persistent, %d)
     EXPECT_EQ(obj.pos, obj2->pos, %d)
@@ -161,13 +160,11 @@ TEST(LightObjects, Cloning){
 
     LightObject coloredObj(colors, 6);
     coloredObj.opacity = 128;
-    coloredObj.wrapMode = 1;
     coloredObj.pos = 21;
     coloredObj.persistent = true;
     LightObject* coloredObj2 = coloredObj.clone();
 
     EXPECT_EQ(coloredObj.length, coloredObj2->length, %d)
-    EXPECT_EQ(coloredObj.wrapMode, coloredObj2->wrapMode, %d)
     EXPECT_EQ(coloredObj.opacity, coloredObj2->opacity, %d)
     EXPECT_EQ(coloredObj.colors.getLength(), coloredObj2->colors.getLength(), %d)
     EXPECT_EQ(coloredObj.persistent, coloredObj2->persistent, %d)

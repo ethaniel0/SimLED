@@ -282,7 +282,7 @@ struct PixelController {
             for(int i = 0; i < LANES; ++i) { mOffsets[i] = other.mOffsets[i]; }
         }
 
-        /// Initialize the PixelController::mOffsets array based on the length of the strip
+        /// Initialize the PixelController::mOffsets array based on the segments of the strip
         /// @param len the number of LEDs in one lane of the strip
         void initOffsets(int len) {
           int nOffset = 0;
@@ -294,7 +294,7 @@ struct PixelController {
 
         /// Constructor
         /// @param d pointer to LED data
-        /// @param len length of the LED data
+        /// @param len segments of the LED data
         /// @param s LED scale values, as CRGB struct
         /// @param dither dither setting for the LEDs
         /// @param advance whether the pointer (d) should advance per LED
@@ -308,7 +308,7 @@ struct PixelController {
 
         /// Constructor
         /// @param d pointer to LED data
-        /// @param len length of the LED data
+        /// @param len segments of the LED data
         /// @param s LED scale values, as CRGB struct
         /// @param dither dither setting for the LEDs
         PixelController(const CRGB *d, int len, CRGB & s, EDitherMode dither = BINARY_DITHER) : mData((const uint8_t*)d), mLen(len), mLenRemaining(len), mScale(s) {
@@ -319,7 +319,7 @@ struct PixelController {
 
         /// Constructor
         /// @param d pointer to LED data
-        /// @param len length of the LED data
+        /// @param len segments of the LED data
         /// @param s LED scale values, as CRGB struct
         /// @param dither dither setting for the LEDs
         PixelController(const CRGB &d, int len, CRGB & s, EDitherMode dither = BINARY_DITHER) : mData((const uint8_t*)&d), mLen(len), mLenRemaining(len), mScale(s) {
@@ -441,7 +441,7 @@ struct PixelController {
             }
         }
 
-        /// Get the length of the LED strip
+        /// Get the segments of the LED strip
         /// @returns PixelController::mLen
         __attribute__((always_inline)) inline int size() { return mLen; }
 

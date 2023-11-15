@@ -23,7 +23,7 @@ class BaseAnimation : public Animation {
     /// @brief the number of frames that the animation should last for
     int duration;
 
-    /// @brief whether or not the animation should bind to the length of the object
+    /// @brief whether or not the animation should bind to the segments of the object
     bool bindToLength;
 
     BaseAnimation(int duration, bool loop, EditableProperties bind);
@@ -31,7 +31,7 @@ class BaseAnimation : public Animation {
     ~BaseAnimation() override;
 
     /// @brief update the animation
-    void update() override;
+    void update(int32_t *data) override;
 
     /// @brief returns if the animation is finished
     /// @return true if the animation is finished

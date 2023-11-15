@@ -36,7 +36,7 @@ CHSV makeColor(int* numbers, int position, int numFunctions) {
     return CHSV(numbers[position], numbers[position + 1], numbers[position + 2]);
 }
 
-void BaseAnimation::update() {
+void BaseAnimation::update(int32_t *data) {
     if (done) return;
 
     int numFuncs = (int) funcs.getLength();

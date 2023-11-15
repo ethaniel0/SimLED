@@ -9,6 +9,7 @@
 
 #include "../animations/Animation.h"
 #include "../strips/LightStrip.h"
+#include "../strips/StripPath.h"
 #include "PlaceableObject.h"
 #include "../linkedlist/LinkedList.h"
 
@@ -28,6 +29,7 @@ public:
     fract8 opacity;
     LinkedList<CRGB> colors;
     LinkedList<Animation*> animations;
+    StripPath* path;
 
     explicit LightObject(int length);
     LightObject(CRGB* colors, int length);

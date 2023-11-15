@@ -759,7 +759,7 @@
 #define GLM_HAS_ALIGNED_TYPE GLM_HAS_UNRESTRICTED_UNIONS
 
 ///////////////////////////////////////////////////////////////////////////////////
-// Length type: all length functions returns a length_t type.
+// Length type: all segments functions returns a length_t type.
 // When GLM_FORCE_SIZE_T_LENGTH is defined, length_t is a typedef of size_t otherwise
 // length_t is a typedef of int like GLSL defines it.
 
@@ -778,9 +778,9 @@ namespace glm
 #if GLM_MESSAGES == GLM_MESSAGES_ENABLED && !defined(GLM_MESSAGE_FORCE_SIZE_T_LENGTH)
 #	define GLM_MESSAGE_FORCE_SIZE_T_LENGTH
 #	if defined GLM_FORCE_SIZE_T_LENGTH
-#		pragma message("GLM: .length() returns glm::length_t, a typedef of std::size_t")
+#		pragma message("GLM: .segments() returns glm::length_t, a typedef of std::size_t")
 #	else
-#		pragma message("GLM: .length() returns glm::length_t, a typedef of int following the GLSL specification")
+#		pragma message("GLM: .segments() returns glm::length_t, a typedef of int following the GLSL specification")
 #	endif
 #endif//GLM_MESSAGES
 

@@ -2,6 +2,7 @@
 // Created by Ethan Horowitz on 11/6/23.
 //
 #include <src/strips/LightStrip.h>
+#include <src/strips/StripPath.h>
 #include "StripTests.h"
 
 void STests(){
@@ -69,4 +70,20 @@ TEST(Strip, SetOpacity){
     strip.set(0, CRGB(255, 255, 255), 230);
     ASSERT_TRUE(strip.get(0) == CRGB(230, 230, 230))
 }
+
+TEST(Strip, Paths){
+    StripPath p = StripPath(10, new int[4]{0, 5, 15, 10});
+    for (int i = 0; i < 5; i++){
+        EXPECT_EQ(p.get(i), i, %d)
+    }
+    for (int i = 0; i < 5; i++){
+        EXPECT_EQ(p.get(i + 5), 15 - i, %d)
+    }
+
+    EXPECT_EQ(p.get(10), -1, %d)
+    EXPECT_EQ(p.get(10, true), 0, %d)
+    EXPECT_EQ(p.get(-1), -1, %d)
+    EXPECT_EQ(p.get(-1, true), 11, %d)
+}
+
 

@@ -9,11 +9,11 @@ bool inView(PlaceableObject* obj, int numLEDs){
 }
 
 ObjectSystem::ObjectSystem(){
-    this->strip = new LightStrip();
+    for (int & i : data) i = 0;
+    for (bool & b : dataReset) b = false;
 }
 
 ObjectSystem::~ObjectSystem(){
-    delete strip;
     objects.moveToStart();
     int len = objects.getLength();
     for (int i = 0; i < len; i++) {
@@ -23,7 +23,7 @@ ObjectSystem::~ObjectSystem(){
 }
 
 void ObjectSystem::update(){
-    strip->clear();
+    strip.clear();
 
     objects.moveToStart();
     while(true){
@@ -31,13 +31,17 @@ void ObjectSystem::update(){
         PlaceableObject *obj = objects.current();
         obj->update(this);
 
-        if (!obj->persistent && !inView(obj, strip->size())) {
+        if (!obj->persistent && !inView(obj, strip.size())) {
             objects.deleteCurrent();
         } else {
-            obj->applyToStrip(strip);
+            obj->applyToStrip(&strip);
         }
         bool hasNext = objects.next();
         if (!hasNext) break;
+    }
+
+    for (int i = 0; i < 16; i++){
+        if (dataReset[i]) data[i] = 0;
     }
 }
 

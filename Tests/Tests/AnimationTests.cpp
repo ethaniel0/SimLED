@@ -171,7 +171,7 @@ TEST(Animations, BaseColorsLengthVarFuncs){
 
     // hue only
     auto* anim = new BaseAnimation(10, false, EditableProperties::COLORS);
-    anim->offset = 17;
+    anim->lightOffset = 17;
     anim->bindToLength = true;
     anim->addFunction(new LinearTransform(0, 100));
 
@@ -287,7 +287,7 @@ TEST(Animations, BaseSetState){
 
 TEST(Animations, BaseClone){
     auto* anim = new BaseAnimation(10, true, EditableProperties::POSITION);
-    anim->offset = 17;
+    anim->lightOffset = 17;
     anim->frames = 12;
     anim->bindToLength = true;
 
@@ -296,10 +296,10 @@ TEST(Animations, BaseClone){
 
     BaseAnimation* anim2 = anim->clone();
 
-    EXPECT_EQ(anim->offset, anim2->offset, %d)
+    EXPECT_EQ(anim->lightOffset, anim2->lightOffset, %d)
     EXPECT_EQ(anim->loop, anim2->loop, %d)
     EXPECT_EQ(anim2->frames, 0, %d)
-    EXPECT_EQ(anim->offset, anim2->offset, %d)
+    EXPECT_EQ(anim->lightOffset, anim2->lightOffset, %d)
     EXPECT_EQ(anim->duration, anim2->duration, %d)
     EXPECT_EQ(anim->bindToLength, anim2->bindToLength, %b)
 }

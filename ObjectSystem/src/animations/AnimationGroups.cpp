@@ -27,10 +27,10 @@ void AnimationSequence::addResetTrigger(int stateNumber) {
     this->resetStates.append(stateNumber);
 }
 
-void AnimationSequence::update(){
+void AnimationSequence::update(int32_t *data) {
     if (done) return;
     auto* anim = animations.get(currentAnimation);
-    anim->update();
+    anim->update(nullptr);
     if(!anim->isFinished()) return;
 
     currentAnimation++;
@@ -128,9 +128,9 @@ void AnimationStateMap::addState(int state, Animation *animation) {
     stateMap[state] = animation;
 }
 
-void AnimationStateMap::update() {
+void AnimationStateMap::update(int32_t *data) {
     if (currentAnimation == nullptr) return;
-    currentAnimation->update();
+    currentAnimation->update(nullptr);
 }
 
 bool AnimationStateMap::isFinished() {

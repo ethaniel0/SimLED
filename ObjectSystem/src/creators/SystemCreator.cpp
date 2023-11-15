@@ -82,7 +82,7 @@ ObjectSystem *SystemCreator::parseSystem(const char *string, int *pos) {
     ObjectSystem* system = new ObjectSystem();
     for (int i = 0; i < numStrips; i++){
         int len = extractNumber(string, pos);
-        system->strip->addStrip(len);
+        system->strip.addStrip(len);
     }
     int numObjects = extractNumber(string, pos);
 

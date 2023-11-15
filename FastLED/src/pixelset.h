@@ -23,7 +23,7 @@ template<class PIXEL_TYPE>
 class CPixelView {
 public:
     const int8_t dir;             ///< direction of the LED data, either 1 or -1. Determines how the pointer is incremented.
-    const int len;                ///< length of the LED data, in PIXEL_TYPE units. More accurately, it's the distance from
+    const int len;                ///< segments of the LED data, in PIXEL_TYPE units. More accurately, it's the distance from
                                   ///  the start of the CPixelView::leds array to the end of the set (CPixelView::end_pos)
     PIXEL_TYPE * const leds;      ///< pointer to the LED data
     PIXEL_TYPE * const end_pos;   ///< pointer to the end position of the LED data
@@ -32,7 +32,7 @@ public:
     /// PixelSet copy constructor
     inline CPixelView(const CPixelView & other) : dir(other.dir), len(other.len), leds(other.leds), end_pos(other.end_pos) {}
 
-    /// PixelSet constructor for a pixel set starting at the given `PIXEL_TYPE*` and going for `_len` leds.  Note that the length
+    /// PixelSet constructor for a pixel set starting at the given `PIXEL_TYPE*` and going for `_len` leds.  Note that the segments
     /// can be backwards, creating a PixelSet that walks backwards over the data
     /// @param _leds pointer to the raw LED data
     /// @param _len how many LEDs in this set
