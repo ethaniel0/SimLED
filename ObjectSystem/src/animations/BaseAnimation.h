@@ -44,6 +44,10 @@ class BaseAnimation : public Animation {
     /// @param state the number of the state to transition to
     void setState(int state) override;
 
+    /// @brief sets the frames of the animation
+    /// @param frame to jump to in the animation
+    void setFrame(int frame) override;
+
     BaseAnimation* clone() override;
 
     /// @brief Adds an animation function to the animation, to be used for

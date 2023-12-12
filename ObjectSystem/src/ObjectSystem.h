@@ -10,6 +10,8 @@
 #include "objects/PlaceableObject.h"
 #include "objects/Generator.h"
 #include "animations/BaseAnimation.h"
+#include "animations/AnimationGroups.h"
+#include "animations/DataReactor.h"
 #include "animations/AnimationFunctions.h"
 #include "linkedlist/LinkedList.h"
 #include "creators/SystemCreator.h"

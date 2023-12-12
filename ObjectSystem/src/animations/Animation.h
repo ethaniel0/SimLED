@@ -14,6 +14,7 @@ class Animation{
         virtual bool isFinished() = 0;
         virtual void reset() = 0;
         virtual void setState(int state) = 0;
+        virtual void setFrame(int frame) = 0;
 
         /// @brief sets the object that the animation applies to (only one at a time)
         /// @param object the object to apply the animation to

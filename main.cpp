@@ -6,6 +6,8 @@
 #include <chrono>
 #include <thread>
 
+#include "Examples/generator.h"
+
 using namespace xd;
 
 StripElement* strip1;
@@ -17,32 +19,6 @@ Button* state1;
 void action1(int _){
     objectSystem->setState(0);
 }
-
-class DataColorAnimation : public Animation {
-public:
-    DataColorAnimation() = default;
-
-    void update(int32_t *data) override{
-        obj->colors.moveToStart();
-        for (int i = 0; i < obj->length; i++) {
-            obj->colors.current() = CHSV(data[0], 255, 255);
-            obj->colors.next();
-        }
-        data[0] = (data[0] + 20) % 255;
-    };
-
-    bool isFinished() override{
-        return false;
-    };
-    void reset() override {}
-    void setState(int state) override {};
-    Animation* clone() override {
-        return new DataColorAnimation();
-    };
-
-
-};
-
 
 void setup() {
     size(640, 480);
@@ -61,20 +37,7 @@ void setup() {
     strip2 = new StripElement(objectSystem->strip.getSegment(1), 30);
     strip2->setParameters(550, 460, -2*M_PI/3, 15, 15);
 
-    LightObject* obj = new LightObject(1);
-    obj->colors.update(CRGB::Red);
-    obj->path = new StripPath(2, new int[]{0, 30, 59, 29});
-    obj->addAnimation(new DataColorAnimation());
-    obj->addAnimation(sc.parseAnimation("b -1 0 r 0 0 0 1 s 1"));
-
-
-//    auto* lightobj = (LightObject*) sc.parseObject("l 0 0 c 1 ff0000 1 " "b -1 0 r 0 0 0 1 s 1");
-//    lightobj->path = new StripPath(6, new int[]{0, 5, 10, 5, 11, 20, 25, 20, 25, 30, 59, 30});
-    auto* gen = new Generator(0, obj);
-    gen->spacing = 5;
-//    auto* gen = sc.parseObject("g0 8 " "l 0 0 c 1 ff0000 1 " "b -1 1 r 0 0 0 1 s 1");
-    objectSystem->addObject(gen);
-    objectSystem->dataReset[0] = true;
+    gen_setup(objectSystem, &sc);
 
     state1 = new Button(new char[]{'1'}, 10, 10, 80, 25);
     state1->fontsize = 30;
@@ -90,7 +53,7 @@ void draw() {
     state1->draw();
 
     objectSystem->update();
-    std::this_thread::sleep_for(std::chrono::milliseconds(50));
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
 }
 
 void destroy() {

@@ -88,6 +88,11 @@ void AnimationSequence::linkObject(LightObject *object) {
     }
 }
 
+void AnimationSequence::setFrame(int frame){
+    animations.get(currentAnimation)->setFrame(frame);
+}
+
+
 AnimationSequence* AnimationSequence::clone() {
     auto seq = new AnimationSequence(loop);
     animations.moveToStart();
@@ -158,6 +163,10 @@ void AnimationStateMap::linkObject(LightObject *object) {
     for (auto anim : stateMap){
         if (anim != nullptr) anim->linkObject(object);
     }
+}
+
+void AnimationStateMap::setFrame(int frame){
+    currentAnimation->setFrame(frame);
 }
 
 AnimationStateMap* AnimationStateMap::clone() {

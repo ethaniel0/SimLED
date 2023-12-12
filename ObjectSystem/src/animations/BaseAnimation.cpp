@@ -107,6 +107,9 @@ void BaseAnimation::update(int32_t *data) {
                 }
             }
             break;
+        case LENGTH:
+            obj->length = numbers[0];
+            break;
         case EditableProperties::NONE:
             break;
     }
@@ -137,6 +140,10 @@ void BaseAnimation::setState(int state) {
     else if (relativeStateTriggers[state] != -1) {
         frames += relativeStateTriggers[state];
     }
+}
+
+void BaseAnimation::setFrame(int frame) {
+    frames = frame;
 }
 
 BaseAnimation* BaseAnimation::clone() {

@@ -21,6 +21,7 @@ enum EditableProperties {
     COLORS,
     OPACITY,
     BRIGHTNESS,
+    LENGTH,
     NONE
 };
 
@@ -40,6 +41,9 @@ public:
     void setState(int state) override;
     void addAnimation(Animation* animation);
     LightObject* clone() override;
+
+private:
+    void adjustLength();
 };
 
 #endif

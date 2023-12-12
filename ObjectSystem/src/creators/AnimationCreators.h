@@ -19,4 +19,6 @@ Animation* createAnimationSequence(const char* string, int* pos, SystemCreator* 
 
 Animation* createAnimationStateMap(const char* string, int* pos, SystemCreator* sc);
 
+Animation* createDataReactor(const char* string, int* pos, SystemCreator* sc);
+
 #endif //SIMLED_ANIMATIONCREATORS_H

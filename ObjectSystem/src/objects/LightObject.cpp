@@ -32,8 +32,26 @@ LightObject::~LightObject(){
     animations.clear();
 };
 
+void LightObject::adjustLength() {
+    if (length == colors.getLength()) return;
+    if (length > colors.getLength()) {
+        for (int i = 0; i < length - colors.getLength(); i++) {
+            colors.append(CRGB::Black);
+        }
+    }
+    else {
+        int clen = colors.getLength();
+        colors.get(clen - 1);
+        int times = clen - length;
+        for (int i = 0; i < times; i++) {
+            colors.deleteCurrent();
+        }
+    }
+}
+
 void LightObject::update(ObjectSystem* system) {
     if (animations.getLength() == 0) return;
+    adjustLength();
     animations.moveToStart();
     int len = animations.getLength();
     for (int i = 0; i < len; i++) {

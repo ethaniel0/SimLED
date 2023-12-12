@@ -26,6 +26,7 @@ SystemCreator::SystemCreator() {
     addAnimation('b', createBaseAnimation);
     addAnimation('s', createAnimationSequence);
     addAnimation('m', createAnimationStateMap);
+    addAnimation('d', createDataReactor);
 
     addPlaceableObject('l', createLightObject);
     addPlaceableObject('g', createGenerator);

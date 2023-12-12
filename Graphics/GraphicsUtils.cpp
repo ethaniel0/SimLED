@@ -15,7 +15,7 @@ void testCircle(int width, int height){
     xd::ellipse(x, y, x, y);
 }
 
-struct Point detectedMousePos{0, 0};
+Point detectedMousePos{0, 0};
 
 bool isMousePressed = false;
 
@@ -23,7 +23,7 @@ bool mouseIsPressed(){
     return isMousePressed;
 }
 
-struct Point mousePos(){
+Point mousePos(){
     return detectedMousePos;
 }
 
