@@ -49,4 +49,8 @@ void pg_setup(ObjectSystem* sys, SystemCreator* sc){
     obj->addAnimation(colorAnim);
 
     sys->addObject(obj);
+
+    // equivalent to doing:
+    // objectSystem = sc.parseSystem("2 91 91 1 l 0 0 l 182 1 1 2 0 91 181 90 2 b 20 1 p 1 0 0 0 0 1 l 0 182 b 182 1 c 0 1 0 1 0 0 1 l 0 255");
+    // (I made the string with the web editor since it's hard to keep track of everything)
 }

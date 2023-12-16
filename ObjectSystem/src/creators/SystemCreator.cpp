@@ -80,7 +80,6 @@ ObjectSystem *SystemCreator::parseSystem(const char *string, int *pos) {
     // <# of strips> <strip lengths> <# of objects> <objects>
     int start = 0;
     if (pos == nullptr) pos = &start;
-    skipWhitespace(string, pos);
     int numStrips = extractNumber(string, pos);
     ObjectSystem* system = new ObjectSystem();
     for (int i = 0; i < numStrips; i++){

@@ -14,6 +14,10 @@ PlaceableObject* createLightObject(const char* string, int* pos, SystemCreator* 
     //    l <length>
     // define by colors:
     //    c <# colors> <color1 hex> <color2 hex> ...
+    // <use path>
+    // if use path:
+    //    <loop path>
+    //    <# segments> <seg1 start> <seg1 end> <seg2 start> <seg2 end> ...
     // after defining segments or colors:
     // ... <# animations> <animation1> <animation2> ...
     int strip_pos = extractNumber(string, pos);
@@ -29,7 +33,6 @@ PlaceableObject* createLightObject(const char* string, int* pos, SystemCreator* 
         int length = extractNumber(string, pos);
         obj = new LightObject(length);
     } else if (specifier == 'c'){
-        incPtr(pos);
         int numColors = extractNumber(string, pos);
         CRGB colors[numColors];
         for (int i = 0; i < numColors; i++){
@@ -41,6 +44,22 @@ PlaceableObject* createLightObject(const char* string, int* pos, SystemCreator* 
 
     obj->pos = strip_pos;
     obj->persistent = persistent;
+
+    // add segments
+    int usePath = extractNumber(string, pos);
+    if (usePath){
+        int loopPath = extractNumber(string, pos);
+        obj->loopPath = loopPath;
+        int numSegments = extractNumber(string, pos);
+        int* segments = new int[numSegments*2];
+        for (int i = 0; i < numSegments; i++){
+            int start = extractNumber(string, pos);
+            int end = extractNumber(string, pos);
+            segments[i*2] = start;
+            segments[i*2+1] = end;
+        }
+        obj->path = new StripPath(numSegments, segments);
+    }
 
     // add animations
     int numAnimations = extractNumber(string, pos);
