@@ -8,6 +8,7 @@ BaseAnimation::BaseAnimation(int duration, bool loop, EditableProperties bind) {
     frames = 0;
     lightOffset = 1;
     frameOffset = 0;
+    updateFrames = true;
     bindToLength = false;
     obj = nullptr;
     for (int i = 0; i < 16; i++){
@@ -37,7 +38,7 @@ CHSV makeColor(int* numbers, int position, int numFunctions) {
 }
 
 void BaseAnimation::update(int32_t *data) {
-    if (done) return;
+    if (duration != -1 && frames > duration) return;
 
     int numFuncs = (int) funcs.getLength();
 
@@ -47,13 +48,17 @@ void BaseAnimation::update(int32_t *data) {
     int numbers[outerSize * numFuncs];
 
     for (int i = 0; i < outerSize; i++) {
-        int count = 0;
         funcs.moveToStart();
         int len = funcs.getLength();
         for (int j = 0; j < len; j++) {
-            numbers[i * gen + count] = funcs.current()->getValue(frames + lightOffset * i + frameOffset, duration);
+            int f = frames + frameOffset + lightOffset * i;
+            if (duration != -1 && f > duration){
+                if (loop) f %= duration;
+                else f = duration;
+            }
+
+            numbers[i * gen + j] = funcs.current()->getValue(f, duration);
             funcs.next();
-            count++;
         }
     }
 
@@ -114,7 +119,7 @@ void BaseAnimation::update(int32_t *data) {
             break;
     }
 
-    frames++;
+    if (updateFrames) frames++;
     if (duration != -1 && frames > duration && loop){
         reset();
     }

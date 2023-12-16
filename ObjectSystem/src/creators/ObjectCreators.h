@@ -14,4 +14,8 @@ PlaceableObject* createLightObject(const char* string, int* pos, SystemCreator* 
 
 PlaceableObject* createGenerator(const char* string, int* pos, SystemCreator* _);
 
+PlaceableObject* createObjectGroup(const char* string, int* pos, SystemCreator* _);
+
+PlaceableObject* createObjectStateMap(const char* string, int* pos, SystemCreator* _);
+
 #endif //SIMLED_OBJECTCREATORS_H

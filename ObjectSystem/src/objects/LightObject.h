@@ -31,18 +31,21 @@ public:
     LinkedList<CRGB> colors;
     LinkedList<Animation*> animations;
     StripPath* path;
+    bool loopPath;
 
     explicit LightObject(int length);
     LightObject(CRGB* colors, int length);
     ~LightObject() override;
 
-    void update(ObjectSystem* system) override;
+    void update(ObjectSystem* system, ObjectManager* manager) override;
     void applyToStrip(LightStrip* strip) override;
     void setState(int state) override;
     void addAnimation(Animation* animation);
     LightObject* clone() override;
 
 private:
+    int lightPos;
+    int checkPos;
     void adjustLength();
 };
 

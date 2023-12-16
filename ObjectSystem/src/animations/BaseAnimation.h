@@ -20,6 +20,9 @@ class BaseAnimation : public Animation {
     /// @brief the number of frames that have passed since the animation started. Will reset to zero on loop
     int frames;
 
+    /// @brief whether or not each call to update should update the frames
+    bool updateFrames;
+
     /// @brief the number of frames that the animation should last for
     int duration;
 

@@ -30,6 +30,8 @@ SystemCreator::SystemCreator() {
 
     addPlaceableObject('l', createLightObject);
     addPlaceableObject('g', createGenerator);
+    addPlaceableObject('o', createObjectGroup);
+    addPlaceableObject('m', createObjectStateMap);
 }
 
 void SystemCreator::addAnimationFunction(char specifier, AnimationFunction* (*func)(const char*, int*, SystemCreator*)) {

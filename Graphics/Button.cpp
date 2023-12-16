@@ -47,7 +47,7 @@ void Button::draw() const {
     if (action != nullptr){
         struct Point mouse = mousePos();
         if (mouse.x >= x && mouse.x <= x + width && mouse.y >= y && mouse.y <= y + height && mouseIsPressed()) {
-            xd::mousePressed(action);
+            action();
         }
     }
 }

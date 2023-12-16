@@ -17,6 +17,9 @@ set(ObjectSystem_SRCS
         src/creators/FunctionCreators.cpp
         src/strips/StripPath.cpp
         src/animations/DataReactor.h
+        src/objects/ObjectManager.cpp
+        src/objects/ObjectGroup.cpp
+        src/objects/ObjectStateMap.cpp
 )
 
 add_subdirectory(../Arduino src/Arduino)

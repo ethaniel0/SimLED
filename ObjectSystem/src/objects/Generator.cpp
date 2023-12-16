@@ -12,11 +12,11 @@ Generator::Generator(int pos, PlaceableObject* referenceObject) {
     spacing = 2;
 }
 
-void Generator::update(ObjectSystem* system) {
+void Generator::update(ObjectSystem* system, ObjectManager* manager){
     if (frames % spacing == 0 && active) {
         PlaceableObject* c = object->clone();
         c->pos = pos;
-        system->addObject(c);
+        manager->addObject(c);
     }
     frames++;
 }

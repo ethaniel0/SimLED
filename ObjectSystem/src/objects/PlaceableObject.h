@@ -8,6 +8,7 @@
 #include "../strips/LightStrip.h"
 
 class ObjectSystem;
+class ObjectManager;
 
 class PlaceableObject {
 public:
@@ -16,7 +17,7 @@ public:
     int length = 0;
 
     virtual ~PlaceableObject() = default;
-    virtual void update(ObjectSystem*) = 0;
+    virtual void update(ObjectSystem*, ObjectManager*) = 0;
     virtual void applyToStrip(LightStrip* strip) = 0;
     virtual void setState(int state) = 0;
     virtual PlaceableObject* clone() = 0;

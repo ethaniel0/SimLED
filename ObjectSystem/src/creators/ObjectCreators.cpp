@@ -3,7 +3,8 @@
 //
 
 #include "ObjectCreators.h"
-#include "../objects/Generator.h"
+#include "../objects/ObjectGroup.h"
+#include "../objects/ObjectStateMap.h"
 
 PlaceableObject* createLightObject(const char* string, int* pos, SystemCreator* sc){
     // define by either segments or colors
@@ -61,4 +62,29 @@ PlaceableObject* createGenerator(const char* string, int* pos, SystemCreator* sc
     auto* gen = new Generator(strip_pos, obj);
     gen->spacing = spacing;
     return gen;
+}
+
+PlaceableObject* createObjectGroup(const char* string, int* pos, SystemCreator* sc){
+    // syntax: <# objects> <... objects to group>
+    auto* group = new ObjectGroup();
+    int numObjects = extractNumber(string, pos);
+    for (int i = 0; i < numObjects; i++){
+        PlaceableObject* obj = sc->parseObject(string, pos);
+        if (obj == nullptr) return nullptr;
+        group->addObject(obj);
+    }
+    return group;
+}
+
+PlaceableObject* createObjectStateMap(const char* string, int* pos, SystemCreator* sc){
+    // syntax: <# states> ...<state> <object>...
+    auto* map = new ObjectStateMap();
+    int numStates = extractNumber(string, pos);
+    for (int i = 0; i < numStates; i++){
+        int state = extractNumber(string, pos);
+        PlaceableObject* obj = sc->parseObject(string, pos);
+        if (obj == nullptr) return nullptr;
+        map->addState(state, obj);
+    }
+    return map;
 }

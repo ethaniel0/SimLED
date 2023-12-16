@@ -9,7 +9,7 @@
 class Button {
 public:
     char* text;
-    void (*action)(int); // void action(mouseBtn)
+    void (*action)(); // void action()
     int x;
     int y;
     int width;

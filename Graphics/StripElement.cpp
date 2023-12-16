@@ -31,7 +31,7 @@ void StripElement::draw(){
         int lx = (int)(this->x + i * x_step);
         int ly = (int)(this->y + i * y_step);
 
-        xd::stroke(color(255, 255, 255));
+        xd::stroke(color(30, 30, 30));
         xd::fill(color(leds[i].r, leds[i].g, leds[i].b));
         xd::ellipse((float)lx, (float)ly, (float)this->ledSize, (float)this->ledSize);
     }

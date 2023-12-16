@@ -3,7 +3,10 @@
 
 LightObject::LightObject(int length) {
     pos = 0;
+    lightPos = 0;
+    checkPos = 0;
     persistent = false;
+    loopPath = false;
     opacity = 255;
     this->length = length;
     path = nullptr;
@@ -14,7 +17,10 @@ LightObject::LightObject(int length) {
 
 LightObject::LightObject(CRGB* colors, int length) {
     pos = 0;
+    lightPos = 0;
+    checkPos = 0;
     persistent = false;
+    loopPath = false;
     opacity = 255;
     this->length = length;
 
@@ -49,8 +55,12 @@ void LightObject::adjustLength() {
     }
 }
 
-void LightObject::update(ObjectSystem* system) {
+void LightObject::update(ObjectSystem* system, ObjectManager* manager) {
     if (animations.getLength() == 0) return;
+    // to keep consistency between animations and where we are on the StripPath, keep animation position in lightPos
+    // and update pos to be the StripPath position once animations are done
+    if (checkPos == pos) pos = lightPos;
+
     adjustLength();
     animations.moveToStart();
     int len = animations.getLength();
@@ -58,6 +68,9 @@ void LightObject::update(ObjectSystem* system) {
         animations.current()->update(system->data);
         animations.next();
     }
+    lightPos = pos;
+    if (path != nullptr) pos = path->get(pos, loopPath);
+    checkPos = pos;
 }
 
 void LightObject::addAnimation(Animation* animation) {
@@ -89,7 +102,7 @@ void LightObject::applyToStrip(LightStrip* strip) {
     else {
         for (int i = 0; i < len; i++) {
             CRGB color = colors.current();
-            int index = path->get(pos + i);
+            int index = path->get(lightPos + i, loopPath);
             color = blend(strip->get(index), color, opacity);
             strip->set(index, color, opacity);
             colors.next();
@@ -103,6 +116,7 @@ LightObject* LightObject::clone() {
     obj->persistent = persistent;
     obj->opacity = opacity;
     obj->path = path;
+    obj->loopPath = loopPath;
 
     colors.moveToStart();
     obj->colors.moveToStart();

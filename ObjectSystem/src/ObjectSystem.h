@@ -15,6 +15,9 @@
 #include "animations/AnimationFunctions.h"
 #include "linkedlist/LinkedList.h"
 #include "creators/SystemCreator.h"
+#include "objects/ObjectManager.h"
+#include "objects/ObjectGroup.h"
+#include "objects/ObjectStateMap.h"
 
 class PlaceableObject;
 
@@ -27,11 +30,11 @@ public:
     ~ObjectSystem();
 
     void update();
-    void addObject(PlaceableObject* object);
     void setState(int val);
+    void addObject(PlaceableObject* object);
 
 private:
-    LinkedList<PlaceableObject*> objects;
+    ObjectManager objects;
 
 };
 
