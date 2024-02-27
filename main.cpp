@@ -7,7 +7,7 @@
 #include <thread>
 
 //#include "Examples/generator.h"
-#include "Examples/TriangleSongs/slip.cpp"
+#include "Examples/mouseDataFollower.h"
 
 using namespace xd;
 
@@ -43,7 +43,7 @@ void setup() {
     strip2 = new StripElement(objectSystem->strip.getSegment(1), NUM_LEDS);
     strip2->setParameters(550, 460, -2*M_PI/3, 5, 5);
 
-    pg_setup(objectSystem, &sc);
+    mdf_setup(objectSystem, &sc);
 
     state1 = new Button(new char[]{'0'}, 10, 10, 80, 25);
     state1->fontsize = 30;
@@ -62,6 +62,8 @@ void draw() {
     fill(color(255, 255, 255));
     state1->draw();
     state2->draw();
+
+    mdf_update(objectSystem);
 
     objectSystem->update();
     std::this_thread::sleep_for(std::chrono::milliseconds(50));
